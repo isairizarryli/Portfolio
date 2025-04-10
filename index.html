@@ -5,9 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isa Irizarry Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--strawberry-red);
+      color: white;
+      padding: 0.5rem 0.75rem;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0.7;
+      z-index: 999;
+    }
+
+    .back-to-top:hover {
+      opacity: 1;
+      background-color: var(--baby-pink);
+      color: var(--charcoal-gray);
+    }
+  </style>
 </head>
-<body>
+<body id="top">
   <header>
     <h1>Isabela Irizarry</h1>
     <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
@@ -25,7 +53,6 @@
   <section id="home" class="cotton">
     <h2>Welcome</h2>
     <p>Hi! I'm Isa, and this is my professional portfolio. I'm passionate about meaningful event experiences and intentional service. Explore my work, achievements, and more!</p>
-    <!-- Add your profile photo here -->
     <img src="images/profile.jpg" alt="Isa Profile Photo" class="responsive">
   </section>
 
@@ -33,14 +60,12 @@
     <h2>About Me</h2>
     <p>I'm Isa, a Dean’s and President’s List student at the University of Central Florida studying Event Management. I’m passionate about creating meaningful, well-organized experiences that make people feel seen and cared for.</p>
     <p>With experience at Walt Disney World and UCF’s Rosen College Career Fair, I’ve developed strong skills in communication, operations, and guest services. Outside of events, I love reading, watching movies, running, and rescuing abandoned cats. 🐾</p>
-    <!-- Optional About Me photo -->
     <img src="images/about.jpg" alt="Isa About Me Photo" class="responsive">
   </section>
 
   <section id="resume" class="cotton">
     <h2>Resume</h2>
     <p>Here’s a snapshot of my experience in event management and guest services. You can also download my full resume below.</p>
-    <!-- Optional resume preview image -->
     <img src="images/resume-preview.jpg" alt="Resume Preview" class="responsive">
     <a href="Isa Irizarry Resume.pdf" target="_blank">Download Resume</a>
   </section>
@@ -60,7 +85,6 @@
         <li>Business Support & Specialist</li>
       </ul>
     </ul>
-    <!-- Optional image for achievements (like award badges) -->
     <img src="images/awards.jpg" alt="Awards and Recognitions" class="responsive">
   </section>
 
@@ -89,7 +113,6 @@
   <section id="thankyou" class="blue">
     <h2>Thank You</h2>
     <p>Thank you so much for taking the time to explore my portfolio. I hope it gave you a glimpse into my passion, personality, and potential.</p>
-    <!-- Optional thank you image (cute graphic or cat!) -->
     <img src="images/thankyou.jpg" alt="Thank You Graphic" class="responsive">
   </section>
 
@@ -98,8 +121,10 @@
     <p>📧 isairizarryli@gmail.com</p>
     <p>📞 (407) 965-8395</p>
     <p>🔗 <a href="https://www.linkedin.com/in/isairizarrylizarraga/" target="_blank">LinkedIn</a></p>
-    <!-- Optional contact icon or illustration -->
     <img src="images/contact.jpg" alt="Contact Illustration" class="responsive">
   </section>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top" title="Back to Top">⬆</a>
 </body>
 </html>

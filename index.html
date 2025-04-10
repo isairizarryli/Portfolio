@@ -126,5 +126,16 @@
 
   <!-- Back to Top Button -->
   <a href="#top" class="back-to-top" title="Back to Top">⬆</a>
+  <script>
+  const backToTopButton = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  });
+</script>
 </body>
 </html>

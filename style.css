@@ -106,3 +106,32 @@ img.responsive {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--strawberry-red);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 0.8;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  background-color: var(--baby-pink);
+  color: var(--charcoal-gray);
+}

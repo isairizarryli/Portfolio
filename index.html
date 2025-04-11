@@ -3,146 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isa Irizarry Portfolio</title>
+  <title>Isa Irizarry | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--strawberry-red);
-      color: white;
-      padding: 0.5rem 0.75rem;
-      border-radius: 50%;
-      font-size: 1.25rem;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: opacity 0.3s ease-in-out;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 999;
-    }
-
-    .back-to-top.show {
-      opacity: 0.8;
-      pointer-events: auto;
-    }
-
-    .back-to-top:hover {
-      opacity: 1;
-      background-color: var(--baby-pink);
-      color: var(--charcoal-gray);
-    }
-  </style>
 </head>
-<body id="top">
+<body class="cotton">
   <header>
     <h1>Isabela Irizarry</h1>
     <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#resume">Resume</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#deliverables">Deliverables</a>
-      <a href="#thankyou">Thank You</a>
-      <a href="#contact">Contact Me</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="deliverables.html">Deliverables</a>
+      <a href="thankyou.html">Thank You</a>
+      <a href="contact.html">Contact Me</a>
     </nav>
   </header>
 
-  <section id="home" class="cotton">
-    <h2>Welcome</h2>
-    <p>Hi! I'm Isa, and this is my professional portfolio. I'm passionate about meaningful event experiences and intentional service. Explore my work, achievements, and more!</p>
-    <img src="images/profile.jpg" alt="Isa Profile Photo" class="responsive">
-  </section>
-
-  <section id="about" class="pink">
-    <h2>About Me</h2>
-    <p>I'm Isa, a Dean’s and President’s List student at the University of Central Florida studying Event Management. I’m passionate about creating meaningful, well-organized experiences that make people feel seen and cared for.</p>
-    <p>With experience at Walt Disney World and UCF’s Rosen College Career Fair, I’ve developed strong skills in communication, operations, and guest services. Outside of events, I love reading, watching movies, running, and rescuing abandoned cats. 🐾</p>
-    <img src="images/about.jpg" alt="Isa About Me Photo" class="responsive">
-  </section>
-
-  <section id="resume" class="cotton">
-    <h2>Resume</h2>
-    <p>Here’s a snapshot of my experience in event management and guest services. You can also download my full resume below.</p>
-    <img src="images/resume-preview.jpg" alt="Resume Preview" class="responsive">
-    <a href="Isa Irizarry Resume.pdf" target="_blank">Download Resume</a>
-  </section>
-
-  <section id="achievements" class="cream">
-    <h2>Achievements</h2>
-    <ul>
-      <li> Bachelor's Degree in Event Management (May 2025)</li>
-      <li> Dean’s List</li>
-      <li> President’s List</li>
-      <li> National Honor Society</li>
-      <li> Certifications:</li>
-      <ul>
-        <li>Event Operations & Management</li>
-        <li>Event F&B Strategies</li>
-        <li>Operations Support & Specialist</li>
-        <li>Business Support & Specialist</li>
-      </ul>
-    </ul>
-    <img src="images/awards.jpg" alt="Awards and Recognitions" class="responsive">
-  </section>
-
-  <section id="deliverables" class="cotton">
-    <h2>Deliverables</h2>
-    <div class="gallery">
-      <div class="card">
-        <img src="images/rfp.jpg" alt="RFP Response" class="responsive">
-        <p>RFP Response – Individual</p>
-      </div>
-      <div class="card">
-        <img src="images/team.jpg" alt="Career Fair Planning" class="responsive">
-        <p>Career Fair Planning – Team</p>
-      </div>
-      <div class="card">
-        <img src="images/tabling.jpg" alt="Before/After Event Table" class="responsive">
-        <p>Before/After Event Table Setup</p>
-      </div>
-      <div class="card">
-        <img src="images/budget.jpg" alt="Budget Plan" class="responsive">
-        <p>Event Budget Plan</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="thankyou" class="blue">
-    <h2>Thank You</h2>
-    <p>Thank you so much for taking the time to explore my portfolio. I hope it gave you a glimpse into my passion, personality, and potential.</p>
-    <img src="images/thankyou.jpg" alt="Thank You Graphic" class="responsive">
-  </section>
-
-  <section id="contact" class="cotton">
-    <h2>Contact Me</h2>
-    <p>📧 isairizarryli@gmail.com</p>
-    <p>📞 (407) 965-8395</p>
-    <p>🔗 <a href="https://www.linkedin.com/in/isairizarrylizarraga/" target="_blank">LinkedIn</a></p>
-    <img src="images/contact.jpg" alt="Contact Illustration" class="responsive">
-  </section>
-
-  <!-- Back to Top Button -->
-  <a href="#top" class="back-to-top" title="Back to Top">⬆</a>
-
-  <script>
-    const backToTopButton = document.querySelector('.back-to-top');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add('show');
-      } else {
-        backToTopButton.classList.remove('show');
-      }
-    });
-  </script>
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>Hi! I'm Isa, and this is my professional portfolio. I'm passionate about meaningful event experiences and intentional service. Explore my work, achievements, and more!</p>
+      <img src="images/profile.jpg" alt="Isa Profile Photo" class="responsive">
+    </section>
+  </main>
 </body>
 </html>

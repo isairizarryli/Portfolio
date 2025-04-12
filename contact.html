@@ -1,15 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isabela Irizarry | Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, #FFC1CC, #FFF5E1, #FFFAFA, #FF6B81, #BFDFFB);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 3rem;
+      color: var(--strawberry-red);
+      margin: 0;
+    }
+
+    .banner .traits {
+      font-family: 'Josefin Sans', sans-serif;
+      color: var(--powder-blue);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      background-color: var(--baby-pink);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    main p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--charcoal-gray);
+    }
+
+    a.contact-link {
+      display: block;
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 1rem;
+      margin: 0.75rem 0;
+      color: var(--charcoal-gray);
+      text-decoration: none;
+    }
+
+    a.contact-link:hover {
+      color: var(--strawberry-red);
+    }
+
+    img.responsive {
+      max-width: 250px;
+      margin-top: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
 <body class="peach-cream">
   <div class="banner">
     <h1>Contact Me</h1>
     <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
-  <nav>...same nav...</nav>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="deliverables.html">Deliverables</a>
+    <a href="thankyou.html">Thank You</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
+
   <main>
-    <section>
-      <p>📧 isairizarryli@gmail.com</p>
-      <p>📞 (407) 965-8395</p>
-      <p>🔗 <a href="https://www.linkedin.com/in/isairizarrylizarraga/" target="_blank">LinkedIn</a></p>
-      <img src="images/contact.jpg" alt="Contact Illustration" class="responsive">
-    </section>
+    <p>Let’s connect!</p>
+    <a href="mailto:isairizarryli@gmail.com" class="contact-link">📧 isairizarryli@gmail.com</a>
+    <a href="tel:+14079658395" class="contact-link">📞 (407) 965-8395</a>
+    <a href="https://www.linkedin.com/in/isairizarrylizarraga/" target="_blank" class="contact-link">🔗 LinkedIn</a>
+
+    <img src="images/contact.jpg" alt="Contact Illustration" class="responsive">
   </main>
 </body>
+</html>

@@ -1,13 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isabela Irizarry | Deliverables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, #FFC1CC, #FFF5E1, #FFFAFA, #FF6B81, #BFDFFB);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 3rem;
+      color: var(--strawberry-red);
+      margin: 0;
+    }
+
+    .banner .traits {
+      font-family: 'Josefin Sans', sans-serif;
+      color: var(--powder-blue);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      background-color: var(--baby-pink);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: var(--cream);
+      padding: 1rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: var(--powder-blue);
+      padding: 0.4rem 0.75rem;
+      border-radius: 20px;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      font-family: 'Comfortaa', sans-serif;
+    }
+
+    .card a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      width: calc(50% - 0.5rem);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
 <body class="peach-cream">
   <div class="banner">
     <h1>Deliverables</h1>
     <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
-  <nav>...same nav...</nav>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="deliverables.html">Deliverables</a>
+    <a href="thankyou.html">Thank You</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
+
   <main>
-    <section class="gallery">
-      <div class="card"><img src="images/rfp.jpg" alt="RFP Response"><p>RFP Response – Individual</p></div>
-      ...
-    </section>
+    <h2>🤝 Team Work</h2>
+
+    <div class="card">
+      <h3>RFP Response</h3>
+      <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
+      <a href="documents/rfp-response.pdf" target="_blank">Download RFP</a>
+    </div>
+
+    <div class="card">
+      <h3>Rosen College Career Fair</h3>
+      <p>As Operations & Exhibition Services Lead, I oversaw event logistics, vendor layouts, signage, and day-of flow for a 500+ attendee fair.</p>
+
+      <div class="gallery">
+        <img src="images/careerfair1.jpg" alt="Career Fair Setup 1">
+        <img src="images/careerfair2.jpg" alt="Career Fair Setup 2">
+      </div>
+
+      <br>
+      <a href="documents/floorplan.pdf" target="_blank">Download Floorplan</a>
+      <a href="documents/budget.pdf" target="_blank">Download Budget</a>
+      <a href="documents/risk-plan.pdf" target="_blank">Download Risk Management</a>
+      <a href="documents/signage-plan.pdf" target="_blank">Download Signage Plan</a>
+    </div>
+
+    <h2>🎨 My Creative Portfolio</h2>
+
+<div class="card">
+  <h3>This Website</h3>
+  <p>This site was fully designed and coded by me to reflect my personality, professionalism, and creativity. Every detail — from the layout to the theme — was intentionally crafted to showcase who I am and how I approach projects with care.</p>
+  <a href="index.html" target="_blank">Explore My Website</a>
+</div>
+
   </main>
 </body>
+</html>

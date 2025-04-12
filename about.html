@@ -3,14 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isa Irizarry | About Me</title>
+  <title>Isabela Irizarry | About Me</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, #FFC1CC, #FFF5E1, #FFFAFA, #FF6B81, #BFDFFB);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 3rem;
+      color: var(--strawberry-red);
+      margin: 0;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      background-color: var(--baby-pink);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .bio-text {
+      flex: 1 1 55%;
+    }
+
+    .bio-text p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .photo-stack {
+      flex: 1 1 40%;
+      background-color: #ffeef2;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .photo-stack img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .photo-stack img:last-child {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
-<body class="pink">
+<body class="blue">
   <div class="banner">
     <h1>About Me</h1>
-    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
 
   <nav>
@@ -24,10 +103,19 @@
   </nav>
 
   <main>
-    <section>
-      <p>I'm Isa, a Dean’s and President’s List student at the University of Central Florida studying Event Management...</p>
-      <img src="images/about.jpg" alt="Isa About Me Photo" class="responsive">
-    </section>
+    <div class="bio-text">
+      <p>Hi! I’m Isabela, an Event Management major at the University of Central Florida. I’m passionate about creating meaningful, well-organized experiences that leave a lasting impact on others. With years of experience in guest service and event logistics—including work at Walt Disney World and UCF’s Rosen College Career Fair—I’ve developed strong skills in communication, operations, and problem-solving.</p>
+
+      <p>I take pride in staying calm under pressure, focusing on the details, and supporting teams behind the scenes. I’m fluent in both English and Spanish, and I thrive in roles where I can combine empathy, planning, and creativity to bring ideas to life and make people feel genuinely cared for.</p>
+
+      <p>Outside of work, I enjoy reading, watching movies, running, and spending time with my loved ones. I also rescue and foster abandoned cats—a passion that keeps me grounded and reminds me why I love helping others.</p>
+    </div>
+
+    <div class="photo-stack">
+      <img src="images/about1.jpg" alt="Isa photo 1">
+      <img src="images/about2.jpg" alt="Isa photo 2">
+      <img src="images/about3.jpg" alt="Isa photo 3">
+    </div>
   </main>
 </body>
 </html>

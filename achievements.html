@@ -21,14 +21,6 @@
       margin: 0;
     }
 
-    .banner .traits {
-      font-family: 'Josefin Sans', sans-serif;
-      color: var(--powder-blue);
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      margin-top: 0.5rem;
-    }
-
     nav {
       text-align: center;
       margin-top: 1rem;
@@ -51,7 +43,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
@@ -59,7 +51,7 @@
     h2 {
       font-family: 'Baloo 2', cursive;
       font-size: 2rem;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
 
     ul {
@@ -68,27 +60,45 @@
       margin-left: 1.5rem;
     }
 
-    .recommendations a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background-color: var(--powder-blue);
-      padding: 0.4rem 0.75rem;
-      border-radius: 20px;
-      text-decoration: none;
-      color: var(--charcoal-gray);
-      font-family: 'Comfortaa', sans-serif;
+    .cert-image-grid {
+      background-color: #ffeef2;
+      border-radius: 15px;
+      padding: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
-    .recommendations a:hover {
-      background-color: var(--strawberry-red);
-      color: white;
+    .cert-image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .recommendations {
+      background-color: #ffeef2;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .recommendations p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body class="blue">
   <div class="banner">
     <h1>Achievements</h1>
-    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
 
   <nav>
@@ -105,7 +115,7 @@
     <section>
       <h2>🎓 Educational Achievements</h2>
       <ul>
-        <li>Bachelor of Science in Event Management, University of Central Florida (Expected May 2025)</li>
+        <li>Bachelor of Science in Event Management (Expected May 2025)</li>
         <li>Dean’s List</li>
         <li>President’s List</li>
         <li>National Honor Society</li>
@@ -115,19 +125,21 @@
     <section>
       <h2>📜 Certifications</h2>
       <ul>
-        <li>Event Operations & Management</li>
-        <li>Event F&B Strategies</li>
         <li>Operations Support & Specialist</li>
         <li>Business Support & Specialist</li>
       </ul>
+
+      <div class="cert-image-grid">
+        <img src="images/cert1.jpg" alt="Certification 1">
+        <img src="images/cert2.jpg" alt="Certification 2">
+        <img src="images/cert3.jpg" alt="Certification 3">
+        <img src="images/cert4.jpg" alt="Certification 4">
+      </div>
     </section>
 
     <section class="recommendations">
       <h2>📝 Letters of Recommendation</h2>
-      <p>Below are a few references and recommendation letters that speak to my skills and work ethic.</p>
-      <a href="recommendation-steven-brinkman.pdf" target="_blank">Steven Brinkman</a><br>
-      <a href="recommendation-person2.pdf" target="_blank">Person 2</a><br>
-      <a href="recommendation-person3.pdf" target="_blank">Person 3</a>
+      <p>Below you'll find references and recommendations from supervisors and peers. <strong>(Coming Soon)</strong></p>
     </section>
   </main>
 </body>

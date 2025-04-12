@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Fair Photo Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 2.8rem;
+      color: var(--strawberry-red);
+      margin: 0;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      background-color: var(--baby-pink);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      background-color: #ffeef2;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="blue">
+  <div class="banner">
+    <h1>⛺ Career Fair Photo Gallery</h1>
+  </div>
+
+  <nav>
+    <a href="career-photos.html">← Back to Gallery Menu</a>
+  </nav>
+
+  <main>
+    <div class="photo-grid">
+      <img src="images/career1.jpg" alt="Career Photo 1">
+      <img src="images/career2.jpg" alt="Career Photo 2">
+      <img src="images/career3.jpg" alt="Career Photo 3">
+      <img src="images/career4.jpg" alt="Career Photo 4">
+      <img src="images/career5.jpg" alt="Career Photo 5">
+      <img src="images/career6.jpg" alt="Career Photo 6">
+      <img src="images/career7.jpg" alt="Career Photo 7">
+      <img src="images/career8.jpg" alt="Career Photo 8">
+      <img src="images/career9.jpg" alt="Career Photo 9">
+      <img src="images/career10.jpg" alt="Career Photo 10">
+    </div>
+  </main>
+</body>
+</html>

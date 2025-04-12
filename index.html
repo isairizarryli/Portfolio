@@ -21,6 +21,14 @@
       margin: 0;
     }
 
+    .traits {
+      font-family: 'Josefin Sans', sans-serif;
+      color: var(--powder-blue);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
+    }
+
     nav {
       text-align: center;
       margin-top: 1rem;
@@ -43,31 +51,25 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 3rem auto;
       padding: 0 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
+      text-align: center;
     }
 
-    .home-text {
-      flex: 1 1 55%;
+    main p {
       font-family: 'Nunito', sans-serif;
-    }
-
-    .home-text p {
       font-size: 1.1rem;
       line-height: 1.7;
       margin-bottom: 1.5rem;
     }
 
     .home-photo {
-      flex: 1 1 40%;
+      margin-top: 2rem;
       background-color: #ffeef2;
       padding: 1rem;
       border-radius: 15px;
+      display: inline-block;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
@@ -85,6 +87,7 @@
 <body class="blue">
   <div class="banner">
     <h1>Isabela Irizarry</h1>
+    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
 
   <nav>
@@ -98,11 +101,9 @@
   </nav>
 
   <main>
-    <div class="home-text">
-      <p>Hi! I’m Isabela, an Event Management major at the University of Central Florida. I’m passionate about creating meaningful, well-organized experiences that leave a lasting impact on others. With years of experience in guest service and event logistics—including work at Walt Disney World and UCF’s Rosen College Career Fair—I’ve developed strong skills in communication, operations, and problem-solving.</p>
+    <p>Hi! I’m Isabela, an Event Management major at the University of Central Florida. I’m passionate about creating meaningful, well-organized experiences that leave a lasting impact on others. With years of experience in guest service and event logistics—including work at Walt Disney World and UCF’s Rosen College Career Fair—I’ve developed strong skills in communication, operations, and problem-solving.</p>
 
-      <p>I take pride in staying calm under pressure, focusing on the details, and supporting teams behind the scenes. I’m fluent in both English and Spanish, and I thrive in roles where I can combine empathy, planning, and creativity to bring ideas to life and make people feel genuinely cared for.</p>
-    </div>
+    <p>I take pride in staying calm under pressure, focusing on the details, and supporting teams behind the scenes. I’m fluent in both English and Spanish, and I thrive in roles where I can combine empathy, planning, and creativity to bring ideas to life and make people feel genuinely cared for.</p>
 
     <div class="home-photo">
       <img src="images/profile.jpg" alt="Isa Profile Photo">

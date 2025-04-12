@@ -21,14 +21,6 @@
       margin: 0;
     }
 
-    .banner .traits {
-      font-family: 'Josefin Sans', sans-serif;
-      color: var(--powder-blue);
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      margin-top: 0.5rem;
-    }
-
     nav {
       text-align: center;
       margin-top: 1rem;
@@ -77,18 +69,39 @@
       color: var(--strawberry-red);
     }
 
-    img.responsive {
-      max-width: 250px;
-      margin-top: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    form {
+      max-width: 500px;
+      margin: 2rem auto 0;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    form button {
+      padding: 0.6rem 1.2rem;
+      background-color: var(--strawberry-red);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-family: 'Comfortaa', sans-serif;
+    }
+
+    form button:hover {
+      background-color: var(--baby-pink);
+      color: var(--charcoal-gray);
     }
   </style>
 </head>
-<body class="peach-cream">
+<body class="blue">
   <div class="banner">
     <h1>Contact Me</h1>
-    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
 
   <nav>
@@ -107,7 +120,13 @@
     <a href="tel:+14079658395" class="contact-link">📞 (407) 965-8395</a>
     <a href="https://www.linkedin.com/in/isairizarrylizarraga/" target="_blank" class="contact-link">🔗 LinkedIn</a>
 
-    <img src="images/contact.jpg" alt="Contact Illustration" class="responsive">
+    <h2 style="margin-top: 3rem;">Send Me a Message</h2>
+    <form action="https://formsubmit.co/isairizarryli@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </main>
 </body>
 </html>

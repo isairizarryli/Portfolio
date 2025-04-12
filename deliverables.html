@@ -21,14 +21,6 @@
       margin: 0;
     }
 
-    .banner .traits {
-      font-family: 'Josefin Sans', sans-serif;
-      color: var(--powder-blue);
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      margin-top: 0.5rem;
-    }
-
     nav {
       text-align: center;
       margin-top: 1rem;
@@ -59,12 +51,12 @@
     h2 {
       font-family: 'Baloo 2', cursive;
       font-size: 2rem;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
 
     .card {
-      background-color: var(--cream);
-      padding: 1rem;
+      background-color: #ffeef2;
+      padding: 1.5rem;
       border-radius: 15px;
       margin-bottom: 2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -72,13 +64,13 @@
 
     .card h3 {
       font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-bottom: 0.5rem;
     }
 
     .card a {
       display: inline-block;
-      margin-top: 0.5rem;
+      margin: 0.25rem;
       background-color: var(--powder-blue);
       padding: 0.4rem 0.75rem;
       border-radius: 20px;
@@ -92,25 +84,43 @@
       color: white;
     }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+    .slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
       margin-top: 1rem;
     }
 
-    .gallery img {
-      max-width: 100%;
-      width: calc(50% - 0.5rem);
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .download-buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .download-buttons a {
+      margin: 0.5rem;
     }
   </style>
 </head>
 <body class="peach-cream">
   <div class="banner">
     <h1>Deliverables</h1>
-    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
   </div>
 
   <nav>
@@ -125,37 +135,57 @@
 
   <main>
     <h2>🤝 Team Work</h2>
-
     <div class="card">
       <h3>RFP Response</h3>
       <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
-      <a href="documents/rfp-response.pdf" target="_blank">Download RFP</a>
+      <a href="documents/rfp-response.pdf" download>Download RFP</a>
     </div>
-
     <div class="card">
       <h3>Rosen College Career Fair</h3>
       <p>As Operations & Exhibition Services Lead, I oversaw event logistics, vendor layouts, signage, and day-of flow for a 500+ attendee fair.</p>
 
-      <div class="gallery">
-        <img src="images/careerfair1.jpg" alt="Career Fair Setup 1">
-        <img src="images/careerfair2.jpg" alt="Career Fair Setup 2">
+      <div class="slideshow">
+        <div class="slide" style="display: block;">
+          <img src="images/career1.jpg" alt="Career Fair Photo 1">
+        </div>
+        <div class="slide">
+          <img src="images/career2.jpg" alt="Career Fair Photo 2">
+        </div>
+        <div class="slide">
+          <img src="images/career3.jpg" alt="Career Fair Photo 3">
+        </div>
+        <div class="slide">
+          <img src="images/career4.jpg" alt="Career Fair Photo 4">
+        </div>
       </div>
 
-      <br>
-      <a href="documents/floorplan.pdf" target="_blank">Download Floorplan</a>
-      <a href="documents/budget.pdf" target="_blank">Download Budget</a>
-      <a href="documents/risk-plan.pdf" target="_blank">Download Risk Management</a>
-      <a href="documents/signage-plan.pdf" target="_blank">Download Signage Plan</a>
+      <div class="download-buttons">
+        <a href="documents/floorplan.pdf" download>Download Floorplan</a>
+        <a href="documents/budget.pdf" download>Download Budget</a>
+        <a href="documents/risk-plan.pdf" download>Download Risk Management</a>
+        <a href="documents/signage-plan.pdf" download>Download Signage Plan</a>
+      </div>
     </div>
 
     <h2>🎨 My Creative Portfolio</h2>
-
-<div class="card">
-  <h3>This Website</h3>
-  <p>This site was fully designed and coded by me to reflect my personality, professionalism, and creativity. Every detail — from the layout to the theme — was intentionally crafted to showcase who I am and how I approach projects with care.</p>
-  <a href="index.html" target="_blank">Explore My Website</a>
-</div>
-
+    <div class="card">
+      <h3>This Website</h3>
+      <p>This website was designed and coded entirely by me using HTML and CSS. From layout to color palette, every element reflects my personal aesthetic and attention to detail — showing not only my creativity, but also my ability to structure and manage an entire digital project from the ground up.</p>
+    </div>
   </main>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlides() {
+    slides.forEach(slide => slide.style.display = "none");
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change every 4 seconds
+  }
+
+  showSlides();
+</script>
 </body>
 </html>

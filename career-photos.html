@@ -56,27 +56,50 @@
       text-align: center;
     }
 
-    .photo-section {
+    .gallery-section {
+      margin-bottom: 4rem;
+    }
+
+    .slideshow {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
       background-color: #ffeef2;
+      padding: 1rem;
       border-radius: 15px;
-      padding: 1.5rem;
-      margin-bottom: 3rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+    .slide {
+      display: none;
     }
 
-    .grid img {
+    .slide img {
       width: 100%;
+      height: auto;
       border-radius: 12px;
       border: 2px solid #ffc1cc;
       padding: 5px;
       background-color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .button-pink {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background-color: var(--baby-pink);
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      color: var(--charcoal-gray);
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-pink:hover {
+      background-color: var(--strawberry-red);
+      color: white;
     }
   </style>
 </head>
@@ -91,32 +114,46 @@
   </nav>
 
   <main>
-    <div class="photo-section">
-      <h2>Before</h2>
-      <div class="grid">
-        <img src="images/before1.jpg" alt="Before 1">
-        <img src="images/before2.jpg" alt="Before 2">
-        <img src="images/before3.jpg" alt="Before 3">
-        <img src="images/before4.jpg" alt="Before 4">
-        <img src="images/before5.jpg" alt="Before 5">
+    <!-- Tabling Days Section -->
+    <div class="gallery-section">
+      <h2>🪧 Tabling Days</h2>
+      <div class="slideshow" id="tabling-slideshow">
+        <div class="slide"><img src="images/tabling1.jpg" alt="Tabling Photo 1"></div>
+        <div class="slide"><img src="images/tabling2.jpg" alt="Tabling Photo 2"></div>
+        <div class="slide"><img src="images/tabling3.jpg" alt="Tabling Photo 3"></div>
+        <div class="slide"><img src="images/tabling4.jpg" alt="Tabling Photo 4"></div>
       </div>
+      <a href="tabling-photos.html" class="button-pink">🪧 View Tabling Days Gallery</a>
     </div>
 
-    <div class="photo-section">
-      <h2>After</h2>
-      <div class="grid">
-        <img src="images/after1.jpg" alt="After 1">
-        <img src="images/after2.jpg" alt="After 2">
-        <img src="images/after3.jpg" alt="After 3">
-        <img src="images/after4.jpg" alt="After 4">
-        <img src="images/after5.jpg" alt="After 5">
-        <img src="images/after6.jpg" alt="After 6">
-        <img src="images/after7.jpg" alt="After 7">
-        <img src="images/after8.jpg" alt="After 8">
-        <img src="images/after9.jpg" alt="After 9">
-        <img src="images/after10.jpg" alt="After 10">
+    <!-- Career Fair Section -->
+    <div class="gallery-section">
+      <h2>⛺ Career Fair</h2>
+      <div class="slideshow" id="career-slideshow">
+        <div class="slide"><img src="images/career1.jpg" alt="Career Fair Photo 1"></div>
+        <div class="slide"><img src="images/career2.jpg" alt="Career Fair Photo 2"></div>
+        <div class="slide"><img src="images/career3.jpg" alt="Career Fair Photo 3"></div>
+        <div class="slide"><img src="images/career4.jpg" alt="Career Fair Photo 4"></div>
       </div>
+      <a href="careerday-photos.html" class="button-pink">⛺ View Career Fair Gallery</a>
     </div>
   </main>
+
+  <script>
+    function rotateSlides(slideshowId) {
+      let slides = document.querySelectorAll(`#${slideshowId} .slide`);
+      let index = 0;
+      function showSlide() {
+        slides.forEach(slide => slide.style.display = "none");
+        slides[index].style.display = "block";
+        index = (index + 1) % slides.length;
+        setTimeout(showSlide, 4000);
+      }
+      showSlide();
+    }
+
+    rotateSlides("tabling-slideshow");
+    rotateSlides("career-slideshow");
+  </script>
 </body>
 </html>

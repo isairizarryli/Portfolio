@@ -43,24 +43,33 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
 
-    .deliverable-preview {
-      margin-bottom: 2.5rem;
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .deliverable-card {
+      background-color: #ffeef2;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
     }
 
-    .deliverable-preview img {
-      max-width: 100%;
+    .deliverable-card img {
+      width: 100%;
       height: auto;
       border-radius: 12px;
       border: 2px solid #ffc1cc;
       padding: 5px;
       background-color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       margin-bottom: 1rem;
     }
 
@@ -92,51 +101,56 @@
   </nav>
 
   <main>
-    <!-- Floor Plan -->
-    <div class="deliverable-preview">
-      <img src="images/floorplan-preview.jpg" alt="Floor Plan Preview">
-      <a href="documents/floorplan.zip" download class="deliverable-button">📐 Floor Plan (Map + Booths)</a>
-    </div>
+    <div class="deliverables-grid">
 
-    <!-- Budget -->
-    <div class="deliverable-preview">
-      <img src="images/budget-preview.jpg" alt="Budget Preview">
-      <a href="documents/budget.zip" download class="deliverable-button">💰 Budget</a>
-    </div>
+      <!-- Floor Plan -->
+      <div class="deliverable-card">
+        <img src="images/floorplan-preview.jpg" alt="Floor Plan Preview">
+        <a href="documents/floorplan.zip" download class="deliverable-button">📐 Floor Plan</a>
+      </div>
 
-    <!-- Risk & Crisis Management -->
-    <div class="deliverable-preview">
-      <img src="images/risk-plan-preview.jpg" alt="Risk Plan Preview">
-      <a href="documents/risk-plan.zip" download class="deliverable-button">⚠️ Risk & Crisis Management Plan</a>
-    </div>
+      <!-- Budget -->
+      <div class="deliverable-card">
+        <img src="images/budget-preview.jpg" alt="Budget Preview">
+        <a href="documents/budget.zip" download class="deliverable-button">💰 Budget</a>
+      </div>
 
-    <!-- Signage Plan -->
-    <div class="deliverable-preview">
-      <img src="images/signage-preview.jpg" alt="Signage Plan Preview">
-      <a href="documents/signage-plan.zip" download class="deliverable-button">📋 Signage Plan</a>
-    </div>
+      <!-- Risk & Crisis Plan -->
+      <div class="deliverable-card">
+        <img src="images/risk-plan-preview.jpg" alt="Risk Plan Preview">
+        <a href="documents/risk-plan.zip" download class="deliverable-button">⚠️ Risk & Crisis Plan</a>
+      </div>
 
-    <!-- Parking Plan -->
-    <div class="deliverable-preview">
-      <img src="images/parking-plan-preview.jpg" alt="Parking Plan Preview">
-      <a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
-    </div>
+      <!-- Signage Plan -->
+      <div class="deliverable-card">
+        <img src="images/signage-preview.jpg" alt="Signage Preview">
+        <a href="documents/signage-plan.zip" download class="deliverable-button">📋 Signage Plan</a>
+      </div>
 
-    <!-- Production Schedule -->
-    <div class="deliverable-preview">
-      <img src="images/production-preview.jpg" alt="Production Schedule Preview">
-      <a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
-    </div>
+      <!-- Parking Plan -->
+      <div class="deliverable-card">
+        <img src="images/parking-plan-preview.jpg" alt="Parking Plan Preview">
+        <a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
+      </div>
 
-    <!-- Employer Escort Script -->
-    <div class="deliverable-preview">
-      <img src="images/escort-preview.jpg" alt="Escort Script Preview">
-      <a href="documents/employer-escort-script.zip" download class="deliverable-button">📜 Employer Escort Volunteer Script</a>
-    </div>
+      <!-- Production Schedule -->
+      <div class="deliverable-card">
+        <img src="images/production-preview.jpg" alt="Production Schedule Preview">
+        <a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
+      </div>
 
-    <!-- All Files -->
-    <div class="deliverable-preview">
-      <a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Career Fair Files</a>
+      <!-- Escort Script -->
+      <div class="deliverable-card">
+        <img src="images/escort-preview.jpg" alt="Escort Script Preview">
+        <a href="documents/employer-escort-script.zip" download class="deliverable-button">📜 Escort Volunteer Script</a>
+      </div>
+
+      <!-- Download All -->
+      <div class="deliverable-card">
+        <img src="images/download-all-preview.jpg" alt="Download All Graphic">
+        <a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Files</a>
+      </div>
+
     </div>
   </main>
 </body>

@@ -1,119 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isabela Irizarry | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isa Irizarry Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+
+  <!-- AOS for Scroll Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Styles -->
   <style>
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .banner h1 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
-      color: var(--strawberry-red);
+    body {
       margin: 0;
-    }
-
-    .traits {
-      font-family: 'Josefin Sans', sans-serif;
-      color: #6bb0e2;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      margin-top: 0.5rem;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      font-family: 'Comfortaa', sans-serif;
-      text-decoration: none;
-      color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: var(--strawberry-red);
-      color: white;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-
-    main p {
       font-family: 'Nunito', sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
+      background-color: #FFEFDB; /* Peach Cream */
     }
 
-    .home-photo {
-      margin-top: 2rem;
-      background-color: #ffeef2;
-      padding: 1rem;
-      border-radius: 15px;
-      display: inline-block;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
     }
 
-    .home-photo img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: 2px solid #ffc1cc;
-      padding: 5px;
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    .intro-text {
+      flex: 1;
+      max-width: 50%;
     }
-    .section-content {
-  background-color: #fffafc; /* soft cream-pink */
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  margin-bottom: 2rem;
-  text-align: center;
-}
+
+    .welcome-title {
+      font-family: 'Comfortaa', cursive;
+      font-size: 3em;
+      color: #FF6B81; /* Strawberry Red */
+      background: linear-gradient(to top, #BFDFFB 40%, transparent 40%);
+      display: inline;
+      padding: 0 5px;
+    }
+
+    .intro-paragraph {
+      font-size: 1.2em;
+      color: #4A4A4A; /* Charcoal Gray */
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .intro-image {
+      flex: 1;
+      max-width: 40%;
+      text-align: right;
+    }
+
+    .intro-image img {
+      max-width: 300px;
+      border-radius: 20px;
+      border: 4px solid #FFC1CC; /* Baby Pink border */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-text,
+      .intro-image {
+        max-width: 100%;
+      }
+
+      .intro-image {
+        margin-top: 30px;
+      }
+    }
   </style>
 </head>
-<body class="blue">
-  <div class="banner">
-    <h1>Isabela Irizarry</h1>
-    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
-  </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="deliverables.html">Deliverables</a>
-    <a href="contact.html">Contact Me</a>
-    <a href="thankyou.html">Thank You</a>
-  </nav>
-
-  <main>
-  <section class="section-content">
-    <h2>Welcome</h2>
-    <p>Hi! I’m Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life through thoughtful planning and logistics. Take a look around to explore my work and what I’ve been building behind the scenes!</p>
-    <img src="images/profile.jpg" alt="Isa Profile Photo" class="responsive">
+<body>
+  <section class="intro-section">
+    <div class="intro-text" data-aos="fade-right">
+      <h1 class="welcome-title">Welcome</h1>
+      <p class="intro-paragraph">
+        Hi! I'm Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life.
+        Take a look around to explore my work and what I've been building behind the scenes!
+      </p>
+    </div>
+    <div class="intro-image" data-aos="fade-left">
+      <img src="images/profile.jpg" alt="Isa Profile Photo">
+    </div>
   </section>
-</main>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
 </body>
 </html>

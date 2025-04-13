@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isabela Irizarry | About Me</title>
+  <title>About Me</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -43,51 +43,44 @@
     }
 
     main {
-      max-width: 1000px;
-      margin: 3rem auto;
+      max-width: 900px;
+      margin: 2rem auto;
       padding: 0 1rem;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .bio {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      color: var(--charcoal-gray);
+    }
+
+    .polaroid-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
-      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
     }
 
-    .bio-text {
-      flex: 1 1 55%;
+    .polaroid {
+      width: 140px;
+      border: 5px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
-    .bio-text p {
-      font-family: 'Nunito', sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
+    .polaroid:nth-child(1) { transform: rotate(-5deg); }
+    .polaroid:nth-child(2) { transform: rotate(4deg); }
+    .polaroid:nth-child(3) { transform: rotate(-3deg); }
+    .polaroid:nth-child(4) { transform: rotate(5deg); }
 
-    .photo-stack {
-      flex: 1 1 40%;
-      background-color: #ffeef2;
-      padding: 1rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .photo-stack img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 12px;
-      border: 2px solid #ffc1cc;
-      padding: 5px;
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .photo-stack img:last-child {
-      margin-bottom: 0;
+    .polaroid:hover {
+      transform: scale(1.05) rotate(0deg);
     }
   </style>
 </head>
-<body class="blue">
+<body class="pink">
   <div class="banner">
     <h1>About Me</h1>
   </div>
@@ -98,12 +91,12 @@
     <a href="resume.html">Resume</a>
     <a href="achievements.html">Achievements</a>
     <a href="deliverables.html">Deliverables</a>
-    <a href="contact.html">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
+    <a href="contact.html">Contact Me</a>
   </nav>
 
   <main>
-    <div class="bio-text">
+    <div class="bio">
       <p>Hi! I’m Isabela, an Event Management major at the University of Central Florida. I’m passionate about creating meaningful, well-organized experiences that leave a lasting impact on others. With years of experience in guest service and event logistics—including work at Walt Disney World and UCF’s Rosen College Career Fair—I’ve developed strong skills in communication, operations, and problem-solving.</p>
 
       <p>I take pride in staying calm under pressure, focusing on the details, and supporting teams behind the scenes. I’m fluent in both English and Spanish, and I thrive in roles where I can combine empathy, planning, and creativity to bring ideas to life and make people feel genuinely cared for.</p>
@@ -111,10 +104,11 @@
       <p>Outside of work, I enjoy reading, watching movies, running, and spending time with my loved ones. I also rescue and foster abandoned cats—a passion that keeps me grounded and reminds me why I love helping others.</p>
     </div>
 
-    <div class="photo-stack">
-      <img src="images/about1.jpg" alt="Isa photo 1">
-      <img src="images/about2.jpg" alt="Isa photo 2">
-      <img src="images/about3.jpg" alt="Isa photo 3">
+    <div class="polaroid-group">
+      <img src="images/about1.jpg" alt="Isa 1" class="polaroid">
+      <img src="images/about2.jpg" alt="Isa 2" class="polaroid">
+      <img src="images/about3.jpg" alt="Isa 3" class="polaroid">
+      <img src="images/about4.jpg" alt="Isa 4" class="polaroid">
     </div>
   </main>
 </body>

@@ -43,31 +43,36 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
+    }
+
+    .deliverable-preview {
+      margin-bottom: 2.5rem;
       text-align: center;
     }
 
-    main p {
-      font-family: 'Nunito', sans-serif;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+    .deliverable-preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
     }
 
     .deliverable-button {
-      display: block;
-      margin: 1rem auto;
-      padding: 0.6rem 1.4rem;
-      font-family: 'Comfortaa', sans-serif;
       background-color: var(--baby-pink);
-      border: none;
-      border-radius: 25px;
       color: var(--charcoal-gray);
-      font-size: 1rem;
+      font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      display: inline-block;
       transition: background-color 0.3s ease;
-      width: fit-content;
     }
 
     .deliverable-button:hover {
@@ -87,17 +92,52 @@
   </nav>
 
   <main>
-    <p>Click below to view or download the individual documents used in planning the Rosen College Career Fair:</p>
+    <!-- Floor Plan -->
+    <div class="deliverable-preview">
+      <img src="images/floorplan-preview.jpg" alt="Floor Plan Preview">
+      <a href="documents/floorplan.zip" download class="deliverable-button">📐 Floor Plan (Map + Booths)</a>
+    </div>
 
-<a href="documents/floorplan.zip" download class="deliverable-button">📐 Floor Plan (Map + Booths)</a>
-<a href="documents/budget.zip" download class="deliverable-button">💰 Budget</a>
-<a href="documents/risk-plan.zip" download class="deliverable-button">⚠️ Risk & Crisis Management Plan</a>
-<a href="documents/signage-plan.zip" download class="deliverable-button">📋 Signage Plan</a>
-<a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
-<a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
-<a href="documents/employer-escort-script.zip" download class="deliverable-button">📜 Employer Escort Volunteer Script</a>
-<a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Career Fair Files</a>
+    <!-- Budget -->
+    <div class="deliverable-preview">
+      <img src="images/budget-preview.jpg" alt="Budget Preview">
+      <a href="documents/budget.zip" download class="deliverable-button">💰 Budget</a>
+    </div>
 
+    <!-- Risk & Crisis Management -->
+    <div class="deliverable-preview">
+      <img src="images/risk-plan-preview.jpg" alt="Risk Plan Preview">
+      <a href="documents/risk-plan.zip" download class="deliverable-button">⚠️ Risk & Crisis Management Plan</a>
+    </div>
+
+    <!-- Signage Plan -->
+    <div class="deliverable-preview">
+      <img src="images/signage-preview.jpg" alt="Signage Plan Preview">
+      <a href="documents/signage-plan.zip" download class="deliverable-button">📋 Signage Plan</a>
+    </div>
+
+    <!-- Parking Plan -->
+    <div class="deliverable-preview">
+      <img src="images/parking-plan-preview.jpg" alt="Parking Plan Preview">
+      <a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
+    </div>
+
+    <!-- Production Schedule -->
+    <div class="deliverable-preview">
+      <img src="images/production-preview.jpg" alt="Production Schedule Preview">
+      <a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
+    </div>
+
+    <!-- Employer Escort Script -->
+    <div class="deliverable-preview">
+      <img src="images/escort-preview.jpg" alt="Escort Script Preview">
+      <a href="documents/employer-escort-script.zip" download class="deliverable-button">📜 Employer Escort Volunteer Script</a>
+    </div>
+
+    <!-- All Files -->
+    <div class="deliverable-preview">
+      <a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Career Fair Files</a>
+    </div>
   </main>
 </body>
 </html>

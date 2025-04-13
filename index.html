@@ -22,30 +22,31 @@
     }
 
     .banner {
-  width: 100%;
-  background: linear-gradient(90deg,     
-    #FF6B81,
-    #FFC1CC,    
-    #eddcd5,
-    #eddcd5,
-    #FFC1CC,
-    #FF6B81
-    );
-  padding: 2rem 1rem;
-  text-align: center;
-}
+      width: 100%;
+      background: linear-gradient(90deg,     
+        #FF6B81,
+        #FFC1CC,    
+        #eddcd5,
+        #eddcd5,
+        #FFC1CC,
+        #FF6B81
+      );
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red, #FF6B81);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08); /* soft drop shadow */
     }
 
     .traits {
       font-family: 'Josefin Sans', sans-serif;
       color: #6bb0e2;
-      font-size: 1.1rem;
+      font-size: 0.95rem; /* slightly smaller */
       letter-spacing: 2px;
       margin-top: 0.5rem;
     }
@@ -162,13 +163,13 @@
 
   <!-- Welcome Section -->
   <section class="intro-section">
-    <div class="intro-text" data-aos="fade-right">
+    <div class="intro-text" data-aos="fade-right" data-aos-offset="200">
       <h2 class="welcome-title">Welcome</h2>
       <p class="intro-paragraph">
         Hi! I’m Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life through thoughtful planning and logistics. Take a look around to explore my work and what I’ve been building behind the scenes!
       </p>
     </div>
-    <div class="intro-image" data-aos="fade-left">
+    <div class="intro-image" data-aos="fade-left" data-aos-offset="200">
       <div class="home-photo">
         <img src="images/profile.jpg" alt="Isa Profile Photo">
       </div>

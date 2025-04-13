@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isabela Irizarry | Deliverables</title>
+  <title>Deliverables</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -16,7 +16,7 @@
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: var(--strawberry-red);
       margin: 0;
     }
@@ -44,22 +44,17 @@
 
     main {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 3rem auto;
       padding: 0 1rem;
-    }
-
-    h2 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 2rem;
-      margin-top: 2.5rem;
     }
 
     .card {
       background-color: #ffeef2;
       padding: 1.5rem;
       border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .card h3 {
@@ -68,7 +63,30 @@
       margin-bottom: 0.5rem;
     }
 
-    .card a {
+    .card p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+    }
+
+    .rfp-card-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .rfp-card-img:hover {
+      transform: scale(1.03);
+    }
+
+    .download-button,
+    .deliverable-button {
       display: inline-block;
       margin: 0.25rem;
       background-color: var(--baby-pink);
@@ -77,61 +95,14 @@
       text-decoration: none;
       color: var(--charcoal-gray);
       font-family: 'Comfortaa', sans-serif;
+      transition: background-color 0.3s ease;
     }
 
-    .card a:hover {
+    .download-button:hover,
+    .deliverable-button:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
-
-    .slideshow {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      border-radius: 15px;
-      margin-top: 1rem;
-    }
-
-    .slide {
-      display: none;
-      width: 100%;
-    }
-
-    .slide img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: 2px solid #ffc1cc;
-      padding: 5px;
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .download-buttons {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .download-buttons a {
-      margin: 0.5rem;
-    }
-    .rfp-preview {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #ffc1cc;
-  padding: 5px;
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-top: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.rfp-preview:hover {
-  transform: scale(1.03);
-}
   </style>
 </head>
 <body class="blue">
@@ -145,49 +116,31 @@
     <a href="resume.html">Resume</a>
     <a href="achievements.html">Achievements</a>
     <a href="deliverables.html">Deliverables</a>
-    <a href="contact.html">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
+    <a href="contact.html">Contact Me</a>
   </nav>
-  
+
   <main>
-    <h2>🤝 Team Work</h2>
+    <!-- RFP Response Card with Preview -->
     <div class="card" style="text-align: center;">
-  <h3>RFP Response</h3>
-  <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
-  <div style="margin-top: 1rem;">
-    <img src="images/rfp-preview.jpg" alt="RFP Preview" class="rfp-preview">
-    <br>
-    <a href="documents/rfp-response.zip" download class="download-button">Download RFP</a>
-  </div>
-</div>
-
-    <div class="card">
-  <h3>Rosen College Career Fair</h3>
-  <p>As Operations & Exhibition Services Lead, I oversaw event logistics, vendor layouts, signage, and day-of flow for a 500+ attendee event.</p>
-
-  <a href="career-fair.html" class="button-pink">📁 Career Fair Deliverables</a>
-  <a href="career-photos.html" class="button-pink">📸 Career Fair Photo Gallery</a>
-</div>
-
-    <h2>🎨 Creative Projects</h2>
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>This website was designed and coded entirely by me using HTML and CSS. From layout to color palette, every element reflects my personal aesthetic and attention to detail — showing not only my creativity, but also my ability to structure and manage an entire digital project from the ground up.</p>
+      <h3>RFP Response</h3>
+      <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
+      <div style="margin-top: 1rem;">
+        <img src="images/rfp-preview.jpg" alt="RFP Preview" class="rfp-card-img">
+        <br>
+        <a href="documents/rfp-response.zip" download class="deliverable-button">Download RFP</a>
+      </div>
     </div>
+
+    <!-- Career Fair Card with Two Gallery Buttons -->
+    <div class="card">
+      <h3>Rosen College Career Fair</h3>
+      <p>As Operations & Exhibition Services Lead, I helped plan, organize, and execute this large-scale event — from layouts to signage to day-of logistics.</p>
+      <a href="career-fair.html" class="deliverable-button">📁 Career Fair Deliverables</a>
+      <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
+    </div>
+
+    <!-- Optional: Add More Cards Here -->
   </main>
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
-
-  function showSlides() {
-    slides.forEach(slide => slide.style.display = "none");
-    slideIndex++;
-    if (slideIndex > slides.length) slideIndex = 1;
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change every 4 seconds
-  }
-
-  showSlides();
-</script>
 </body>
 </html>

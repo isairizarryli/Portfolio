@@ -116,6 +116,22 @@
     .download-buttons a {
       margin: 0.5rem;
     }
+    .rfp-preview {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ffc1cc;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.rfp-preview:hover {
+  transform: scale(1.03);
+}
   </style>
 </head>
 <body class="blue">
@@ -138,8 +154,10 @@
     <div class="card">
   <h3>RFP Response</h3>
   <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
-  <a href="documents/rfp-response.zip" download class="button-pink">Download RFP</a>
+  <img src="images/rfp-preview.jpg" alt="RFP Preview" class="rfp-preview">
+  <a href="documents/rfp-response.zip" download class="download-button">Download RFP</a>
 </div>
+
     <div class="card">
   <h3>Rosen College Career Fair</h3>
   <p>As Operations & Exhibition Services Lead, I oversaw event logistics, vendor layouts, signage, and day-of flow for a 500+ attendee event.</p>

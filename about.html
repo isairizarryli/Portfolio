@@ -3,22 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
+  <title>About Me | Isabela Irizarry</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --peach-cream: #FFF1E6;
+      --peach-pink: #fad0c1;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #a9ceeb;
+      --soft-blue: #6bb0e2;
+      --charcoal-gray: #4A4A4A;
+    }
+
+    body {
+      background-color: var(--cream);
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg,     
+        var(--strawberry-red),
+        var(--baby-pink),    
+        var(--peach-cream),
+        var(--peach-cream),
+        var(--baby-pink),
+        var(--strawberry-red)
+      );
       padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
@@ -31,7 +62,7 @@
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
@@ -42,98 +73,98 @@
       color: white;
     }
 
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      font-family: 'Nunito', sans-serif;
+    .section {
+      padding: 4rem 10%;
+    }
+
+    .section h2 {
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.5em;
+      color: var(--strawberry-red);
+      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
+      display: inline;
+      padding: 0 5px;
+    }
+
+    .section p {
+      font-size: 1.1em;
       color: var(--charcoal-gray);
-    }
-
-    h2 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: var(--charcoal-gray);
-    }
-
-    .bio-section {
-      margin-bottom: 3rem;
-    }
-
-    .bio-section p {
-      font-size: 1.05rem;
       line-height: 1.6;
-      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
 
-    .polaroid-group {
+    .photo-gallery {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1rem;
-      margin: 2rem 0;
+      margin-top: 2rem;
     }
 
-    .polaroid {
-      width: 140px;
-      border: 5px solid white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+    .photo-gallery img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      border: 2px solid var(--baby-pink);
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
-    .polaroid:nth-child(1) { transform: rotate(-5deg); }
-    .polaroid:nth-child(2) { transform: rotate(4deg); }
-    .polaroid:nth-child(3) { transform: rotate(-3deg); }
-    .polaroid:nth-child(4) { transform: rotate(5deg); }
+    .photo-gallery .photo {
+      flex: 1 1 30%;
+    }
 
-    .polaroid:hover {
-      transform: scale(1.05) rotate(0deg);
+    @media screen and (max-width: 768px) {
+      .photo-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
-<body class="blue">
+<body>
+  <!-- Banner -->
   <div class="banner">
     <h1>About Me</h1>
   </div>
 
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="resume.html">Resume</a>
     <a href="achievements.html">Achievements</a>
     <a href="deliverables.html">Deliverables</a>
-    <a href="thankyou.html">Thank You</a>
     <a href="contact.html">Contact Me</a>
+    <a href="thankyou.html">Thank You</a>
   </nav>
 
-  <main>
-    <!-- Professional Background -->
+  <!-- Professional Background -->
+  <section class="section" data-aos="fade-up" data-aos-delay="0">
     <h2>Professional Background</h2>
-    <div class="bio-section">
-      <p>I am an Event Management major at the University of Central Florida with a strong focus on planning, logistics, and operations. I enjoy figuring out how all the moving parts of an event can fit together to create a seamless and memorable experience. I thrive in environments where I can bring structure to complexity—aligning people, resources, and timing to make big ideas feel effortless.</p>
+    <p>I am an Event Management student at UCF with a passion for organizing impactful, well-coordinated events. My background includes roles at Walt Disney World, Kaplan, and UCF Rosen College, where I honed my skills in logistics, guest services, and event operations.</p>
+    <p>My certifications in event operations, food & beverage strategy, and business support complement my hands-on experience, giving me a well-rounded perspective in planning and executing diverse events.</p>
+  </section>
 
-      <p>My professional background includes several guest-facing and leadership roles at Walt Disney World, as well as serving as the Operations & Exhibition Services Lead for UCF’s Rosen College Career Fair. In that role, I managed logistical operations for a 500+ attendee event, coordinating floor plans, signage, vendor load-in/load-out, and risk management. I also collaborated cross-functionally to oversee registration, parking, guest experience, and on-site problem-solving. Across all of my roles, I’ve become known as someone who stays calm under pressure and steps in as a dependable team lead when it matters most.</p>
-
-      <p>I’m especially proud of maintaining strong academic performance—earning Dean’s and President’s List honors—while working full-time. This balance reflects how seriously I take my commitments and how motivated I am to grow. I approach every project with empathy, organization, and initiative, and I’m always looking for new ways to contribute meaningfully while supporting those around me.</p>
-    </div>
-
-    <!-- Personal Section -->
+  <!-- A Little About Me -->
+  <section class="section" data-aos="fade-up" data-aos-offset="200">
     <h2>A Little About Me</h2>
-    <div class="bio-section">
-      <p>When I’m not working, I enjoy slow moments—movies, theme park strolls, books, and quality time with my family. I’m also passionate about animal rescue—specifically fostering abandoned kittens. What started as a spontaneous act of care quickly became a personal mission I’ve embraced wholeheartedly.</p>
+    <p>I’m a detail-oriented, bilingual creative who thrives in environments that value empathy, teamwork, and a strong vision. I love bringing people together and creating memorable experiences.</p>
+    <p>When I’m not planning events, you can find me enjoying games like Dragon City, exploring new ideas, or curating playlists to match every mood and moment.</p>
 
-      <p>Rescuing vulnerable animals has taught me patience, perspective, and the importance of showing up when it matters most. Whether I’m caring for a newborn kitten or supporting a team during a fast-paced event, I bring that same empathy, energy, and follow-through to everything I do.</p>
+    <!-- Staggered Gallery -->
+    <div class="photo-gallery">
+      <div class="photo" data-aos="fade-up" data-aos-delay="200"><img src="images/photo1.jpg" alt="Isa gallery 1"></div>
+      <div class="photo" data-aos="fade-up" data-aos-delay="400"><img src="images/photo2.jpg" alt="Isa gallery 2"></div>
+      <div class="photo" data-aos="fade-up" data-aos-delay="600"><img src="images/photo3.jpg" alt="Isa gallery 3"></div>
     </div>
+  </section>
 
-    <!-- Optional: Polaroid Photo Group -->
-    <div class="polaroid-group">
-      <img src="images/about1.jpg" alt="Isa 1" class="polaroid">
-      <img src="images/about2.jpg" alt="Isa 2" class="polaroid">
-      <img src="images/about3.jpg" alt="Isa 3" class="polaroid">
-      <img src="images/about4.jpg" alt="Isa 4" class="polaroid">
-    </div>
-  </main>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
 </body>
 </html>

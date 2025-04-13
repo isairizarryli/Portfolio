@@ -8,28 +8,37 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
 
-  <!-- AOS Animation Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Your Main Styles -->
+  <!-- External Stylesheet (optional) -->
   <link rel="stylesheet" href="style.css">
 
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --peach-cream: #FFF1E6;
+      --peach-pink: #fad0c1;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #a9ceeb;
+      --soft-blue: #6bb0e2;
+      --charcoal-gray: #4A4A4A;
+    }
+
     body {
-      background-color: #FFF5E1; /* Cream */
+      background-color: var(--cream);
       margin: 0;
       font-family: 'Nunito', sans-serif;
     }
 
+    /* ========== Banner ========== */
     .banner {
       width: 100%;
       background: linear-gradient(90deg,     
-        #FF6B81,
-        #FFC1CC,    
+        var(--strawberry-red),
+        var(--baby-pink),    
         #eddcd5,
         #eddcd5,
-        #FFC1CC,
-        #FF6B81
+        var(--baby-pink),
+        var(--strawberry-red)
       );
       padding: 2rem 1rem;
       text-align: center;
@@ -38,19 +47,20 @@
     .banner h1 {
       font-family: 'Baloo 2', cursive;
       font-size: 4rem;
-      color: var(--strawberry-red, #FF6B81);
+      color: var(--strawberry-red);
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08); /* soft drop shadow */
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     .traits {
       font-family: 'Josefin Sans', sans-serif;
-      color: #6bb0e2;
-      font-size: 0.95rem; /* slightly smaller */
+      color: var(--soft-blue);
+      font-size: 0.95rem;
       letter-spacing: 2px;
       margin-top: 0.5rem;
     }
 
+    /* ========== Navigation ========== */
     nav {
       text-align: center;
       margin-top: 1rem;
@@ -60,44 +70,48 @@
       margin: 0 1rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
-      color: var(--charcoal-gray, #4A4A4A);
-      background-color: var(--powder-blue, #BFDFFB);
+      color: var(--charcoal-gray);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
     }
 
     nav a:hover {
-      background-color: var(--strawberry-red, #FF6B81);
+      background-color: var(--strawberry-red);
       color: white;
     }
 
+    /* ========== Intro Section ========== */
     .intro-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 4rem 10%;
-      background-color: #FFF5E1;
+      background-color: var(--cream);
     }
 
     .intro-text {
       flex: 1;
       max-width: 50%;
+      opacity: 0;
+      animation: fadeInRight 1s ease-out forwards;
+      animation-delay: 0.3s;
     }
 
     .welcome-title {
       font-family: 'Comfortaa', cursive;
       font-size: 3em;
-      color: #FF6B81; /* Strawberry Red */
-      background: linear-gradient(to top, #BFDFFB 40%, transparent 40%);
+      color: var(--strawberry-red);
+      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
       display: inline;
       padding: 0 5px;
     }
 
     .intro-paragraph {
       font-size: 1.2em;
-      color: #4A4A4A;
+      color: var(--charcoal-gray);
       margin-top: 20px;
       line-height: 1.6;
     }
@@ -106,9 +120,12 @@
       flex: 1;
       max-width: 40%;
       text-align: right;
+      opacity: 0;
+      animation: fadeInLeft 1s ease-out forwards;
+      animation-delay: 1s;
     }
 
-    .intro-image .home-photo {
+    .home-photo {
       background-color: #ffeef2;
       padding: 1rem;
       border-radius: 15px;
@@ -116,14 +133,37 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
-    .intro-image img {
+    .home-photo img {
       max-width: 100%;
       height: auto;
       border-radius: 12px;
-      border: 2px solid #ffc1cc;
+      border: 2px solid var(--baby-pink);
       padding: 5px;
       background-color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* ========== Animations ========== */
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @media screen and (max-width: 768px) {
@@ -138,6 +178,7 @@
 
       .intro-image {
         margin-top: 2rem;
+        text-align: center;
       }
     }
   </style>
@@ -163,26 +204,17 @@
 
   <!-- Welcome Section -->
   <section class="intro-section">
-  <div class="intro-text" data-aos="fade-right" data-aos-delay="0">
-    <h2 class="welcome-title">Welcome</h2>
-    <p class="intro-paragraph">
-      Hi! I’m Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life through thoughtful planning and logistics. Take a look around to explore my work and what I’ve been building behind the scenes!
-    </p>
-  </div>
-  <div class="intro-image" data-aos="fade-left" data-aos-delay="400">
-    <div class="home-photo">
-      <img src="images/profile.jpg" alt="Isa Profile Photo">
+    <div class="intro-text">
+      <h2 class="welcome-title">Welcome</h2>
+      <p class="intro-paragraph">
+        Hi! I’m Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life through thoughtful planning and logistics. Take a look around to explore my work and what I’ve been building behind the scenes!
+      </p>
     </div>
-  </div>
-</section>
-
-  <!-- AOS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  </script>
+    <div class="intro-image">
+      <div class="home-photo">
+        <img src="images/profile.jpg" alt="Isa Profile Photo">
+      </div>
+    </div>
+  </section>
 </body>
 </html>

@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Isa Irizarry Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isabela Irizarry | Home</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
 
-  <!-- AOS for Scroll Animations -->
+  <!-- AOS Animation Library -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Your Main Styles -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
     body {
+      background-color: #FFF5E1; /* Cream */
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background-color: #FFEFDB; /* Peach Cream */
+    }
+
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 3rem;
+      color: var(--strawberry-red, #FF6B81);
+      margin: 0;
+    }
+
+    .traits {
+      font-family: 'Josefin Sans', sans-serif;
+      color: #6bb0e2;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray, #4A4A4A);
+      background-color: var(--baby-pink, #FFC1CC);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--strawberry-red, #FF6B81);
+      color: white;
     }
 
     .intro-section {
@@ -24,7 +69,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding: 60px 10%;
+      padding: 4rem 10%;
+      background-color: #FFF5E1;
     }
 
     .intro-text {
@@ -43,7 +89,7 @@
 
     .intro-paragraph {
       font-size: 1.2em;
-      color: #4A4A4A; /* Charcoal Gray */
+      color: #4A4A4A;
       margin-top: 20px;
       line-height: 1.6;
     }
@@ -54,11 +100,22 @@
       text-align: right;
     }
 
+    .intro-image .home-photo {
+      background-color: #ffeef2;
+      padding: 1rem;
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
     .intro-image img {
-      max-width: 300px;
-      border-radius: 20px;
-      border: 4px solid #FFC1CC; /* Baby Pink border */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     @media screen and (max-width: 768px) {
@@ -67,33 +124,51 @@
         text-align: center;
       }
 
-      .intro-text,
-      .intro-image {
+      .intro-text, .intro-image {
         max-width: 100%;
       }
 
       .intro-image {
-        margin-top: 30px;
+        margin-top: 2rem;
       }
     }
   </style>
 </head>
 
 <body>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Isabela Irizarry</h1>
+    <div class="traits">INTELLECTUAL • ADVOCATE • CAREGIVER</div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="deliverables.html">Deliverables</a>
+    <a href="contact.html">Contact Me</a>
+    <a href="thankyou.html">Thank You</a>
+  </nav>
+
+  <!-- Welcome Section -->
   <section class="intro-section">
     <div class="intro-text" data-aos="fade-right">
-      <h1 class="welcome-title">Welcome</h1>
+      <h2 class="welcome-title">Welcome</h2>
       <p class="intro-paragraph">
-        Hi! I'm Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life.
-        Take a look around to explore my work and what I've been building behind the scenes!
+        Hi! I’m Isabela — a creative, detail-driven Event Management student at UCF who loves bringing ideas to life through thoughtful planning and logistics. Take a look around to explore my work and what I’ve been building behind the scenes!
       </p>
     </div>
     <div class="intro-image" data-aos="fade-left">
-      <img src="images/profile.jpg" alt="Isa Profile Photo">
+      <div class="home-photo">
+        <img src="images/profile.jpg" alt="Isa Profile Photo">
+      </div>
     </div>
   </section>
 
-  <!-- AOS Script -->
+  <!-- AOS Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({

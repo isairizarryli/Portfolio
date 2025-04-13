@@ -76,6 +76,23 @@
       font-family: 'Nunito', sans-serif;
       font-size: 1rem;
     }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .responsive {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #ffc1cc;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
   </style>
 </head>
 <body class="blue">
@@ -97,7 +114,7 @@
     <h2 class="section-title">🎓 Educational Achievements</h2>
     <div class="card">
       <ul>
-        <li>Bachelor’s Degree in Event Management (December 2025)</li>
+        <li>Bachelor’s Degree in Event Management (May 2025)</li>
         <li>Dean’s List</li>
         <li>President’s List</li>
         <li>National Honor Society</li>
@@ -105,14 +122,14 @@
     </div>
 
     <h2 class="section-title">📜 Certifications</h2>
-    <div class="card">
-      <ul>
-        <li>Operations Support & Specialist Certification</li>
-        <li>Business Support & Specialist Certification</li>
-      </ul>
+    <div class="photo-grid">
+      <img src="images/cert1.jpg" alt="Certification 1" class="responsive">
+      <img src="images/cert2.jpg" alt="Certification 2" class="responsive">
+      <img src="images/cert3.jpg" alt="Certification 3" class="responsive">
+      <img src="images/cert4.jpg" alt="Certification 4" class="responsive">
     </div>
 
-    <h2 class="section-title">📝 Letters of Recommendation</h2>
+    <h2 class="section-title">📨 Letters of Recommendation</h2>
     <div class="card">
       <h3>Coming Soon</h3>
       <p>This section will feature letters of recommendation highlighting my work ethic, leadership, and collaboration. Check back soon!</p>

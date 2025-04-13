@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Achievements</title>
+  <title>Isabela Irizarry | Achievements</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg, #FFC1CC, #FFF5E1, #FFFAFA, #FF6B81, #BFDFFB);
       padding: 2rem 1rem;
       text-align: center;
     }
@@ -44,47 +44,34 @@
 
     main {
       max-width: 1000px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
-      font-family: 'Nunito', sans-serif;
-      color: var(--charcoal-gray);
     }
 
-    h2.section-title {
+    h2 {
       font-family: 'Baloo 2', cursive;
       font-size: 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
+      margin-top: 2.5rem;
     }
 
-    .card {
-      background-color: #ffeef2;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .card h3 {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
+    ul {
       font-family: 'Nunito', sans-serif;
       font-size: 1rem;
+      margin-left: 1.5rem;
     }
 
-    .photo-grid {
+    .cert-image-grid {
+      background-color: #ffeef2;
+      border-radius: 15px;
+      padding: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
-      margin-top: 1rem;
     }
 
-    .responsive {
+    .cert-image-grid img {
       width: 100%;
       height: auto;
       border-radius: 12px;
@@ -92,6 +79,20 @@
       padding: 5px;
       background-color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .recommendations {
+      background-color: #ffeef2;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .recommendations p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -111,29 +112,36 @@
   </nav>
 
   <main>
-    <h2 class="section-title">🎓 Educational Achievements</h2>
-    <div class="card">
+    <section>
+      <h2>🎓 Educational Achievements</h2>
       <ul>
-        <li>Bachelor’s Degree in Event Management (May 2025)</li>
+        <li>Bachelor of Science in Event Management (Expected May 2025)</li>
         <li>Dean’s List</li>
         <li>President’s List</li>
         <li>National Honor Society</li>
       </ul>
-    </div>
+    </section>
 
-    <h2 class="section-title">📜 Certifications</h2>
-    <div class="photo-grid">
-      <img src="images/cert1.jpg" alt="Certification 1" class="responsive">
-      <img src="images/cert2.jpg" alt="Certification 2" class="responsive">
-      <img src="images/cert3.jpg" alt="Certification 3" class="responsive">
-      <img src="images/cert4.jpg" alt="Certification 4" class="responsive">
-    </div>
+    <section>
+      <h2>📜 Certifications</h2>
+      <ul>
+        <li>Operations Support & Specialist</li>
+        <li>Business Support & Specialist</li>
+      </ul>
 
-    <h2 class="section-title">📨 Letters of Recommendation</h2>
-    <div class="card">
-      <h3>Coming Soon</h3>
-      <p>This section will feature letters of recommendation highlighting my work ethic, leadership, and collaboration. Check back soon!</p>
-    </div>
+      <div class="cert-image-grid">
+        <img src="images/cert1.jpg" alt="Certification 1">
+        <img src="images/cert2.jpg" alt="Certification 2">
+        <img src="images/cert3.jpg" alt="Certification 3">
+        <img src="images/cert4.jpg" alt="Certification 4">
+      </div>
+    </section>
+
+    <section>
+      <h2>📝 Letters of Recommendation</h2>
+      <p><strong>(Coming Soon)</strong></p>
+      <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
+    </section>
   </main>
 </body>
 </html>

@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deliverables</title>
+  <title>Isabela Irizarry | Deliverables</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --cotton-white: #FFFAFA;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #BFDFFB;
+      --charcoal-gray: #4A4A4A;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--cotton-white);
+    }
+
     .banner {
       width: 100%;
       background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
@@ -16,25 +31,27 @@
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 2.8rem;
+      font-size: 3rem;
       color: var(--strawberry-red);
       margin: 0;
     }
 
     nav {
       text-align: center;
-      margin-top: 1rem;
+      background-color: var(--cream);
+      padding: 1rem;
+      border-bottom: 2px solid var(--baby-pink);
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 0.75rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
       background-color: var(--baby-pink);
       padding: 0.5rem 1rem;
       border-radius: 25px;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
@@ -50,53 +67,60 @@
 
     h2.section-title {
       font-family: 'Baloo 2', cursive;
-      font-size: 2rem;
+      font-size: 2.2rem;
       text-align: center;
       color: var(--charcoal-gray);
       margin-bottom: 2rem;
     }
 
     .card {
-      background-color: #ffeef2;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      text-align: center;
+      background-color: var(--baby-pink);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
       margin-bottom: 2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
     }
 
     .card h3 {
       font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      color: var(--charcoal-gray);
     }
 
     .card p {
       font-family: 'Nunito', sans-serif;
       font-size: 1rem;
+      line-height: 1.6;
+      color: var(--charcoal-gray);
     }
 
-    .download-button,
     .deliverable-button {
       display: inline-block;
-      margin: 0.25rem;
-      background-color: var(--baby-pink);
-      padding: 0.4rem 0.75rem;
-      border-radius: 20px;
+      margin: 0.5rem;
+      background-color: var(--powder-blue);
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
       text-decoration: none;
       color: var(--charcoal-gray);
       font-family: 'Comfortaa', sans-serif;
+      font-weight: bold;
       transition: background-color 0.3s ease;
     }
 
-    .download-button:hover,
     .deliverable-button:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
   </style>
 </head>
-<body class="blue">
+<body>
   <div class="banner">
     <h1>Deliverables</h1>
   </div>
@@ -113,16 +137,14 @@
 
   <main>
     <!-- Team Work Section -->
-    <h2 class="section-title">🤝 Team Work</h2>
+    <h2 class="section-title">Team Work</h2>
 
-    <!-- RFP Response -->
     <div class="card">
       <h3>RFP Response</h3>
       <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
       <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
     </div>
 
-    <!-- Career Fair -->
     <div class="card">
       <h3>Rosen College Career Fair</h3>
       <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
@@ -131,7 +153,7 @@
     </div>
 
     <!-- Creative Projects Section -->
-    <h2 class="section-title">🎨 Creative Projects</h2>
+    <h2 class="section-title">Creative Projects</h2>
 
     <div class="card">
       <h3>My Portfolio Website</h3>

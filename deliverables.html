@@ -11,10 +11,8 @@
       --baby-pink: #FFC1CC;
       --cream: #FFF5E1;
       --peach-cream: #FFF1E6;
-      --peach-pink: #fad0c1;
       --strawberry-red: #FF6B81;
       --powder-blue: #a9ceeb;
-      --soft-blue: #6bb0e2;
       --charcoal-gray: #4A4A4A;
     }
 
@@ -81,41 +79,26 @@
       background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
       display: inline;
       padding: 0 5px;
-      margin-bottom: 2rem;
     }
 
-    .card {
-      background-color: var(--cream);
-      border: 2px solid var(--baby-pink);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 2rem;
-      transition: transform 0.2s ease;
+    .section-content {
+      background-color: #ffeef2;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
-    .card:hover {
-      transform: scale(1.01);
-    }
-
-    .card h3 {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-      color: var(--charcoal-gray);
-    }
-
-    .card p {
-      font-family: 'Nunito', sans-serif;
+    .section-content p {
       font-size: 1rem;
-      line-height: 1.6;
+      font-family: 'Nunito', sans-serif;
       color: var(--charcoal-gray);
+      margin-bottom: 1rem;
     }
 
     .deliverable-button {
       display: inline-block;
-      margin: 0.5rem;
+      margin: 0.5rem 0.5rem 0 0;
       background-color: var(--baby-pink);
       padding: 0.6rem 1.2rem;
       border-radius: 25px;
@@ -165,19 +148,11 @@
     <!-- Team Work Section -->
     <section class="stagger-section">
       <h2 class="section-title">Team Work</h2>
-      .section-title {
-  margin-bottom: 1.5rem; /* You can increase this to 2rem or more for more space */
-}
-      
-      <div class="card">
-        <h3>RFP Response</h3>
-        <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
+      <div class="section-content">
+        <p><strong>RFP Response:</strong> A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
         <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
-      </div>
 
-      <div class="card">
-        <h3>Rosen College Career Fair</h3>
-        <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
+        <p><strong>Rosen College Career Fair:</strong> In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
         <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
         <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
       </div>
@@ -186,13 +161,8 @@
     <!-- Creative Projects Section -->
     <section class="stagger-section">
       <h2 class="section-title">Creative Projects</h2>
-      .section-title {
-  margin-bottom: 1.5rem; /* You can increase this to 2rem or more for more space */
-}
-
-      <div class="card">
-        <h3>My Portfolio Website</h3>
-        <p>💻 This website was hand-coded from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
+      <div class="section-content">
+        <p><strong>My Portfolio Website:</strong> 💻 This website was hand-coded from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
       </div>
     </section>
   </main>

@@ -8,10 +8,6 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
 
-  <!-- AOS Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
   <style>
     :root {
       --baby-pink: #FFC1CC;
@@ -32,14 +28,7 @@
 
     .banner {
       width: 100%;
-      background: linear-gradient(90deg,     
-        var(--strawberry-red),
-        var(--baby-pink),    
-        var(--peach-cream),
-        var(--peach-cream),
-        var(--baby-pink),
-        var(--strawberry-red)
-      );
+      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--peach-cream), var(--peach-cream), var(--baby-pink), var(--strawberry-red));
       padding: 2rem 1rem;
       text-align: center;
     }
@@ -58,7 +47,7 @@
       justify-content: center;
       gap: 0.5rem;
       padding: 1rem;
-      background-color: rgba(255, 245, 225, 0.9); /* semi-transparent cream */
+      background-color: rgba(255, 245, 225, 0.9);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -106,6 +95,8 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 2.4s forwards;
     }
 
     .photo-gallery img {
@@ -120,6 +111,16 @@
 
     .photo-gallery .photo {
       flex: 1 1 30%;
+    }
+
+    .about-me-section {
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @media screen and (max-width: 768px) {
@@ -148,7 +149,7 @@
   </nav>
 
   <!-- Professional Background -->
-  <section class="section" data-aos="fade-up" data-aos-delay="0">
+  <section class="section">
     <h2>Professional Background</h2>
     <p>I am an Event Management major at the University of Central Florida with a strong focus on planning, logistics, and operations. I enjoy figuring out how all the moving parts of an event can fit together to create a seamless and memorable experience. I thrive in environments where I can bring structure to complexity—aligning people, resources, and timing to make big ideas feel effortless.</p>
     <p>My professional background includes several guest-facing and leadership roles at Walt Disney World, as well as serving as the Operations & Exhibition Services Lead for UCF’s Rosen College Career Fair. In that role, I managed logistical operations for a 500+ attendee event, coordinating floor plans, signage, vendor load-in/load-out, and risk management. I also collaborated cross-functionally to oversee registration, parking, guest experience, and on-site problem-solving. Across all of my roles, I’ve become known as someone who stays calm under pressure and steps in as a dependable team lead when it matters most.</p>
@@ -156,24 +157,17 @@
   </section>
 
   <!-- A Little About Me -->
-  <section class="section" data-aos="fade-up" data-aos-offset="200">
+  <section class="section about-me-section">
     <h2>A Little About Me</h2>
     <p>When I’m not working, I enjoy slow moments—movies, theme park strolls, books, and quality time with my family. I’m also passionate about animal rescue—specifically fostering abandoned kittens. What started as a spontaneous act of care quickly became a personal mission I’ve embraced wholeheartedly.</p>
     <p>Rescuing vulnerable animals has taught me patience, perspective, and the importance of showing up when it matters most. Whether I’m caring for a newborn kitten or supporting a team during a fast-paced event, I bring that same empathy, energy, and follow-through to everything I do.</p>
 
     <!-- Staggered Gallery -->
     <div class="photo-gallery">
-      <div class="photo" data-aos="fade-up" data-aos-delay="200"><img src="images/photo1.jpg" alt="Isa gallery 1"></div>
-      <div class="photo" data-aos="fade-up" data-aos-delay="400"><img src="images/photo2.jpg" alt="Isa gallery 2"></div>
-      <div class="photo" data-aos="fade-up" data-aos-delay="600"><img src="images/photo3.jpg" alt="Isa gallery 3"></div>
+      <div class="photo"><img src="images/photo1.jpg" alt="Isa gallery 1"></div>
+      <div class="photo"><img src="images/photo2.jpg" alt="Isa gallery 2"></div>
+      <div class="photo"><img src="images/photo3.jpg" alt="Isa gallery 3"></div>
     </div>
   </section>
-
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
 </body>
 </html>

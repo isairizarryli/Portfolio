@@ -6,32 +6,58 @@
   <title>Isabela Irizarry | Achievements</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --peach-cream: #FFF1E6;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #a9ceeb;
+      --charcoal-gray: #4A4A4A;
+    }
+
+    body {
+      background-color: var(--cream);
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--peach-cream), var(--peach-cream), var(--baby-pink), var(--strawberry-red));
       padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: rgba(255, 245, 225, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      margin: 0 1rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
@@ -43,21 +69,50 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
     h2 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 2rem;
-      margin-top: 2.5rem;
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.5rem;
+      color: var(--strawberry-red);
+      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
+      display: inline;
+      padding: 0 5px;
     }
 
-    ul {
+    .timeline {
+      border-left: 4px solid var(--powder-blue);
+      padding-left: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item h4 {
+      font-size: 1.2rem;
+      color: var(--charcoal-gray);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item p {
+      margin: 0;
       font-family: 'Nunito', sans-serif;
-      font-size: 1rem;
-      margin-left: 1.5rem;
+    }
+
+    .split-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .split-column {
+      flex: 1 1 48%;
     }
 
     .cert-image-grid {
@@ -75,10 +130,15 @@
       width: 100%;
       height: auto;
       border-radius: 12px;
-      border: 2px solid #ffc1cc;
+      border: 2px solid var(--baby-pink);
       padding: 5px;
       background-color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .cert-image-grid img:hover {
+      transform: scale(1.03);
     }
 
     .recommendations {
@@ -87,16 +147,21 @@
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
-      margin-top: 1rem;
     }
 
     .recommendations p {
       font-family: 'Nunito', sans-serif;
       font-size: 1rem;
     }
+
+    @media screen and (max-width: 768px) {
+      .split-section {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
-<body class="blue">
+<body>
   <div class="banner">
     <h1>Achievements</h1>
   </div>
@@ -112,36 +177,56 @@
   </nav>
 
   <main>
-    <section>
+    <!-- Educational Achievements Timeline -->
+    <section data-aos="fade-up">
       <h2>🎓 Educational Achievements</h2>
-      <ul>
-        <li>Bachelor of Science in Event Management (December 2025)</li>
-        <li>Dean’s List</li>
-        <li>President’s List</li>
-        <li>National Honor Society</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📜 Certifications</h2>
-      <ul>
-        <li>Operations Support & Specialist</li>
-        <li>Business Support & Specialist</li>
-      </ul>
-
-      <div class="cert-image-grid">
-        <img src="images/cert1.jpg" alt="Certification 1">
-        <img src="images/cert2.jpg" alt="Certification 2">
-        <img src="images/cert3.jpg" alt="Certification 3">
-        <img src="images/cert4.jpg" alt="Certification 4">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Degree in Progress</h4>
+          <p>Bachelor of Science in Event Management (Expected Dec 2025)</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Academic Honors</h4>
+          <p>Dean’s List (Multiple Semesters)</p>
+          <p>President’s List (Multiple Semesters)</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Memberships</h4>
+          <p>National Honor Society</p>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>📝 Letters of Recommendation</h2>
-      <p><strong>(Coming Soon)</strong></p>
-      <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
+    <!-- Certifications and Recommendations Split Layout -->
+    <section class="split-section">
+      <div class="split-column" data-aos="fade-up" data-aos-delay="100">
+        <h2>📜 Certifications</h2>
+        <ul>
+          <li>Operations Support & Specialist</li>
+          <li>Business Support & Specialist</li>
+        </ul>
+        <div class="cert-image-grid">
+          <img src="images/cert1.jpg" alt="Certification 1">
+          <img src="images/cert2.jpg" alt="Certification 2">
+          <img src="images/cert3.jpg" alt="Certification 3">
+          <img src="images/cert4.jpg" alt="Certification 4">
+        </div>
+      </div>
+      <div class="split-column" data-aos="fade-up" data-aos-delay="300">
+        <h2>📝 Letters of Recommendation</h2>
+        <div class="recommendations">
+          <p><strong>(Coming Soon)</strong></p>
+          <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
+        </div>
+      </div>
     </section>
   </main>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
 </body>
 </html>

@@ -81,26 +81,32 @@
       padding: 0 5px;
     }
 
-    .section-content {
-      background-color: #ffeef2;
-      border-radius: 15px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .timeline {
+      border-left: 4px solid var(--powder-blue);
+      padding-left: 1.5rem;
+      margin-top: 2rem;
     }
 
-    .section-content p {
-      font-size: 1rem;
-      font-family: 'Nunito', sans-serif;
+    .timeline-item {
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
       color: var(--charcoal-gray);
-      margin-bottom: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item p {
+      margin: 0 0 0.5rem 0;
+      font-family: 'Nunito', sans-serif;
     }
 
     .deliverable-button {
       display: inline-block;
-      margin: 0.5rem 0.5rem 0 0;
       background-color: var(--baby-pink);
-      padding: 0.6rem 1.2rem;
+      padding: 0.5rem 1rem;
       border-radius: 25px;
       text-decoration: none;
       color: var(--charcoal-gray);
@@ -148,21 +154,30 @@
     <!-- Team Work Section -->
     <section class="stagger-section">
       <h2 class="section-title">Team Work</h2>
-      <div class="section-content">
-        <p><strong>RFP Response:</strong> A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
-        <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>RFP Response</h4>
+          <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
+          <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
+        </div>
 
-        <p><strong>Rosen College Career Fair:</strong> In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
-        <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
-        <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
+        <div class="timeline-item">
+          <h4>Rosen College Career Fair</h4>
+          <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
+          <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
+          <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
+        </div>
       </div>
     </section>
 
     <!-- Creative Projects Section -->
     <section class="stagger-section">
       <h2 class="section-title">Creative Projects</h2>
-      <div class="section-content">
-        <p><strong>My Portfolio Website:</strong> 💻 This website was hand-coded from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>My Portfolio Website</h4>
+          <p>💻 This website was hand-coded from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
+        </div>
       </div>
     </section>
   </main>

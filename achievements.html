@@ -110,7 +110,7 @@
       gap: 2rem;
       margin-top: 3rem;
       opacity: 0;
-      animation: fadeIn 1s ease-out 1s forwards;
+      animation: fadeIn 1s ease-out 1.2s forwards;
     }
 
     .cert-text {
@@ -151,7 +151,7 @@
       text-align: center;
       margin-top: 3rem;
       opacity: 0;
-      animation: fadeIn 1s ease-out 2s forwards;
+      animation: fadeIn 1s ease-out 2.1s forwards;
     }
 
     .recommendations p {
@@ -163,84 +163,3 @@
       opacity: 0;
       animation: fadeIn 1s ease-out 0.3s forwards;
     }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 768px) {
-      .certifications-section {
-        flex-direction: column;
-      }
-
-      .cert-text, .cert-image-grid {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="banner">
-    <h1>Achievements</h1>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="deliverables.html">Deliverables</a>
-    <a href="thankyou.html">Thank You</a>
-    <a href="contact.html">Contact Me</a>
-  </nav>
-
-  <main>
-    <!-- Educational Achievements Timeline -->
-    <section class="education-section">
-      <h2>Educational Achievements</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Degree in Progress</h4>
-          <p>Bachelor of Science in Event Management (Expected Dec 2025)</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Academic Honors</h4>
-          <p>Dean’s List (Multiple Semesters)</p>
-          <p>President’s List (Multiple Semesters)</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Memberships</h4>
-          <p>National Honor Society</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="certifications-section">
-      <div class="cert-text">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Operations Support & Specialist</li>
-          <li>Business Support & Specialist</li>
-        </ul>
-      </div>
-      <div class="cert-image-grid">
-        <img src="images/cert1.jpg" alt="Certification 1">
-        <img src="images/cert2.jpg" alt="Certification 2">
-        <img src="images/cert3.jpg" alt="Certification 3">
-        <img src="images/cert4.jpg" alt="Certification 4">
-      </div>
-    </section>
-
-    <!-- Letters of Recommendation Section -->
-    <section>
-      <h2>Letters of Recommendation</h2>
-      <div class="recommendations">
-        <p><strong>(Coming Soon)</strong></p>
-        <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
-      </div>
-    </section>
-  </main>
-</body>
-</html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Career Fair Deliverables</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --baby-pink: #FFC1CC;
@@ -75,36 +76,13 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      text-align: center;
-    }
-
-    .deliverable-item {
+      animation: fadeIn 1s ease-out 0.6s forwards;
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease-out forwards;
     }
 
-    .deliverables-grid .deliverable-item:nth-child(1) { animation-delay: 0.2s; }
-    .deliverables-grid .deliverable-item:nth-child(2) { animation-delay: 0.4s; }
-    .deliverables-grid .deliverable-item:nth-child(3) { animation-delay: 0.6s; }
-    .deliverables-grid .deliverable-item:nth-child(4) { animation-delay: 0.8s; }
-    .deliverables-grid .deliverable-item:nth-child(5) { animation-delay: 1s; }
-    .deliverables-grid .deliverable-item:nth-child(6) { animation-delay: 1.2s; }
-    .deliverables-grid .deliverable-item:nth-child(7) { animation-delay: 1.4s; }
-    .deliverables-grid .deliverable-item:nth-child(8) { animation-delay: 1.6s; }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .deliverable-item img {
+    .deliverables-grid img {
       width: 100%;
-      height: 240px;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
       border-radius: 12px;
       border: 2px solid var(--baby-pink);
       padding: 5px;
@@ -113,19 +91,19 @@
       transition: transform 0.3s ease;
     }
 
-    .deliverable-item img:hover {
+    .deliverables-grid img:hover {
       transform: scale(1.03);
     }
 
     .deliverable-button {
-      margin-top: 0.75rem;
-      display: inline-block;
       background-color: var(--baby-pink);
       color: var(--charcoal-gray);
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
-      padding: 0.5rem 1.2rem;
+      padding: 0.5rem 1rem;
       border-radius: 25px;
+      display: inline-block;
+      margin-top: 1rem;
       transition: background-color 0.3s ease;
     }
 
@@ -133,10 +111,35 @@
       background-color: var(--strawberry-red);
       color: white;
     }
-    .continue-button {
-  opacity: 0;
-  animation: fadeIn 1s ease-out 2.2s forwards;
-}
+
+    .button-footer {
+      text-align: center;
+      margin: 3rem auto;
+      animation: fadeIn 1s ease-out 1.5s forwards;
+      opacity: 0;
+    }
+
+    .button-footer a {
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      background-color: var(--powder-blue);
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    .button-footer a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -151,50 +154,18 @@
 
   <main>
     <div class="deliverables-grid">
-      <div class="deliverable-item">
-        <img src="images/floorplan-preview.jpg" alt="Floor Plan Preview">
-        <a href="documents/floorplan.zip" download class="deliverable-button">📐 Floor Plan</a>
-      </div>
+      <div><img src="images/floorplan-preview.jpg" alt="Floor Plan"></div>
+      <div><img src="images/budget-preview.jpg" alt="Budget"></div>
+      <div><img src="images/risk-plan-preview.jpg" alt="Risk Plan"></div>
+      <div><img src="images/signage-preview.jpg" alt="Signage Plan"></div>
+      <div><img src="images/parking-plan-preview.jpg" alt="Parking Plan"></div>
+      <div><img src="images/production-preview.jpg" alt="Production Schedule"></div>
+      <div><img src="images/escort-preview.jpg" alt="Escort Script"></div>
+      <div><img src="images/download-all-preview.jpg" alt="Download All Files"></div>
+    </div>
 
-      <div class="deliverable-item">
-        <img src="images/budget-preview.jpg" alt="Budget Preview">
-        <a href="documents/budget.zip" download class="deliverable-button">💰 Budget</a>
-      </div>
-
-      <div class="deliverable-item">
-        <img src="images/risk-plan-preview.jpg" alt="Risk Plan Preview">
-        <a href="documents/risk-plan.zip" download class="deliverable-button">⚠️ Risk & Crisis Plan</a>
-      </div>
-
-      <div class="deliverable-item">
-        <img src="images/signage-preview.jpg" alt="Signage Preview">
-        <a href="documents/signage-plan.zip" download class="deliverable-button">📋 Signage Plan</a>
-      </div>
-
-      <div class="deliverable-item">
-        <img src="images/parking-plan-preview.jpg" alt="Parking Plan Preview">
-        <a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
-      </div>
-
-      <div class="deliverable-item">
-        <img src="images/production-preview.jpg" alt="Production Schedule Preview">
-        <a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
-      </div>
-
-      <div class="deliverable-item">
-        <img src="images/escort-preview.jpg" alt="Escort Script Preview">
-        <a href="documents/employer-escort-script.zip" download class="deliverable-button">📜 Escort Volunteer Script</a>
-      </div>
-
-      <div class="deliverable-item">
-        <img src="images/download-all-preview.jpg" alt="Download All Graphic">
-        <a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Files</a>
-      </div>
-
-      <!-- Staggered Continue Button -->
-<div class="stagger-section continue-button" style="text-align: center; margin-top: 3rem;">
-  <a href="career-photos.html" class="deliverable-button">Continue to Career Fair Photo Gallery ➡️</a>
-</div>
+    <div class="button-footer">
+      <a href="career-photos.html">Continue to Career Fair Photo Gallery ➡️</a>
     </div>
   </main>
 </body>

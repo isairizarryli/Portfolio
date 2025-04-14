@@ -7,31 +7,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --peach-cream: #FFF1E6;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #a9ceeb;
+      --charcoal-gray: #4A4A4A;
+    }
+
+    body {
+      background-color: var(--cream);
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--cream), var(--peach-cream), var(--cream), var(--baby-pink), var(--strawberry-red));
       padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: rgba(255, 245, 225, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      margin: 0 1rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
@@ -49,6 +73,20 @@
       text-align: center;
     }
 
+    main h2 {
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.5rem;
+      color: var(--strawberry-red);
+      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
+      display: inline;
+      padding: 0 5px;
+    }
+
+    main .thank-section {
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.5s forwards;
+    }
+
     main p {
       font-family: 'Nunito', sans-serif;
       font-size: 1.2rem;
@@ -64,9 +102,14 @@
     .thank-icons span {
       margin: 0 0.4rem;
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
-<body class="blue">
+<body>
   <div class="banner">
     <h1>Thank You</h1>
   </div>
@@ -82,14 +125,17 @@
   </nav>
 
   <main>
-    <p>Thank you so much for taking the time to explore my portfolio. I hope this gave you insight into who I am, what I care about, and the kind of work I aim to deliver.</p>
-    <p>I’m incredibly passionate about creating meaningful experiences through thoughtful planning and genuine care for people. I appreciate your interest and the opportunity to share my story.</p>
-    <p>I can't wait to connect with you soon!</p>
+    <section class="thank-section">
+      <h2>To all those who made it this far,</h2>
+      <p>Thank you so much for taking the time to explore my portfolio. I hope this gave you insight into who I am, what I care about, and the kind of work I aim to deliver.</p>
+      <p>I’m incredibly passionate about creating meaningful experiences through thoughtful planning and genuine care for people. I appreciate your interest and the opportunity to share my story.</p>
+      <p>I can't wait to connect with you soon!</p>
 
-    <div class="thank-icons">
-      <span>💌</span>
-      <span>✨</span>
-    </div>
+      <div class="thank-icons">
+        <span>💌</span>
+        <span>✨</span>
+      </div>
+    </section>
   </main>
 </body>
 </html>

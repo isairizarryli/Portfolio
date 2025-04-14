@@ -7,31 +7,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --peach-cream: #FFF1E6;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #a9ceeb;
+      --charcoal-gray: #4A4A4A;
+    }
+
+    body {
+      background-color: var(--cream);
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--cream), var(--peach-cream), var(--cream), var(--baby-pink), var(--strawberry-red));
       padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: rgba(255, 245, 225, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      margin: 0 1rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
@@ -63,6 +87,7 @@
       margin: 0.75rem 0;
       color: var(--charcoal-gray);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a.contact-link:hover {
@@ -91,6 +116,7 @@
       border: none;
       border-radius: 20px;
       font-family: 'Comfortaa', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     form button:hover {
@@ -99,7 +125,7 @@
     }
   </style>
 </head>
-<body class="blue">
+<body>
   <div class="banner">
     <h1>Contact Me</h1>
   </div>
@@ -120,14 +146,14 @@
     <a href="tel:+14079658395" class="contact-link">📞 (407) 965-8395</a>
     <a href="https://www.linkedin.com/in/isairizarrylizarraga/" target="_blank" class="contact-link">🔗 LinkedIn</a>
 
-    <h2 style="margin-top: 3rem;">Send Me a Message</h2>
+    <h2 style="margin-top: 3rem; font-family: 'Comfortaa', cursive; color: var(--strawberry-red); background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%); display: inline; padding: 0 5px;">Send Me a Message</h2>
     <form action="https://formsubmit.co/isairizarryli@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <!-- Hidden settings -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://isairizarryli.github.io/Isabela-Portfolio/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://isairizarryli.github.io/Isabela-Portfolio/thankyou.html">
       <button type="submit">Send</button>
     </form>
   </main>

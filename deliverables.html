@@ -19,36 +19,43 @@
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background-color: var(--cotton-white);
+      background-color: var(--cream);
     }
 
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--cream), var(--cotton-white), var(--cream), var(--baby-pink), var(--strawberry-red));
       padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
-      text-align: center;
-      background-color: var(--cream);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
       padding: 1rem;
-      border-bottom: 2px solid var(--baby-pink);
+      background-color: rgba(255, 245, 225, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      margin: 0 0.75rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: all 0.3s ease;
@@ -66,11 +73,12 @@
     }
 
     h2.section-title {
-      font-family: 'Baloo 2', cursive;
-      font-size: 2.2rem;
-      text-align: center;
-      color: var(--charcoal-gray);
-      margin-bottom: 2rem;
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.5rem;
+      color: var(--strawberry-red);
+      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
+      display: inline;
+      padding: 0 5px;
     }
 
     .card {
@@ -118,6 +126,20 @@
       background-color: var(--strawberry-red);
       color: white;
     }
+
+    .stagger-section {
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.5s forwards;
+    }
+
+    .stagger-section:nth-of-type(2) {
+      animation-delay: 1.2s;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -137,28 +159,32 @@
 
   <main>
     <!-- Team Work Section -->
-    <h2 class="section-title">Team Work</h2>
+    <section class="stagger-section">
+      <h2 class="section-title">🤝 Team Work</h2>
 
-    <div class="card">
-      <h3>RFP Response</h3>
-      <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
-      <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
-    </div>
+      <div class="card">
+        <h3>RFP Response</h3>
+        <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
+        <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
+      </div>
 
-    <div class="card">
-      <h3>Rosen College Career Fair</h3>
-      <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
-      <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
-      <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
-    </div>
+      <div class="card">
+        <h3>Rosen College Career Fair</h3>
+        <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
+        <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
+        <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
+      </div>
+    </section>
 
     <!-- Creative Projects Section -->
-    <h2 class="section-title">Creative Projects</h2>
+    <section class="stagger-section">
+      <h2 class="section-title">🎨 Creative Projects</h2>
 
-    <div class="card">
-      <h3>My Portfolio Website</h3>
-      <p>💻 This website was hand-coded from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
-    </div>
+      <div class="card">
+        <h3>My Portfolio Website</h3>
+        <p>💻 This website was hand-coded from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
+      </div>
+    </section>
   </main>
 </body>
 </html>

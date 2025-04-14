@@ -104,22 +104,23 @@
       font-family: 'Nunito', sans-serif;
     }
 
-    .split-section {
+    .certifications-section {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      margin-top: 2rem;
+      align-items: flex-start;
+      margin-top: 3rem;
     }
 
-    .split-column {
-      flex: 1 1 48%;
+    .cert-text {
+      flex: 1 1 40%;
     }
 
     .cert-image-grid {
+      flex: 1 1 55%;
       background-color: #ffeef2;
       border-radius: 15px;
       padding: 1rem;
-      margin-top: 1rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -147,6 +148,7 @@
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
+      margin-top: 3rem;
     }
 
     .recommendations p {
@@ -155,7 +157,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      .split-section {
+      .certifications-section {
         flex-direction: column;
       }
     }
@@ -179,7 +181,7 @@
   <main>
     <!-- Educational Achievements Timeline -->
     <section data-aos="fade-up">
-      <h2>🎓 Educational Achievements</h2>
+      <h2>Educational Achievements</h2>
       <div class="timeline">
         <div class="timeline-item">
           <h4>Degree in Progress</h4>
@@ -197,27 +199,29 @@
       </div>
     </section>
 
-    <!-- Certifications and Recommendations Split Layout -->
-    <section class="split-section">
-      <div class="split-column" data-aos="fade-up" data-aos-delay="100">
-        <h2>📜 Certifications</h2>
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+      <div class="cert-text" data-aos="fade-up" data-aos-delay="100">
+        <h2>Certifications</h2>
         <ul>
           <li>Operations Support & Specialist</li>
           <li>Business Support & Specialist</li>
         </ul>
-        <div class="cert-image-grid">
-          <img src="images/cert1.jpg" alt="Certification 1">
-          <img src="images/cert2.jpg" alt="Certification 2">
-          <img src="images/cert3.jpg" alt="Certification 3">
-          <img src="images/cert4.jpg" alt="Certification 4">
-        </div>
       </div>
-      <div class="split-column" data-aos="fade-up" data-aos-delay="300">
-        <h2>📝 Letters of Recommendation</h2>
-        <div class="recommendations">
-          <p><strong>(Coming Soon)</strong></p>
-          <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
-        </div>
+      <div class="cert-image-grid" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/cert1.jpg" alt="Certification 1">
+        <img src="images/cert2.jpg" alt="Certification 2">
+        <img src="images/cert3.jpg" alt="Certification 3">
+        <img src="images/cert4.jpg" alt="Certification 4">
+      </div>
+    </section>
+
+    <!-- Letters of Recommendation Section -->
+    <section data-aos="fade-up" data-aos-delay="400">
+      <h2>Letters of Recommendation</h2>
+      <div class="recommendations">
+        <p><strong>(Coming Soon)</strong></p>
+        <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
       </div>
     </section>
   </main>

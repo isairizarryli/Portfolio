@@ -106,18 +106,19 @@
 
     .certifications-section {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      justify-content: space-between;
       align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 2rem;
       margin-top: 3rem;
     }
 
     .cert-text {
-      flex: 1 1 40%;
+      flex: 0 1 45%;
     }
 
     .cert-image-grid {
-      flex: 1 1 55%;
+      flex: 0 1 55%;
       background-color: #ffeef2;
       border-radius: 15px;
       padding: 1rem;
@@ -160,6 +161,10 @@
       .certifications-section {
         flex-direction: column;
       }
+
+      .cert-text, .cert-image-grid {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
@@ -181,7 +186,7 @@
   <main>
     <!-- Educational Achievements Timeline -->
     <section data-aos="fade-up">
-      <h2>Educational Achievements</h2>
+      <h2>🎓 Educational Achievements</h2>
       <div class="timeline">
         <div class="timeline-item">
           <h4>Degree in Progress</h4>
@@ -202,7 +207,7 @@
     <!-- Certifications Section -->
     <section class="certifications-section">
       <div class="cert-text" data-aos="fade-up" data-aos-delay="100">
-        <h2>Certifications</h2>
+        <h2>📜 Certifications</h2>
         <ul>
           <li>Operations Support & Specialist</li>
           <li>Business Support & Specialist</li>
@@ -218,7 +223,7 @@
 
     <!-- Letters of Recommendation Section -->
     <section data-aos="fade-up" data-aos-delay="400">
-      <h2>Letters of Recommendation</h2>
+      <h2>📝 Letters of Recommendation</h2>
       <div class="recommendations">
         <p><strong>(Coming Soon)</strong></p>
         <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>

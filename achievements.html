@@ -6,8 +6,6 @@
   <title>Isabela Irizarry | Achievements</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <style>
     :root {
       --baby-pink: #FFC1CC;
@@ -111,6 +109,8 @@
       flex-wrap: nowrap;
       gap: 2rem;
       margin-top: 3rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.5s forwards;
     }
 
     .cert-text {
@@ -150,11 +150,18 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
       margin-top: 3rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1s forwards;
     }
 
     .recommendations p {
       font-family: 'Nunito', sans-serif;
       font-size: 1rem;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @media screen and (max-width: 768px) {
@@ -186,7 +193,7 @@
   <main>
     <!-- Educational Achievements Timeline -->
     <section data-aos="fade-up">
-      <h2>Educational Achievements</h2>
+      <h2>🎓 Educational Achievements</h2>
       <div class="timeline">
         <div class="timeline-item">
           <h4>Degree in Progress</h4>
@@ -206,14 +213,14 @@
 
     <!-- Certifications Section -->
     <section class="certifications-section">
-      <div class="cert-text" data-aos="fade-up" data-aos-delay="100">
-        <h2>Certifications</h2>
+      <div class="cert-text">
+        <h2>📜 Certifications</h2>
         <ul>
           <li>Operations Support & Specialist</li>
           <li>Business Support & Specialist</li>
         </ul>
       </div>
-      <div class="cert-image-grid" data-aos="fade-up" data-aos-delay="300">
+      <div class="cert-image-grid">
         <img src="images/cert1.jpg" alt="Certification 1">
         <img src="images/cert2.jpg" alt="Certification 2">
         <img src="images/cert3.jpg" alt="Certification 3">
@@ -222,8 +229,8 @@
     </section>
 
     <!-- Letters of Recommendation Section -->
-    <section data-aos="fade-up" data-aos-delay="400">
-      <h2>Letters of Recommendation</h2>
+    <section>
+      <h2>📝 Letters of Recommendation</h2>
       <div class="recommendations">
         <p><strong>(Coming Soon)</strong></p>
         <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>

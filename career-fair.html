@@ -7,31 +7,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --baby-pink: #FFC1CC;
+      --cream: #FFF5E1;
+      --peach-cream: #FFF1E6;
+      --strawberry-red: #FF6B81;
+      --powder-blue: #a9ceeb;
+      --charcoal-gray: #4A4A4A;
+    }
+
+    body {
+      background-color: var(--cream);
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, #FF6B81, #FFC1CC, #FFF5E1, #FFF1E6, #FFF5E1, #FFC1CC, #FF6B81);
+      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--peach-cream), var(--peach-cream), var(--baby-pink), var(--strawberry-red));
       padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: rgba(255, 245, 225, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      margin: 0 1rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
-      background-color: var(--baby-pink);
+      background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
@@ -55,11 +79,17 @@
     }
 
     .deliverable-card {
-      background-color: #ffeef2;
+      background-color: var(--peach-cream);
+      border: 2px solid var(--baby-pink);
       padding: 1rem;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .deliverable-card:hover {
+      transform: scale(1.01);
     }
 
     .deliverable-card img {
@@ -67,17 +97,17 @@
       height: 260px;
       object-fit: cover;
       border-radius: 12px;
-      border: 2px solid #ffc1cc;
+      border: 2px solid var(--baby-pink);
       padding: 5px;
       background-color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       margin-bottom: 1rem;
+      transition: transform 0.3s ease;
     }
-       
+
     .deliverable-card img:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-}
+      transform: scale(1.03);
+    }
 
     .deliverable-button {
       background-color: var(--baby-pink);
@@ -108,55 +138,45 @@
 
   <main>
     <div class="deliverables-grid">
-
-      <!-- Floor Plan -->
       <div class="deliverable-card">
         <img src="images/floorplan-preview.jpg" alt="Floor Plan Preview">
         <a href="documents/floorplan.zip" download class="deliverable-button">📐 Floor Plan</a>
       </div>
 
-      <!-- Budget -->
       <div class="deliverable-card">
         <img src="images/budget-preview.jpg" alt="Budget Preview">
         <a href="documents/budget.zip" download class="deliverable-button">💰 Budget</a>
       </div>
 
-      <!-- Risk & Crisis Plan -->
       <div class="deliverable-card">
         <img src="images/risk-plan-preview.jpg" alt="Risk Plan Preview">
         <a href="documents/risk-plan.zip" download class="deliverable-button">⚠️ Risk & Crisis Plan</a>
       </div>
 
-      <!-- Signage Plan -->
       <div class="deliverable-card">
         <img src="images/signage-preview.jpg" alt="Signage Preview">
         <a href="documents/signage-plan.zip" download class="deliverable-button">📋 Signage Plan</a>
       </div>
 
-      <!-- Parking Plan -->
       <div class="deliverable-card">
         <img src="images/parking-plan-preview.jpg" alt="Parking Plan Preview">
         <a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
       </div>
 
-      <!-- Production Schedule -->
       <div class="deliverable-card">
         <img src="images/production-preview.jpg" alt="Production Schedule Preview">
         <a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
       </div>
 
-      <!-- Escort Script -->
       <div class="deliverable-card">
         <img src="images/escort-preview.jpg" alt="Escort Script Preview">
         <a href="documents/employer-escort-script.zip" download class="deliverable-button">📜 Escort Volunteer Script</a>
       </div>
 
-      <!-- Download All -->
       <div class="deliverable-card">
         <img src="images/download-all-preview.jpg" alt="Download All Graphic">
         <a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Files</a>
       </div>
-
     </div>
   </main>
 </body>

@@ -20,34 +20,23 @@
       --soft-orange: #ff9f6b;
       --charcoal-gray: #4A4A4A;
     }
-
     body {
       background-color: var(--cream);
       margin: 0;
       font-family: 'Nunito', sans-serif;
     }
-
     .banner {
       width: 100%;
-      background: linear-gradient(90deg,     
-        var(--baby-pink),
-        var(--peach-pink),    
-        var(--cream),
-        var(--peach-pink),
-        var(--baby-pink)
-      );
+      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
     }
-
     .banner h1 {
       font-family: 'Baloo 2', cursive;
       font-size: 3.5rem;
       color: var(--strawberry-red);
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
-
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -61,7 +50,6 @@
       backdrop-filter: blur(6px);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
-
     nav a {
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
@@ -71,18 +59,15 @@
       border-radius: 25px;
       transition: background-color 0.3s ease;
     }
-
     nav a:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
-
     main {
       max-width: 1200px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
-
     .deliverables-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -90,30 +75,29 @@
       animation: fadeIn 1s ease-out 0.6s forwards;
       opacity: 0;
     }
-
     .deliverable {
+      background-color: var(--cream);
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
+      border-left: 5px solid var(--powder-blue);
     }
-
     .deliverable img {
       width: 100%;
       height: 260px;
       object-fit: cover;
-      border-radius: 12px;
-      border: 2px solid var(--baby-pink);
-      padding: 5px;
+      border-radius: 30px;
       background-color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
     }
-
     .deliverable img:hover {
       transform: scale(1.03);
     }
-
     .deliverable-button {
-      background-color: var(--soft-orange);
-      color: var(--charcoal-gray);
+      background-color: var(--bold-strawberry);
+      color: white;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       padding: 0.5rem 1rem;
@@ -122,36 +106,31 @@
       margin-top: 0.75rem;
       transition: background-color 0.3s ease;
     }
-
     .deliverable-button:hover {
-      background-color: var(--strawberry-red);
+      background-color: var(--charcoal-gray);
       color: white;
     }
-
     .button-footer {
       text-align: center;
       margin: 3rem auto;
       animation: fadeIn 1s ease-out 1.5s forwards;
       opacity: 0;
     }
-
     .button-footer a {
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
-      color: var(--charcoal-gray);
-      background-color: var(--powder-blue);
+      color: white;
+      background-color: var(--bold-strawberry);
       padding: 0.5rem 1.5rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
       font-size: 1rem;
       display: inline-block;
     }
-
     .button-footer a:hover {
-      background-color: var(--strawberry-red);
+      background-color: var(--charcoal-gray);
       color: white;
     }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -162,12 +141,10 @@
   <div class="banner">
     <h1>Career Fair Deliverables</h1>
   </div>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="deliverables.html">← Back to Deliverables</a>
   </nav>
-
   <main>
     <div class="deliverables-grid">
       <div class="deliverable">
@@ -188,11 +165,11 @@
       </div>
       <div class="deliverable">
         <img src="images/parking-plan-preview.jpg" alt="Parking Plan">
-        <a href="documents/parking-plan.zip" download class="deliverable-button">🅿️ Parking Plan</a>
+        <a href="documents/parking-plan.zip" download class="deliverable-button">🄹️ Parking Plan</a>
       </div>
       <div class="deliverable">
         <img src="images/production-preview.jpg" alt="Production Schedule">
-        <a href="documents/production-schedule.zip" download class="deliverable-button">🎬 Production Schedule</a>
+        <a href="documents/production-schedule.zip" download class="deliverable-button">🎮 Production Schedule</a>
       </div>
       <div class="deliverable">
         <img src="images/escort-preview.jpg" alt="Escort Script">
@@ -203,7 +180,6 @@
         <a href="documents/career-fair-deliverables.zip" download class="deliverable-button">📦 Download All Files</a>
       </div>
     </div>
-
     <div class="button-footer">
       <a href="career-photos.html">Continue to Career Fair Photo Gallery →</a>
     </div>

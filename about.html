@@ -29,15 +29,19 @@
       font-family: 'Nunito', sans-serif;
     }
 
+    .about-logo {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      width: 90px;
+      height: auto;
+      opacity: 0.95;
+      z-index: 100;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg,     
-        var(--baby-pink),
-        var(--peach-pink),    
-        var(--cream),
-        var(--peach-pink),
-        var(--baby-pink)
-      );
+      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
     }
@@ -86,10 +90,11 @@
     .section h2 {
       font-family: 'Comfortaa', cursive;
       font-size: 2.5em;
-      color: var(--bold-strawberry);
-      background: linear-gradient(to top, var(--soft-blue) 40%, transparent 50%);
-      display: inline;
-      padding: 0 5px;
+      color: var(--charcoal-gray);
+      background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
+      padding: 0 6px;
+      border-radius: 8px;
+      display: inline-block;
     }
 
     .section p {
@@ -106,16 +111,18 @@
       margin-top: 2rem;
       opacity: 0;
       animation: fadeIn 1s ease-out 2.4s forwards;
+      justify-content: center;
     }
 
     .photo-gallery img {
       width: 100%;
       max-width: 250px;
-      border-radius: 15px;
-      border: 2px solid var(--baby-pink);
-      padding: 5px;
+      border-radius: 50% / 40%;
+      object-fit: cover;
       background-color: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 3px solid var(--peach-pink);
+      padding: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease;
     }
 
@@ -125,6 +132,8 @@
 
     .photo-gallery .photo {
       flex: 1 1 30%;
+      display: flex;
+      justify-content: center;
     }
 
     .background-section {
@@ -147,10 +156,19 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .about-logo {
+        width: 70px;
+        top: 1rem;
+        left: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Logo -->
+  <img src="images/Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo" class="about-logo" />
+
   <!-- Banner -->
   <div class="banner">
     <h1>About Me</h1>
@@ -182,7 +200,7 @@
     <p>Since middle school, I’ve rescued over 15 abandoned animals—what started as a dream to give every lonely pet a home has become a true calling. My most recent foster, a fragile kitten found at just a few days old, reminded me that even in uncertain moments, I’m capable of pushing forward with care and confidence.</p>
     <p>Fostering has shaped my outlook in big ways. It’s given me resilience, empathy, and the ability to stay calm under pressure—all traits I carry with me in every event I help bring to life.</p>
 
-    <!-- Staggered Gallery -->
+    <!-- Oval Gallery -->
     <div class="photo-gallery">
       <div class="photo"><img src="images/photo1.jpg" alt="Isa gallery 1"></div>
       <div class="photo"><img src="images/photo2.jpg" alt="Isa gallery 2"></div>

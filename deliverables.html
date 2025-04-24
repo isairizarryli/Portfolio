@@ -1,4 +1,3 @@
-<!-- Deliverables.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +25,15 @@
       margin: 0;
       font-family: 'Nunito', sans-serif;
     }
+    .logo {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      width: 90px;
+      height: auto;
+      opacity: 0.95;
+      z-index: 100;
+    }
     .banner {
       width: 100%;
       background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
@@ -37,7 +45,6 @@
       font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
     nav {
       display: flex;
@@ -49,8 +56,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
     nav a {
       font-family: 'Comfortaa', sans-serif;
@@ -73,28 +78,19 @@
     h2.section-title {
       font-family: 'Comfortaa', cursive;
       font-size: 2.5rem;
-      color: var(--strawberry-red);
-      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
-      display: inline;
-      padding: 0 5px;
-    }
-    .timeline {
-      border-left: 4px solid var(--powder-blue);
-      padding-left: 1.5rem;
-      margin-top: 2rem;
-    }
-    .timeline-item {
-      margin-bottom: 2rem;
-    }
-    .timeline-item h4 {
-      font-size: 1.2rem;
-      font-weight: bold;
       color: var(--charcoal-gray);
-      margin-bottom: 0.25rem;
+      background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
+      padding: 0 6px;
+      border-radius: 8px;
+      display: inline-block;
     }
-    .timeline-item p {
-      margin: 0 0 0.5rem 0;
-      font-family: 'Nunito', sans-serif;
+    .card-style {
+      background-color: var(--cream);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      border-left: 5px solid var(--powder-blue);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
     .deliverable-button {
       display: inline-block;
@@ -131,6 +127,7 @@
   </style>
 </head>
 <body>
+  <img src="images/Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo" class="logo" />
   <div class="banner">
     <h1>Deliverables</h1>
   </div>
@@ -144,38 +141,33 @@
     <a href="thankyou.html">Thank You</a>
   </nav>
   <main>
-    <!-- Team Work Section -->
     <section class="stagger-section">
       <h2 class="section-title">Team Work</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>RFP Response</h4>
-          <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
-          <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
-        </div>
-        <div class="timeline-item">
-          <h4>Rosen College Career Fair</h4>
-          <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
-          <div class="button-group">
-            <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
-            <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
-          </div>
+      <div class="card-style">
+        <h4>RFP Response</h4>
+        <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
+        <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
+      </div>
+      <div class="card-style">
+        <h4>Rosen College Career Fair</h4>
+        <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
+        <div class="button-group">
+          <a href="career-fair.html" class="deliverable-button">⛺ Career Fair Deliverables</a>
+          <a href="career-photos.html" class="deliverable-button">📸 Career Fair Photo Gallery</a>
         </div>
       </div>
     </section>
-    <!-- Signature Concepts Section -->
+    <hr class="section-divider">
     <section class="stagger-section">
       <h2 class="section-title">Signature Concepts</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Briar Rosé Catering – Menu Profile Project</h4>
-<p>This project involved the full creation of a fictional catering company—from naming and branding to menu development and event execution. I designed a cohesive brand identity, developed menus aligned with the company’s values and audience, and applied those elements to a fully planned event complete with timelines, staffing plans, and BEO-style strategic documentation.</p>
-          <a href="briar-rose.html" class="deliverable-button">🌸 View Briar Rosé Concept</a>
-        </div>
-        <div class="timeline-item">
+      <div class="card-style">
+        <h4>Briar Rosé Catering – Menu Profile Project</h4>
+        <p>This project involved the full creation of a fictional catering company—from naming and branding to menu development and event execution. I designed a cohesive brand identity, developed menus aligned with the company’s values and audience, and applied those elements to a fully planned event complete with timelines, staffing plans, and BEO-style strategic documentation.</p>
+        <a href="briar-rose.html" class="deliverable-button">🌸 View Briar Rosé Concept</a>
+      </div>
+      <div class="card-style">
         <h4>My Portfolio Website</h4>
         <p>This website was hand-coded by me from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
-        </div>
       </div>
     </section>
   </main>

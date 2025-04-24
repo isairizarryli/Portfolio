@@ -11,8 +11,13 @@
       --baby-pink: #FFC1CC;
       --cream: #FFF5E1;
       --peach-cream: #FFF1E6;
+      --peach-pink: #fad0c1;
       --strawberry-red: #FF6B81;
+      --bold-strawberry: #ff3856;
       --powder-blue: #a9ceeb;
+      --soft-blue: #abd2ef;
+      --orange: #ff7b00;
+      --soft-orange: #ff9f6b;
       --charcoal-gray: #4A4A4A;
     }
 
@@ -29,12 +34,17 @@
       text-align: center;
     }
 
-    .banner h1 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 4rem;
-      color: var(--strawberry-red);
-      margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg,     
+        var(--baby-pink),
+        var(--peach-pink),    
+        var(--cream),
+        var(--peach-pink),
+        var(--baby-pink)
+      );
+      padding: 2rem 1rem;
+      text-align: center;
     }
 
     nav {

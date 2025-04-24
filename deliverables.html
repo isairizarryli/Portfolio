@@ -20,11 +20,13 @@
       --soft-orange: #ff9f6b;
       --charcoal-gray: #4A4A4A;
     }
+
     body {
       background-color: var(--peach-cream);
       margin: 0;
       font-family: 'Nunito', sans-serif;
     }
+
     .logo {
       position: absolute;
       top: 1.5rem;
@@ -34,18 +36,22 @@
       opacity: 0.95;
       z-index: 100;
     }
+
     .banner {
       width: 100%;
       background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
+      position: relative;
     }
+
     .banner h1 {
       font-family: 'Baloo 2', cursive;
       font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
     }
+
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -57,6 +63,7 @@
       top: 0;
       z-index: 1000;
     }
+
     nav a {
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
@@ -66,15 +73,18 @@
       border-radius: 25px;
       transition: all 0.3s ease;
     }
+
     nav a:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
+
     main {
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
+
     h2.section-title {
       font-family: 'Comfortaa', cursive;
       font-size: 2.5rem;
@@ -84,6 +94,7 @@
       border-radius: 8px;
       display: inline-block;
     }
+
     .card-style {
       background-color: var(--cream);
       padding: 1rem 1.5rem;
@@ -92,6 +103,7 @@
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
+
     .deliverable-button {
       display: inline-block;
       background-color: var(--bold-strawberry);
@@ -103,23 +115,37 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
+
     .deliverable-button:hover {
       background-color: var(--charcoal-gray);
       color: white;
     }
+
     .button-group {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 0.75rem;
     }
+
+    .section-divider {
+      border: none;
+      border-top: 3px dotted var(--soft-orange);
+      width: 70%;
+      margin: 3rem auto;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1s forwards;
+    }
+
     .stagger-section {
       opacity: 0;
       animation: fadeIn 1s ease-out 0.5s forwards;
     }
+
     .stagger-section:nth-of-type(2) {
       animation-delay: 1.2s;
     }
+
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -131,15 +157,11 @@
         top: 1rem;
         left: 1rem;
       }
-
-      .section-divider {
-  border: none;
-  border-top: 3px dotted var(--soft-orange);
-  width: 70%;
-  margin: 3rem auto;
-  opacity: 0;
-  animation: fadeIn 1s ease-out 1s forwards;
-}
+      .banner h1 {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+        line-height: 1.2;
+      }
     }
   </style>
 </head>

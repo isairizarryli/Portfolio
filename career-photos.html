@@ -93,19 +93,19 @@
       text-align: center;
       margin-bottom: 2rem;
     }
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
     .photo-grid img {
-      width: 100%;
-      border-radius: 30px;
-      border: 3px solid var(--peach-pink);
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
+  width: 100%;
+  border-radius: 30px;
+  border: 3px solid var(--peach-pink);
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
     .subsection-title {
       font-size: 1.5rem;
       font-weight: bold;

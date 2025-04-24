@@ -20,13 +20,11 @@
       --soft-orange: #ff9a56;
       --charcoal-gray: #4A4A4A;
     }
-
     body {
       background-color: var(--peach-cream);
       margin: 0;
       font-family: 'Nunito', sans-serif;
     }
-
     .logo {
       position: absolute;
       top: 1.5rem;
@@ -36,36 +34,29 @@
       opacity: 0.95;
       z-index: 100;
     }
-
     .banner {
       width: 100%;
       background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
     }
-
     .banner h1 {
       font-family: 'Baloo 2', cursive;
       font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
-
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 0.5rem;
       padding: 1rem;
       background-color: var(--peach-cream);
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
-
     nav a {
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
@@ -75,18 +66,15 @@
       border-radius: 25px;
       transition: background-color 0.3s ease;
     }
-
     nav a:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
-
     main {
       max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-
     h2 {
       font-family: 'Comfortaa', cursive;
       font-size: 2.5rem;
@@ -96,13 +84,7 @@
       border-radius: 8px;
       display: inline-block;
     }
-
-    .timeline {
-      padding-left: 1rem;
-      margin-top: 2rem;
-    }
-
-    .timeline-item {
+    .timeline-item, .card-style {
       background-color: var(--cream);
       padding: 1rem 1.5rem;
       border-radius: 12px;
@@ -110,146 +92,25 @@
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
-
-    .timeline-item h4 {
-      font-size: 1.2rem;
-      color: var(--charcoal-gray);
-      margin-bottom: 0.25rem;
-    }
-
-    .timeline-item p {
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
-    }
-
-    .certifications-section {
+    .cert-card .images {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 3rem;
-      opacity: 0;
-      animation: fadeIn 1s ease-out 1.2s forwards;
-    }
-
-    .cert-text {
-      flex: 0 1 45%;
-    }
-
-    .cert-text ul {
-      list-style: none;
-      padding-left: 0;
+      gap: 1rem;
       margin-top: 1rem;
     }
-
-    .cert-text li {
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-      color: var(--charcoal-gray);
-    }
-
-    .cert-image-grid {
-      flex: 0 1 55%;
-      background-color: var(--cream);
-      border-radius: 15px;
-      padding: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .cert-image-grid img {
-      width: 100%;
-      height: auto;
+    .cert-card .images img {
+      width: calc(50% - 0.5rem);
       border-radius: 30px;
       object-fit: contain;
       background-color: white;
-      padding: 0;
-      border: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .cert-image-grid img:hover {
-      transform: scale(1.03);
-    }
-
-    .recommendations {
-      background-color: #ffeef2;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      margin-top: 3rem;
-      opacity: 0;
-      animation: fadeIn 1s ease-out 2.1s forwards;
-    }
-
-    .recommendations p {
-      font-family: 'Nunito', sans-serif;
-      font-size: 1rem;
-    }
-
-    .coming-soon {
-      background-color: var(--powder-blue);
-      color: var(--charcoal-gray);
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      font-family: 'Comfortaa', sans-serif;
-      display: inline-block;
-    }
-
-    .section-divider {
-      border: none;
-      height: 4px;
-      width: 80%;
-      margin: 4rem auto;
-      background: linear-gradient(to right, var(--baby-pink), var(--peach-pink), var(--powder-blue), var(--peach-pink), var(--baby-pink));
-      border-radius: 10px;
-      opacity: 0.6;
-    }
-
-    .education-section {
-      opacity: 0;
-      animation: fadeIn 1s ease-out 0.3s forwards;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 768px) {
-      .logo {
-        width: 70px;
-        top: 1rem;
-        left: 1rem;
-      }
-
-      .certifications-section {
-        flex-direction: column;
-      }
-
-      .cert-text, .cert-image-grid {
-        flex: 1 1 100%;
-      }
     }
   </style>
 </head>
 <body>
-  <!-- Logo -->
   <img src="images/Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo" class="logo" />
-
-  <!-- Banner -->
   <div class="banner">
     <h1>Achievements</h1>
   </div>
-
-  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
@@ -259,53 +120,47 @@
     <a href="contact.html">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
   </nav>
-
-  <!-- Main Content -->
   <main>
-    <section class="education-section">
+    <section>
       <h2>Educational Achievements</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Degrees</h4>
-          <p>Associates of Science in Business Administration (May 2023)</p>
-          <p>Bachelor of Science in Event Management (Expected Dec 2025)</p>
+      <div class="timeline-item">
+        <h4>Degrees</h4>
+        <p>Associates of Science in Business Administration (May 2023)</p>
+        <p>Bachelor of Science in Event Management (Expected Dec 2025)</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Academic Honors</h4>
+        <p>Dean’s List (Multiple Semesters)</p>
+        <p>President’s List (Multiple Semesters)</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Memberships</h4>
+        <p>National Honor Society</p>
+      </div>
+    </section>
+    <hr class="section-divider">
+    <section>
+      <h2>Certifications</h2>
+      <div class="timeline-item">
+        <h4>🎓 Operations Support & Specialist</h4>
+        <div class="cert-card images">
+          <img src="images/cert1.jpg" alt="Certification 1">
+          <img src="images/cert2.jpg" alt="Certification 2">
         </div>
-        <div class="timeline-item">
-          <h4>Academic Honors</h4>
-          <p>Dean’s List (Multiple Semesters)</p>
-          <p>President’s List (Multiple Semesters)</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Memberships</h4>
-          <p>National Honor Society</p>
+      </div>
+      <div class="timeline-item">
+        <h4>📋 Business Support & Specialist</h4>
+        <div class="cert-card images">
+          <img src="images/cert3.jpg" alt="Certification 3">
+          <img src="images/cert4.jpg" alt="Certification 4">
         </div>
       </div>
     </section>
-
     <hr class="section-divider">
-
-    <section class="certifications-section">
-      <div class="cert-text">
-        <h2>Certifications</h2>
-        <ul>
-          <li>🎓 Operations Support & Specialist</li>
-          <li>📋 Business Support & Specialist</li>
-        </ul>
-      </div>
-      <div class="cert-image-grid">
-        <img src="images/cert1.jpg" alt="Certification 1">
-        <img src="images/cert2.jpg" alt="Certification 2">
-        <img src="images/cert3.jpg" alt="Certification 3">
-        <img src="images/cert4.jpg" alt="Certification 4">
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
     <section>
       <h2>Letters of Recommendation</h2>
-      <div class="recommendations">
-        <p><span class="coming-soon">Coming Soon</span></p>
+      <div class="timeline-item">
+        <h4>Coming Soon</h4>
         <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
       </div>
     </section>

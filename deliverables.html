@@ -11,8 +11,13 @@
       --baby-pink: #FFC1CC;
       --cream: #FFF5E1;
       --peach-cream: #FFF1E6;
+      --peach-pink: #fad0c1;
       --strawberry-red: #FF6B81;
+      --bold-strawberry: #ff3856;
       --powder-blue: #a9ceeb;
+      --soft-blue: #abd2ef;
+      --orange: #ff7b00;
+      --soft-orange: #ff9f6b;
       --charcoal-gray: #4A4A4A;
     }
 
@@ -24,7 +29,13 @@
 
     .banner {
       width: 100%;
-      background: linear-gradient(90deg, var(--strawberry-red), var(--baby-pink), var(--cream), var(--cream), var(--baby-pink), var(--strawberry-red));
+      background: linear-gradient(90deg,     
+        var(--baby-pink),
+        var(--peach-pink),    
+        var(--cream),
+        var(--peach-pink),
+        var(--baby-pink)
+      );
       padding: 2rem 1rem;
       text-align: center;
     }
@@ -140,6 +151,15 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
+    .section-divider {
+  border: none;
+  border-top: 3px dotted var(--soft-orange);
+  width: 70%;
+  margin: 3rem auto;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1s forwards;
+}
   </style>
 </head>
 <body>
@@ -178,6 +198,8 @@
         </div>
       </div>
     </section>
+
+    <hr class="section-divider">
 
     <!-- Signature Concepts Section -->
     <section class="stagger-section">

@@ -39,12 +39,25 @@
       background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
+      position: relative;
     }
     .banner h1 {
       font-family: 'Baloo 2', cursive;
       font-size: 3.5rem;
       color: var(--strawberry-red);
       margin: 0;
+    }
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 70px;
+        top: 1rem;
+        left: 1rem;
+      }
+      .banner h1 {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+        line-height: 1.2;
+      }
     }
     nav {
       display: flex;
@@ -144,13 +157,6 @@
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
-
-    @media screen and (max-width: 768px) {
-  .logo {
-    width: 70px;
-    top: 1rem;
-    left: 1rem;
-  }
     }
   </style>
 </head>

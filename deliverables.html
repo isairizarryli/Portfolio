@@ -1,3 +1,4 @@
+<!-- Deliverables.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,26 +21,17 @@
       --soft-orange: #ff9f6b;
       --charcoal-gray: #4A4A4A;
     }
-
     body {
       background-color: var(--peach-cream);
       margin: 0;
       font-family: 'Nunito', sans-serif;
     }
-
     .banner {
       width: 100%;
-      background: linear-gradient(90deg,     
-        var(--baby-pink),
-        var(--peach-pink),    
-        var(--cream),
-        var(--peach-pink),
-        var(--baby-pink)
-      );
+      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
     }
-
     .banner h1 {
       font-family: 'Baloo 2', cursive;
       font-size: 4rem;
@@ -47,7 +39,6 @@
       margin: 0;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
-
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -61,7 +52,6 @@
       backdrop-filter: blur(6px);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
-
     nav a {
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
@@ -71,18 +61,15 @@
       border-radius: 25px;
       transition: all 0.3s ease;
     }
-
     nav a:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
-
     main {
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
-
     h2.section-title {
       font-family: 'Comfortaa', cursive;
       font-size: 2.5rem;
@@ -91,29 +78,24 @@
       display: inline;
       padding: 0 5px;
     }
-
     .timeline {
       border-left: 4px solid var(--powder-blue);
       padding-left: 1.5rem;
       margin-top: 2rem;
     }
-
     .timeline-item {
       margin-bottom: 2rem;
     }
-
     .timeline-item h4 {
       font-size: 1.2rem;
       font-weight: bold;
       color: var(--charcoal-gray);
       margin-bottom: 0.25rem;
     }
-
     .timeline-item p {
       margin: 0 0 0.5rem 0;
       font-family: 'Nunito', sans-serif;
     }
-
     .deliverable-button {
       display: inline-block;
       background-color: var(--soft-orange);
@@ -125,28 +107,23 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-
     .deliverable-button:hover {
       background-color: var(--strawberry-red);
       color: white;
     }
-
     .button-group {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 0.75rem;
     }
-
     .stagger-section {
       opacity: 0;
       animation: fadeIn 1s ease-out 0.5s forwards;
     }
-
     .stagger-section:nth-of-type(2) {
       animation-delay: 1.2s;
     }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -157,7 +134,6 @@
   <div class="banner">
     <h1>Deliverables</h1>
   </div>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
@@ -167,7 +143,6 @@
     <a href="contact.html">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
   </nav>
-
   <main>
     <!-- Team Work Section -->
     <section class="stagger-section">
@@ -178,7 +153,6 @@
           <p>A collaborative response to a mock event proposal outlining venue details, logistics, catering, and budget.</p>
           <a href="documents/rfp-response.zip" download class="deliverable-button">📄 Download RFP</a>
         </div>
-
         <div class="timeline-item">
           <h4>Rosen College Career Fair</h4>
           <p>In my role as Operations & Exhibitions Service Lead, I led a team responsible for managing floor plans, safety logistics, signage, and overall event flow. My leadership contributed to a seamless, well-organized event serving over 500 attendees and 70+ employers.</p>
@@ -189,8 +163,6 @@
         </div>
       </div>
     </section>
-
-    
     <!-- Signature Concepts Section -->
     <section class="stagger-section">
       <h2 class="section-title">Signature Concepts</h2>
@@ -200,14 +172,9 @@
           <p>This website was hand-coded by me from scratch using HTML and CSS. Every detail—from structure to styling—was crafted with care to reflect my brand, showcase my work, and highlight my creative and technical abilities.</p>
         </div>
         <div class="timeline-item">
-          <h4>Golden Hour Brunch</h4>
-          <p>Brunch with a glow-up—sun-kissed dishes, laid-back elegance, and golden aesthetics.</p>
-          <a href="documents/golden-hour-brunch.zip" download class="deliverable-button">🥂 Download Golden Hour Brunch</a>
-        </div>
-        <div class="timeline-item">
-          <h4>Morning Indulgence & Afternoon Elegance Menu</h4>
-          <p>Designed for working professionals looking for a refined midday reset.</p>
-          <a href="documents/executive-midday-menu.zip" download class="deliverable-button">💼 Download Morning Indulgence & Afternoon Elegance Menu</a>
+          <h4>Briar Rosé Catering – Menu Profile Project</h4>
+<p>This project involved the full creation of a fictional catering company—from naming and branding to menu development and event execution. I designed a cohesive brand identity, developed menus aligned with the company’s values and audience, and applied those elements to a fully planned event complete with timelines, staffing plans, and BEO-style strategic documentation.</p>
+          <a href="briar-rose.html" class="deliverable-button">🌸 View Briar Rosé Concept</a>
         </div>
       </div>
     </section>

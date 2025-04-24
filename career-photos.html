@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Career Fair Photo Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
   <style>
     :root {
       --baby-pink: #FFC1CC;
@@ -113,6 +115,8 @@
 
     .photo-grid img {
       width: 100%;
+      height: 220px;
+      object-fit: cover;
       border-radius: 30px;
       border: 3px solid var(--peach-pink);
       background-color: white;
@@ -193,12 +197,12 @@
       <h2 class="section-title">Tabling Days</h2>
       <p class="caption">Just a little chaos and a lot of charisma!</p>
       <div class="photo-grid">
-        <img src="images/tabling1.jpg" alt="Tabling Photo 1">
-        <img src="images/tabling2.jpg" alt="Tabling Photo 2">
-        <img src="images/tabling3.jpg" alt="Tabling Photo 3">
-        <img src="images/tabling4.jpg" alt="Tabling Photo 4">
-        <img src="images/tabling5.jpg" alt="Tabling Photo 5">
-        <img src="images/tabling6.jpg" alt="Tabling Photo 6">
+        <a href="images/tabling1.jpg" data-lightbox="tabling"><img src="images/tabling1.jpg" alt="Tabling Photo 1"></a>
+        <a href="images/tabling2.jpg" data-lightbox="tabling"><img src="images/tabling2.jpg" alt="Tabling Photo 2"></a>
+        <a href="images/tabling3.jpg" data-lightbox="tabling"><img src="images/tabling3.jpg" alt="Tabling Photo 3"></a>
+        <a href="images/tabling4.jpg" data-lightbox="tabling"><img src="images/tabling4.jpg" alt="Tabling Photo 4"></a>
+        <a href="images/tabling5.jpg" data-lightbox="tabling"><img src="images/tabling5.jpg" alt="Tabling Photo 5"></a>
+        <a href="images/tabling6.jpg" data-lightbox="tabling"><img src="images/tabling6.jpg" alt="Tabling Photo 6"></a>
       </div>
     </section>
 
@@ -208,26 +212,27 @@
     <section>
       <h2 class="section-title">Career Fair Day-Of</h2>
       <p class="caption">This wasn’t just a day—it was the reward for months of intention.</p>
+
       <div class="subsection-title">Before</div>
       <div class="photo-grid">
-        <img src="images/before1.jpg" alt="Career Fair Setup 1">
-        <img src="images/before2.jpg" alt="Career Fair Setup 2">
-        <img src="images/before3.jpg" alt="Career Fair Setup 3">
-        <img src="images/before4.jpg" alt="Career Fair Setup 4">
+        <a href="images/before1.jpg" data-lightbox="before"><img src="images/before1.jpg" alt="Career Fair Setup 1"></a>
+        <a href="images/before2.jpg" data-lightbox="before"><img src="images/before2.jpg" alt="Career Fair Setup 2"></a>
+        <a href="images/before3.jpg" data-lightbox="before"><img src="images/before3.jpg" alt="Career Fair Setup 3"></a>
+        <a href="images/before4.jpg" data-lightbox="before"><img src="images/before4.jpg" alt="Career Fair Setup 4"></a>
       </div>
 
       <div class="subsection-title">After</div>
       <div class="photo-grid">
-        <img src="images/after1.jpg" alt="Career Fair Live 1">
-        <img src="images/after2.jpg" alt="Career Fair Live 2">
-        <img src="images/after3.jpg" alt="Career Fair Live 3">
-        <img src="images/after4.jpg" alt="Career Fair Live 4">
-        <img src="images/after5.jpg" alt="Career Fair Live 5">
-        <img src="images/after6.jpg" alt="Career Fair Live 6">
-        <img src="images/after7.jpg" alt="Career Fair Live 7">
-        <img src="images/after8.jpg" alt="Career Fair Live 8">
-        <img src="images/after9.jpg" alt="Career Fair Live 9">
-        <img src="images/after10.jpg" alt="Career Fair Live 10">
+        <a href="images/after1.jpg" data-lightbox="after"><img src="images/after1.jpg" alt="Career Fair Live 1"></a>
+        <a href="images/after2.jpg" data-lightbox="after"><img src="images/after2.jpg" alt="Career Fair Live 2"></a>
+        <a href="images/after3.jpg" data-lightbox="after"><img src="images/after3.jpg" alt="Career Fair Live 3"></a>
+        <a href="images/after4.jpg" data-lightbox="after"><img src="images/after4.jpg" alt="Career Fair Live 4"></a>
+        <a href="images/after5.jpg" data-lightbox="after"><img src="images/after5.jpg" alt="Career Fair Live 5"></a>
+        <a href="images/after6.jpg" data-lightbox="after"><img src="images/after6.jpg" alt="Career Fair Live 6"></a>
+        <a href="images/after7.jpg" data-lightbox="after"><img src="images/after7.jpg" alt="Career Fair Live 7"></a>
+        <a href="images/after8.jpg" data-lightbox="after"><img src="images/after8.jpg" alt="Career Fair Live 8"></a>
+        <a href="images/after9.jpg" data-lightbox="after"><img src="images/after9.jpg" alt="Career Fair Live 9"></a>
+        <a href="images/after10.jpg" data-lightbox="after"><img src="images/after10.jpg" alt="Career Fair Live 10"></a>
       </div>
 
       <div class="button-footer">
@@ -235,5 +240,7 @@
       </div>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
       --strawberry-red: #FF6B81;
       --bold-strawberry: #ff3856;
       --powder-blue: #a9ceeb;
-      --soft-blue: #6bb0e2;
+      --soft-blue: #abd2ef;
       --orange: #ff7b00;
       --soft-orange: #ff9a56;
       --charcoal-gray: #4A4A4A;
@@ -87,7 +87,7 @@
       font-family: 'Comfortaa', cursive;
       font-size: 2.5em;
       color: var(--bold-strawberry);
-      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 50%);
+      background: linear-gradient(to top, var(--soft-blue) 40%, transparent 50%);
       display: inline;
       padding: 0 5px;
     }
@@ -147,6 +147,16 @@
         flex-direction: column;
         align-items: center;
       }
+      .section-divider {
+      border: none;
+      height: 4px;
+      width: 80%;
+      margin: 3rem auto;
+      background: linear-gradient(to right, var(--baby-pink), var(--powder-blue), var(--baby-pink));
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1s forwards;
+    }
     }
   </style>
 </head>
@@ -174,6 +184,8 @@
     <p>My experience includes guest-facing and leadership roles at Walt Disney World and Kaplan Test Prep, along with serving as the Operations & Exhibition Services Lead for UCF’s Rosen College Career Fair. For that 500+ attendee event, I managed comprehensive logistics—including floorplans, signage, vendor load-in/load-out, and risk management. I also collaborated across departments to oversee registration, parking, guest experience, and real-time troubleshooting. I’m known for staying calm under pressure and stepping in as a dependable team lead when it matters most.</p>
     <p>While working full-time, I’ve also maintained strong academic performance—earning Dean’s and President’s List honors. I approach every project with empathy, organization, and initiative, and I’m always looking for ways to contribute meaningfully while supporting those around me.</p>
   </section>
+  
+<hr class="section-divider">
 
   <!-- A Little About Me -->
   <section class="section about-me-section">

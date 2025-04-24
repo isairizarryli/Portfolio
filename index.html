@@ -99,9 +99,9 @@
     .welcome-title {
       font-family: 'Comfortaa', cursive;
       font-size: 3em;
-      color: var(--bold-strawberry);
-      background: linear-gradient(to top, var(--soft-orange) 45%, transparent 50%);
-      padding: 0 5px;
+      color: var(--charcoal-gray);
+      background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
+      padding: 0 6px;
       border-radius: 8px;
     }
 
@@ -134,21 +134,24 @@
     }
 
     .home-photo {
-      background-color: var(--soft-orange);
-      padding: 1.5rem;
-      border-radius: 0 0 100px 100px;
-      display: inline-block;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      border-top: 6px solid var(--orange);
+      background-color: var(--cream);
+      border-radius: 150px 150px 0 0;
+      overflow: hidden;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border: 3px solid var(--peach-pink); /* Optional: border outline */
     }
 
     .home-photo img {
-      max-width: 100%;
+      display: block;
+      width: 100%;
       height: auto;
-      border-radius: 0 0 80px 80px;
-      border: none;
+      border-radius: 0;
       padding: 0;
-      background-color: white;
+      border: none;
+      background-color: transparent;
     }
 
     .home-photo img:hover {

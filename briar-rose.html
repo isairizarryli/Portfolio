@@ -13,20 +13,44 @@
       color: var(--charcoal-gray);
       margin: 0;
     }
-    .hero {
+    .banner {
+      width: 100%;
       background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 3rem 1rem;
     }
-    .hero h1 {
+    .banner h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 3rem;
+      font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: var(--peach-cream);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    nav a {
+      font-family: 'Comfortaa', sans-serif;
+      text-decoration: none;
+      color: var(--charcoal-gray);
+      background-color: var(--powder-blue);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: var(--strawberry-red);
+      color: white;
     }
     main {
       max-width: 1000px;
@@ -74,9 +98,14 @@
   </style>
 </head>
 <body>
-  <div class="hero">
+  <div class="banner">
     <h1>Briar Rosé Catering</h1>
   </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="deliverables.html">Back to Deliverables</a>
+  </nav>
 
   <main>
     <section class="section">

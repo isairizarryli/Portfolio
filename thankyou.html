@@ -27,17 +27,22 @@
       font-family: 'Nunito', sans-serif;
     }
 
+    .logo {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      width: 90px;
+      height: auto;
+      opacity: 0.95;
+      z-index: 100;
+    }
+
     .banner {
       width: 100%;
-      background: linear-gradient(90deg,     
-        var(--baby-pink),
-        var(--peach-pink),    
-        var(--cream),
-        var(--peach-pink),
-        var(--baby-pink)
-      );
+      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
       padding: 2rem 1rem;
       text-align: center;
+      position: relative;
     }
 
     .banner h1 {
@@ -45,7 +50,6 @@
       font-size: 4rem;
       color: var(--strawberry-red);
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     nav {
@@ -84,21 +88,22 @@
       text-align: center;
     }
 
-    main h2 {
+    h2.section-title {
       font-family: 'Comfortaa', cursive;
       font-size: 2.5rem;
-      color: var(--strawberry-red);
-      background: linear-gradient(to top, var(--powder-blue) 40%, transparent 40%);
-      display: inline;
-      padding: 0 5px;
+      color: var(--charcoal-gray);
+      background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
+      padding: 0 6px;
+      border-radius: 8px;
+      display: inline-block;
     }
 
-    main .thank-section {
+    .thank-section {
       opacity: 0;
       animation: fadeIn 1s ease-out 0.5s forwards;
     }
 
-    main p {
+    .thank-section p {
       font-family: 'Nunito', sans-serif;
       font-size: 1.2rem;
       line-height: 1.7;
@@ -118,9 +123,23 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 70px;
+        top: 1rem;
+        left: 1rem;
+      }
+      .banner h1 {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+        line-height: 1.2;
+      }
+    }
   </style>
 </head>
 <body>
+  <img src="images/Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo" class="logo">
   <div class="banner">
     <h1>Thank You</h1>
   </div>
@@ -137,11 +156,10 @@
 
   <main>
     <section class="thank-section">
-      <h2>To all those who made it this far,</h2>
+      <h2 class="section-title">To all those who made it this far,</h2>
       <p>Thank you so much for taking the time to explore my portfolio. I hope this gave you insight into who I am, what I care about, and the kind of work I aim to deliver.</p>
       <p>I’m incredibly passionate about creating meaningful experiences through thoughtful planning and genuine care for people. I appreciate your interest and the opportunity to share my story.</p>
-      <p>I can't wait to connect with you soon!✨</p>
-
+      <p>I can't wait to connect with you soon! ✨</p>
     </section>
   </main>
 </body>

@@ -107,34 +107,37 @@
     .photo-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 2rem;
       margin-top: 2rem;
       opacity: 0;
       animation: fadeIn 1s ease-out 2.4s forwards;
       justify-content: center;
     }
 
+    .photo-gallery .photo {
+      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
     .photo-gallery img {
       width: 100%;
-      max-width: 180px;
-      height: 180px;
-      border-radius: 38% / 38%;
-      object-fit: cover;
+      height: auto;
+      aspect-ratio: 1 / 1.25;
+      border-radius: 28% / 38%;
+      object-fit: contain;
       background-color: white;
       border: 3px solid var(--peach-pink);
       padding: 6px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-       transition: transform 0.3s ease;
-   }
+      transition: transform 0.3s ease;
+    }
 
     .photo-gallery img:hover {
       transform: scale(1.03);
-    }
-
-    .photo-gallery .photo {
-      flex: 1 1 30%;
-      display: flex;
-      justify-content: center;
     }
 
     .background-section {
@@ -165,6 +168,12 @@
       .photo-gallery {
         flex-direction: column;
         align-items: center;
+      }
+
+      .photo-gallery .photo {
+        width: 100%;
+        max-width: 240px;
+        margin-bottom: 1rem;
       }
 
       .about-logo {
@@ -204,7 +213,7 @@
   <!-- Professional Background -->
   <section class="section background-section">
     <h2>Professional Background</h2>
-    <p>Hi, I’m Isabela! I’m currently pursuing my Bachelor of Science in Event Management at UCF’s Rosen College, where I’ve found my passion for creating experiences that feel seamless, thoughtful, and full of heart. From coordinating group itineraries at Walt Disney World to leading logistics for Rosen’s college-wide Career Fair, I’ve had the chance to grow in both guest services and operations.</p>
+    <p>Hi, I’m Isabela! I’m currently pursuing my Bachelor of Science in Event Management at UCF’s Rosen College, where I’ve honed my passion for creating experiences that feel seamless, thoughtful, and full of heart. From coordinating group itineraries at Walt Disney World to leading logistics for Rosen’s college-wide Career Fair, I’ve had the chance to grow in both guest services and operations.</p>
     <p>I love the challenge of behind-the-scenes planning—anticipating needs, staying three steps ahead, and making sure everything runs smoothly while people simply enjoy the moment. I thrive in fast-paced environments where I can bring calm to the chaos, find creative solutions, and support others with empathy and intention. Whether I’m managing vendors, building layered backup plans, or designing a smooth check-in process, I always lead with care and a steady hand.</p>
   </section>
 

@@ -114,24 +114,7 @@
       animation: fadeIn 1s ease-out 1s forwards;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 768px) {
-      .logo {
-        width: 70px;
-        top: 1rem;
-        left: 1rem;
-      }
-      .banner h1 {
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        line-height: 1.2;
-      }
-
-      .cert-card .images {
+    .cert-card .images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -153,7 +136,23 @@
   object-fit: contain;
 }
 
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 70px;
+        top: 1rem;
+        left: 1rem;
+      }
+      .banner h1 {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+        line-height: 1.2;
+      }
+     }
   </style>
 </head>
 <body>

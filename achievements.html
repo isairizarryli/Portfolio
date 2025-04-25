@@ -114,19 +114,20 @@
     }
 
     .cert-card .images img {
-      width: 100%;
-      max-width: 220px;
+      max-width: 100%;
+      width: auto;
       height: auto;
+      max-height: 300px;
       border-radius: 20px;
       object-fit: contain;
       background-color: white;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      flex: 1 1 auto;
     }
 
     @media screen and (max-width: 500px) {
       .cert-card .images img {
-        max-width: 200px;
+        max-width: 100%;
+        max-height: 200px;
       }
     }
 
@@ -193,15 +194,15 @@
     <hr class="section-divider">
     <section>
       <h2>Certifications</h2>
-      <div class="timeline-item">
+      <div class="timeline-item cert-card">
         <h4>Operations Support & Specialist</h4>
-        <div class="cert-card images">
+        <div class="images">
           <img src="images/cert1.jpg" alt="Certification 1">
         </div>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item cert-card">
         <h4>Business Support & Specialist</h4>
-        <div class="cert-card images">
+        <div class="images">
           <img src="images/cert2.jpg" alt="Certification 2">
           <img src="images/cert3.jpg" alt="Certification 3">
         </div>

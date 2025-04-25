@@ -130,6 +130,29 @@
         padding: 0 2rem;
         line-height: 1.2;
       }
+
+      .cert-card .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cert-card .images img {
+  width: auto;
+  max-width: 240px;
+  height: auto;
+  max-height: 180px;
+  border-radius: 10px;
+  border: 2px solid var(--peach-pink);
+  background-color: white;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  object-fit: contain;
+}
+
     }
   </style>
 </head>
@@ -167,14 +190,19 @@
     </section>
     <hr class="section-divider">
     <section>
-      <h2>Certifications</h2>
-      <div class="timeline-item">
-        <h4>Operations Support & Specialist</h4>
-      </div>
-      <div class="timeline-item">
-        <h4>Business Support & Specialist</h4>
-      </div>
-    </section>
+  <h2>Certifications</h2>
+
+  <div class="timeline-item cert-card">
+    <h4>Business Certifications</h4>
+    <p>Earned through Valencia College’s technical training programs, these certifications demonstrate core competencies in business operations, specialist-level administrative functions, and operational support services.</p>
+    <div class="images">
+      <img src="images/cert1.jpg" alt="Business Operations Certificate">
+      <img src="images/cert2.jpg" alt="Business Specialist Certificate">
+      <img src="images/cert3.jpg" alt="Operations Support and Services Certificate">
+    </div>
+  </div>
+</section>
+
     <hr class="section-divider">
     <section>
       <h2>Letters of Recommendation</h2>

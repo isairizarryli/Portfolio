@@ -186,18 +186,21 @@
     }
 
     @media screen and (max-width: 768px) {
-      .logo {
-        width: 70px;
-        top: 1rem;
-        left: 1rem;
-      }
+  .logo {
+    width: 70px;
+    top: 2rem; /* 👈 bump logo a little lower for breathing room */
+    left: 1rem;
+  }
 
-      .banner h1 {
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        line-height: 1.2;
-      }
-    }
+  .banner h1 {
+    font-size: 2rem; /* 👈 smaller font for mobile */
+    line-height: 1.3;
+    padding: 3.5rem 1.5rem 1rem 1.5rem; /* 👈 top, right, bottom, left: gives more top padding */
+    word-break: break-word;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
   </style>
 </head>
 <body>

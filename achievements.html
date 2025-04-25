@@ -107,16 +107,26 @@
 
     .cert-card .images {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
       gap: 1rem;
       margin-top: 1rem;
     }
 
     .cert-card .images img {
-      width: calc(50% - 0.5rem);
+      width: 100%;
+      max-width: 300px;
+      height: auto;
       border-radius: 30px;
       object-fit: contain;
       background-color: white;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    @media screen and (max-width: 500px) {
+      .cert-card .images img {
+        max-width: 200px;
+      }
     }
 
     .section-divider {

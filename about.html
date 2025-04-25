@@ -125,16 +125,17 @@
 
     .photo-gallery img {
       width: 100%;
+      max-width: 240px;
       height: auto;
-      aspect-ratio: 1 / 1.1;
-      border-radius: 28% / 38%;
+      border-radius: 28px;
       object-fit: contain;
       background-color: white;
       border: 3px solid var(--peach-pink);
       padding: 6px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease;
-    }
+   }
+
 
     .photo-gallery img:hover {
       transform: scale(1.03);

@@ -2,247 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Isabela Irizarry | Home</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
-
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa:wght@400;600&family=Josefin+Sans:wght@500&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* =====================
+       THEME & TOKENS
+       ===================== */
     :root {
       --baby-pink: #FFC1CC;
       --cream: #FFF5E1;
       --peach-cream: #FFF1E6;
-      --peach-pink: #fad0c1;
+      --peach-pink: #FAD0C1;
       --strawberry-red: #FF6B81;
-      --bold-strawberry: #ff3856;
-      --powder-blue: #a9ceeb;
-      --soft-blue: #abd2ef;
-      --orange: #ff7b00;
-      --soft-orange: #ff9a56;
+      --bold-strawberry: #FF3856;
+      --powder-blue: #A9CEEB;
+      --soft-blue: #ABD2EF;
+      --orange: #FF7B00;
+      --soft-orange: #FF9A56;
       --charcoal-gray: #4A4A4A;
+
+      /* Isa's portfolio banner gradient (symmetrical) */
+      --banner-gradient: linear-gradient(90deg,
+        var(--bold-strawberry), var(--baby-pink), var(--cream), var(--peach-cream), var(--cream), var(--baby-pink), var(--bold-strawberry)
+      );
+
+      --radius-pill: 999px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+      --shadow-md: 0 10px 20px rgba(0,0,0,.12);
+      --content-max: 1100px;
     }
+
+    /* =====================
+       BASE
+       ===================== */
+    html { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
 
     body {
-      background-color: var(--peach-cream);
       margin: 0;
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--charcoal-gray);
+      background: var(--peach-cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* ========== Banner ========== */
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
-      padding: 2rem 1rem;
-      text-align: center;
+    a { color: inherit; }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container { max-width: var(--content-max); padding: 0 1rem; margin: 0 auto; }
+
+    /* =====================
+       ACCESSIBILITY
+       ===================== */
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
     }
+    .skip-link:focus {
+      left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem .75rem; background: #fff; border-radius: .5rem; box-shadow: var(--shadow-sm);
+    }
+
+    /* =====================
+       BANNER / HERO
+       ===================== */
+    .banner { width: 100%; background: var(--banner-gradient); padding: 2.25rem 1rem; }
+    .banner-inner { text-align: center; }
 
     .banner h1 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 4rem;
-      color: var(--strawberry-red);
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      color: var(--bold-strawberry);
+      text-shadow: 0 1px 4px rgba(0,0,0,.08);
+      -webkit-text-stroke: 0.6px rgba(255,255,255,.25);
     }
 
     .traits {
       font-family: 'Josefin Sans', sans-serif;
-      color: var(--orange);
-      font-size: 0.95rem;
-      letter-spacing: 2px;
-      margin-top: 0.5rem;
+      font-size: .95rem; letter-spacing: 2px; margin-top: .5rem; color: var(--orange);
     }
 
-    /* ========== Navigation ========== */
+    /* =====================
+       NAVIGATION
+       ===================== */
+    header { background: transparent; position: sticky; top: 0; z-index: 100; backdrop-filter: saturate(140%) blur(6px); }
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .75rem; flex-wrap: wrap;
     }
-
     nav a {
-      margin: 0 1rem;
-      font-family: 'Comfortaa', sans-serif;
-      text-decoration: none;
-      color: var(--charcoal-gray);
-      background-color: var(--powder-blue);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
+      font-family: 'Comfortaa', sans-serif; text-decoration: none; padding: .5rem .9rem; border-radius: var(--radius-pill);
+      background: var(--powder-blue); color: var(--charcoal-gray); box-shadow: var(--shadow-sm);
+      transition: transform .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
+      outline-offset: 3px;
     }
+    nav a:hover { background: var(--bold-strawberry); color: #fff; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    nav a:focus-visible { outline: 3px solid var(--soft-orange); }
+    nav a[aria-current="page"] { background: var(--soft-blue); font-weight: 600; }
 
-    nav a:hover {
-      background-color: var(--strawberry-red);
-      color: white;
-    }
-
-    /* ========== Intro Section ========== */
-    .intro-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 10%;
-      background-color: var(--peach-cream);
-    }
-
-    .intro-text {
-      flex: 1;
-      max-width: 50%;
-      opacity: 0;
-      animation: fadeInRight 1s ease-out forwards;
-      animation-delay: 0.3s;
-    }
+    /* =====================
+       INTRO SECTION
+       ===================== */
+    .intro-section { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding: clamp(2rem, 6vw, 4rem) 0; }
 
     .welcome-title {
-      font-family: 'Comfortaa', cursive;
-      font-size: 3em;
-      color: var(--charcoal-gray);
-      background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
-      padding: 0 6px;
-      border-radius: 8px;
+      font-family: 'Comfortaa', cursive; font-size: clamp(1.6rem, 3.5vw, 2.5rem); margin: 0;
+      display: inline; background: linear-gradient(to top, var(--peach-pink) 55%, transparent 55%);
+      padding: 0 .25rem; border-radius: .5rem;
     }
 
-    .intro-paragraph {
-      font-size: 1.2em;
-      color: var(--charcoal-gray);
-      margin-top: 20px;
-      line-height: 1.6;
+    .intro-paragraph { margin-top: 1rem; font-size: 1.125rem; max-width: 60ch; }
+
+    .logo-container { margin-top: 1.25rem; }
+    .logo { width: 140px; opacity: .95; }
+
+    .intro-figure { justify-self: end; }
+    .home-photo { background: var(--cream); border: 3px solid var(--peach-pink); border-radius: 150px 150px 0 0; box-shadow: var(--shadow-md); overflow: hidden; max-width: 320px; }
+
+    .home-photo img { transition: transform .3s ease, box-shadow .3s ease; }
+    .home-photo img:hover { transform: scale(1.03); box-shadow: var(--shadow-sm); }
+
+    /* =====================
+       MOTION PREFERENCES
+       ===================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in-up { opacity: 0; transform: translateY(10px); animation: fadeInUp .8s ease forwards; }
+      .fade-in-left { opacity: 0; transform: translateX(24px); animation: fadeInLeft .8s ease .25s forwards; }
     }
 
-    .logo-container {
-      text-align: center;
-      margin: 2rem 0 0;
-      animation: fadeIn 1.5s ease-out forwards;
+    @keyframes fadeInUp { to { opacity: 1; transform: none; } }
+    @keyframes fadeInLeft { to { opacity: 1; transform: none; } }
+
+    /* =====================
+       RESPONSIVE
+       ===================== */
+    @media (max-width: 900px) {
+      nav { justify-content: center; }
+      .intro-section { grid-template-columns: 1fr; text-align: center; }
+      .intro-figure { justify-self: center; }
     }
 
-    .logo-container img {
-      width: 140px;
-      height: auto;
-      opacity: 0.95;
+    @media (max-width: 480px) {
+      .logo { width: 110px; }
     }
-
-    .intro-image {
-      flex: 1;
-      max-width: 40%;
-      text-align: right;
-      opacity: 0;
-      animation: fadeInLeft 1s ease-out forwards;
-      animation-delay: 1s;
-    }
-
-    .home-photo {
-      background-color: var(--cream);
-      border-radius: 150px 150px 0 0;
-      overflow: hidden;
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border: 3px solid var(--peach-pink); /* Optional: border outline */
-    }
-
-    .home-photo img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-      padding: 0;
-      border: none;
-      background-color: transparent;
-    }
-
-    .home-photo img:hover {
-      transform: scale(1.03);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-    }
-
-    /* ========== Animations ========== */
-    @keyframes fadeInRight {
-      0% { opacity: 0; transform: translateX(-30px); }
-      100% { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeInLeft {
-      0% { opacity: 0; transform: translateX(30px); }
-      100% { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 768px) {
-      .intro-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro-text, .intro-image {
-        max-width: 100%;
-      }
-
-      .intro-image {
-        margin-top: 2rem;
-        text-align: center;
-      }
-
-      .banner h1 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 4rem;
-  color: var(--strawberry-red);
-  margin: 0;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
-}
-
-@media screen and (max-width: 768px) {
-  .banner h1 {
-    font-size: 2.5rem;
-    padding: 0 2rem;
-    line-height: 1.2;
-  }
-}
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Banner -->
-  <div class="banner">
-    <h1>Isabela Irizarry</h1>
-    <div class="traits"><em>INTENTIONAL • GENEROUS • EMPATHETIC</em></div>
+  <div class="banner" role="banner">
+    <div class="banner-inner container">
+      <h1>Isabela Irizarry</h1>
+      <p class="traits"><em>INTENTIONAL • GENEROUS • EMPATHETIC</em></p>
+    </div>
   </div>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="deliverables.html">Deliverables</a>
-    <a href="contact.html">Contact Me</a>
-    <a href="thankyou.html">Thank You</a>
-  </nav>
+  <!-- Sticky Nav -->
+  <header>
+    <nav aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="deliverables.html">Deliverables</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="thankyou.html">Thank You</a>
+    </nav>
+  </header>
 
-  <!-- Welcome Section -->
-  <section class="intro-section">
-    <div class="intro-text">
-      <h2 class="welcome-title">Welcome to My Portfolio!</h2>
-      <p class="intro-paragraph">
-        I’m Isabela, and this space is a curated look at the work, learning, and creativity that fuel me. Feel free to explore—each piece tells a little more of my story.
-      </p>
-      <div class="logo-container">
-        <img src="images/Trans-Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo">
+  <main id="main" class="container">
+    <section class="intro-section">
+      <div class="intro-copy fade-in-up">
+        <h2 class="welcome-title">Welcome to My Portfolio!</h2>
+        <p class="intro-paragraph">
+          I’m Isabela, and this space is a curated look at the work, learning, and creativity that fuel me. Feel free to explore—each piece tells a little more of my story.
+        </p>
+        <div class="logo-container">
+          <img class="logo" src="images/Trans-Isabela-Irizarry-Logo.png" width="280" height="280" alt="Isabela Irizarry logo" loading="lazy">
+        </div>
       </div>
-    </div>
-    <div class="intro-image">
-      <div class="home-photo">
-        <img src="images/profile.jpg" alt="Isa Profile Photo">
-      </div>
-    </div>
-  </section>
+
+      <figure class="intro-figure fade-in-left">
+        <div class="home-photo">
+          <img src="images/profile.jpg" width="600" height="800" alt="Portrait of Isabela" loading="lazy">
+        </div>
+      </figure>
+    </section>
+  </main>
 </body>
 </html>

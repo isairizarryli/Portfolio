@@ -24,13 +24,26 @@
       --orange: #ff7b00;
       --soft-orange: #ff9a56;
       --charcoal-gray: #4A4A4A;
+      --white: #ffffff;
+
+      /* layout helpers */
+      --radius: 18px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+      --shadow-md: 0 10px 20px rgba(0,0,0,.12);
+      --maxw: 1100px;
     }
 
     body {
       background-color: var(--peach-cream);
       margin: 0;
       font-family: 'Nunito', sans-serif;
+      color: var(--charcoal-gray);
     }
+
+    /* ========== Helpers ========== */
+    .container { max-width: var(--maxw); padding: 0 10%; margin: 0 auto; }
+    .section { padding: 3.5rem 0; }
+    .section-title { font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 1.25rem; color: var(--charcoal-gray); }
 
     /* ========== Banner ========== */
     .banner {
@@ -63,19 +76,22 @@
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 0.5rem;
       font-family: 'Comfortaa', sans-serif;
       text-decoration: none;
       color: var(--charcoal-gray);
       background-color: var(--powder-blue);
       padding: 0.5rem 1rem;
       border-radius: 25px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: var(--shadow-sm);
     }
 
     nav a:hover {
       background-color: var(--strawberry-red);
-      color: white;
+      color: var(--white);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
     }
 
     /* ========== Intro Section ========== */
@@ -86,10 +102,11 @@
       align-items: center;
       padding: 4rem 10%;
       background-color: var(--peach-cream);
+      gap: 2rem;
     }
 
     .intro-text {
-      flex: 1;
+      flex: 1 1 50%;
       max-width: 50%;
       opacity: 0;
       animation: fadeInRight 1s ease-out forwards;
@@ -103,6 +120,7 @@
       background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
       padding: 0 6px;
       border-radius: 8px;
+      display: inline;
     }
 
     .intro-paragraph {
@@ -110,10 +128,11 @@
       color: var(--charcoal-gray);
       margin-top: 20px;
       line-height: 1.6;
+      max-width: 60ch;
     }
 
     .logo-container {
-      text-align: center;
+      text-align: left;
       margin: 2rem 0 0;
       animation: fadeIn 1.5s ease-out forwards;
     }
@@ -125,7 +144,7 @@
     }
 
     .intro-image {
-      flex: 1;
+      flex: 1 1 40%;
       max-width: 40%;
       text-align: right;
       opacity: 0;
@@ -141,7 +160,7 @@
       max-width: 300px;
       margin: 0 auto;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border: 3px solid var(--peach-pink); /* Optional: border outline */
+      border: 3px solid var(--peach-pink);
     }
 
     .home-photo img {
@@ -152,13 +171,32 @@
       padding: 0;
       border: none;
       background-color: transparent;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .home-photo img:hover {
       transform: scale(1.03);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
     }
+
+    /* ========== Recommendation Section ========== */
+    .recommendation { background: var(--cream); border-top: 2px dashed var(--peach-pink); border-bottom: 2px dashed var(--peach-pink); }
+    .rec-inner { max-width: var(--maxw); padding: 0 10%; margin: 0 auto; }
+    .rec-quote { background: var(--white); border-left: 5px solid var(--strawberry-red); border-radius: var(--radius); padding: 1rem 1.25rem; box-shadow: var(--shadow-sm); }
+    .rec-quote p { margin: 0 0 .5rem; }
+    .rec-quote cite { font-style: normal; font-weight: 600; color: var(--charcoal-gray); }
+    .rec-actions { margin-top: .75rem; }
+    .btn-link { display: inline-block; margin-top: .25rem; background: var(--powder-blue); color: var(--charcoal-gray); padding: .5rem .9rem; border-radius: 25px; box-shadow: var(--shadow-sm); }
+    .btn-link:hover { background: var(--strawberry-red); color: var(--white); }
+
+    /* ========== Highlights Section ========== */
+    .highlights { background: var(--peach-cream); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.25rem; transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .card h4 { margin: .25rem 0 .5rem; font-family: 'Josefin Sans', sans-serif; }
+    .card .kicker { font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: var(--strawberry-red); font-size: .9rem; }
+    .card a { color: var(--bold-strawberry); font-family: 'Comfortaa', sans-serif; }
 
     /* ========== Animations ========== */
     @keyframes fadeInRight {
@@ -176,36 +214,18 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ========== Responsive ========== */
     @media screen and (max-width: 768px) {
-      .intro-section {
-        flex-direction: column;
-        text-align: center;
-      }
+      .intro-section { flex-direction: column; text-align: center; padding: 3rem 10%; }
+      .intro-text, .intro-image { max-width: 100%; }
+      .intro-image { margin-top: 2rem; text-align: center; }
+      .logo-container { text-align: center; }
+      nav a { margin: .35rem; }
+    }
 
-      .intro-text, .intro-image {
-        max-width: 100%;
-      }
-
-      .intro-image {
-        margin-top: 2rem;
-        text-align: center;
-      }
-
-      .banner h1 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 4rem;
-  color: var(--strawberry-red);
-  margin: 0;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
-}
-
-@media screen and (max-width: 768px) {
-  .banner h1 {
-    font-size: 2.5rem;
-    padding: 0 2rem;
-    line-height: 1.2;
-  }
-}
+    @media screen and (max-width: 768px) {
+      .banner h1 { font-size: 2.5rem; padding: 0 2rem; line-height: 1.2; }
+    }
   </style>
 </head>
 
@@ -244,6 +264,47 @@
       </div>
     </div>
   </section>
+
+  <!-- Recommendation Section -->
+  <section class="recommendation section">
+    <div class="rec-inner">
+      <h3 class="section-title">From My Professor</h3>
+      <blockquote class="rec-quote">
+        <p>“Isabela consistently demonstrates meticulous planning, calm problem-solving under pressure, and a guest-first mindset. She elevates every team she joins.”</p>
+        <cite>— Prof. [Name], UCF Rosen College</cite>
+      </blockquote>
+      <div class="rec-actions">
+        <!-- Replace the href with your actual file path if you want a download link -->
+        <a class="btn-link" href="documents/recommendation-letter.pdf">Read full letter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section (bottom) -->
+  <section class="highlights section">
+    <div class="container">
+      <h3 class="section-title">Highlights</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="kicker">Experience</div>
+          <h4>Ops & Exhibition Lead — UCF Career Fair</h4>
+          <p>Directed floor plan, registration, signage, and load-in/out for 500+ attendees; ensured exhibitor success and guest flow.</p>
+          <a href="deliverables.html">Open deliverables →</a>
+        </article>
+        <article class="card">
+          <div class="kicker">Disney</div>
+          <h4>Front Desk Concierge / Sales Cast</h4>
+          <p>High-volume guest service and tailored solutions; compliance and attention to detail across diverse audiences.</p>
+          <a href="resume.html">See resume →</a>
+        </article>
+        <article class="card">
+          <div class="kicker">Skills</div>
+          <h4>Logistics • Client Care • Risk</h4>
+          <p>Timeline building, vendor coordination, layered contingency planning, and hospitality-first communication.</p>
+          <a href="achievements.html">View achievements →</a>
+        </article>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
-

@@ -19,145 +19,54 @@
       --orange: #ff7b00;
       --soft-orange: #ff9a56;
       --charcoal-gray: #4A4A4A;
+      --white: #ffffff;
+      --radius: 12px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+      --shadow-md: 0 10px 20px rgba(0,0,0,.12);
+      --maxw: 1100px;
     }
 
-    body {
-      background-color: var(--peach-cream);
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
-    }
+    body { background-color: var(--peach-cream); margin: 0; font-family: 'Nunito', sans-serif; color: var(--charcoal-gray); }
 
-    .logo {
-      position: absolute;
-      top: 1.5rem;
-      left: 2rem;
-      width: 90px;
-      height: auto;
-      opacity: 0.95;
-      z-index: 100;
-    }
+    .logo { position: absolute; top: 1.5rem; left: 2rem; width: 90px; height: auto; opacity: 0.95; z-index: 100; }
 
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
-      padding: 2rem 1rem;
-      text-align: center;
-      position: relative;
-    }
+    .banner { width: 100%; background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink)); padding: 2rem 1rem; text-align: center; position: relative; }
+    .banner h1 { font-family: 'Baloo 2', cursive; font-size: 4rem; color: var(--strawberry-red); margin: 0; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08); }
 
-    .banner h1 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 4rem;
-      color: var(--strawberry-red);
-      margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
-    }
+    nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; padding: 1rem; background-color: var(--peach-cream); position: sticky; top: 0; z-index: 1000; }
+    nav a { font-family: 'Comfortaa', sans-serif; text-decoration: none; color: var(--charcoal-gray); background-color: var(--powder-blue); padding: 0.5rem 1rem; border-radius: 25px; transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-sm); }
+    nav a:hover { background-color: var(--strawberry-red); color: white; transform: translateY(-1px); box-shadow: var(--shadow-md); }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 1rem;
-      background-color: var(--peach-cream);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    main { max-width: var(--maxw); margin: 2rem auto; padding: 0 1rem; }
 
-    nav a {
-      font-family: 'Comfortaa', sans-serif;
-      text-decoration: none;
-      color: var(--charcoal-gray);
-      background-color: var(--powder-blue);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
+    h2 { font-family: 'Comfortaa', cursive; font-size: 2.2rem; color: var(--charcoal-gray); background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%); padding: 0 6px; border-radius: 8px; display: inline-block; }
 
-    nav a:hover {
-      background-color: var(--strawberry-red);
-      color: white;
-    }
+    .timeline-item, .card-style { background-color: var(--cream); padding: 1rem 1.5rem; border-radius: 12px; border-left: 5px solid var(--powder-blue); margin-bottom: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
 
-    main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+    .section-divider { border: none; border-top: 3px dotted var(--soft-orange); width: 70%; margin: 3rem auto; opacity: 0; animation: fadeIn 1s ease-out 1s forwards; }
 
-    h2 {
-      font-family: 'Comfortaa', cursive;
-      font-size: 2.5rem;
-      color: var(--charcoal-gray);
-      background: linear-gradient(to top, var(--peach-pink) 50%, transparent 50%);
-      padding: 0 6px;
-      border-radius: 8px;
-      display: inline-block;
-    }
+    /* Buttons */
+    .btn-row { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem; }
+    .btn { display: inline-block; font-family: 'Comfortaa', sans-serif; background: var(--powder-blue); color: var(--charcoal-gray); padding: .5rem 1rem; border-radius: 25px; box-shadow: var(--shadow-sm); transition: background .2s ease, transform .15s ease, box-shadow .2s ease; text-decoration: none; }
+    .btn:hover { background: var(--strawberry-red); color: #fff; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-ghost { background: #fff; border: 1px solid rgba(0,0,0,.06); }
 
-    .timeline-item, .card-style {
-      background-color: var(--cream);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      border-left: 5px solid var(--powder-blue);
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
+    /* Rec callout */
+    .rec-snippet { background: var(--cream); border-left: 5px solid var(--strawberry-red); border-radius: 12px; padding: 1rem 1.25rem; box-shadow: var(--shadow-sm); }
+    .rec-snippet p { margin: 0 0 .5rem; }
+    .rec-snippet cite { font-style: normal; font-weight: 600; }
 
-    .section-divider {
-      border: none;
-      border-top: 3px dotted var(--soft-orange);
-      width: 70%;
-      margin: 3rem auto;
-      opacity: 0;
-      animation: fadeIn 1s ease-out 1s forwards;
-    }
+    /* Cert images (kept) */
+    .cert-card .images { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; margin-top: 1rem; }
+    .cert-card .images img { width: auto; max-width: 240px; height: auto; max-height: 180px; border-radius: 10px; border: 2px solid var(--peach-pink); background-color: white; padding: 6px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); object-fit: contain; }
+    .cert-card .images img:hover { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); }
 
-    .cert-card .images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.cert-card .images img {
-  width: auto;
-  max-width: 240px;
-  height: auto;
-  max-height: 180px;
-  border-radius: 10px;
-  border: 2px solid var(--peach-pink);
-  background-color: white;
-  padding: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  object-fit: contain;
-}
-
-    .cert-card .images img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 
     @media screen and (max-width: 768px) {
-      .logo {
-        width: 70px;
-        top: 1rem;
-        left: 1rem;
-      }
-      .banner h1 {
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        line-height: 1.2;
-      }
-     }
+      .logo { width: 70px; top: 1rem; left: 1rem; }
+      .banner h1 { font-size: 2.5rem; padding: 0 2rem; line-height: 1.2; }
+    }
   </style>
 </head>
 <body>
@@ -174,7 +83,9 @@
     <a href="contact.html">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
   </nav>
+
   <main>
+    <!-- Educational Achievements -->
     <section>
       <h2>Educational Achievements</h2>
       <div class="timeline-item">
@@ -192,9 +103,12 @@
         <p>National Honor Society</p>
       </div>
     </section>
+
     <hr class="section-divider">
+
+    <!-- Skills & Certifications -->
     <section>
-  <h2>Skills & Certifications</h2>
+      <h2>Skills & Certifications</h2>
 
       <div class="timeline-item">
         <h4>Technical Skills</h4>
@@ -208,23 +122,28 @@
         <p>Conversational Portuguese</p>
       </div>
 
-  <div class="timeline-item cert-card">
-    <h4>Business Certifications</h4>
-    <p>Earned through Valencia College’s technical training programs, these certifications demonstrate core competencies in business operations, specialist-level administrative functions, and operational support services.</p>
-    <div class="images">
-      <img src="images/cert1.jpg" alt="Business Operations Certificate">
-      <img src="images/cert2.jpg" alt="Business Specialist Certificate">
-      <img src="images/cert3.jpg" alt="Operations Support and Services Certificate">
-    </div>
-  </div>
-</section>
+      <div class="timeline-item cert-card">
+        <h4>Business Certifications</h4>
+        <p>Earned through Valencia College’s technical training programs, these certifications demonstrate core competencies in business operations, specialist-level administrative functions, and operational support services.</p>
+        <div class="images">
+          <img src="images/cert1.jpg" alt="Business Operations Certificate">
+          <img src="images/cert2.jpg" alt="Business Specialist Certificate">
+          <img src="images/cert3.jpg" alt="Operations Support and Services Certificate">
+        </div>
+      </div>
+    </section>
 
     <hr class="section-divider">
+
+    <!-- Letters of Recommendation (UPDATED) -->
     <section>
       <h2>Letters of Recommendation</h2>
-      <div class="timeline-item">
-        <h4>Coming Soon</h4>
-        <p>This section will feature letters of recommendation that reflect my strengths as a student, teammate, and emerging professional.</p>
+      <div class="timeline-item rec-snippet">
+        <p>“Isabela consistently demonstrates meticulous planning, calm problem-solving under pressure, and a guest-first mindset. She elevates every team she joins.”</p>
+        <cite>— Professor [Name], UCF Rosen College</cite>
+        <div class="btn-row">
+          <a class="btn" href="recommendation.html">Read full recommendation</a>
+        </div>
       </div>
     </section>
   </main>

@@ -8,148 +8,66 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
 
-  <!-- Animation Stylesheet -->
+  <!-- AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
   <style>
-    :root {
-      --baby-pink: #FFC1CC;
-      --cream: #FFF5E1;
-      --peach-cream: #FFF1E6;
-      --peach-pink: #fad0c1;
-      --strawberry-red: #FF6B81;
-      --bold-strawberry: #ff3856;
-      --powder-blue: #a9ceeb;
-      --soft-blue: #abd2ef;
-      --orange: #ff7b00;
-      --soft-orange: #ff9f6b;
-      --charcoal-gray: #4A4A4A;
+    :root{
+      --baby-pink:#FFC1CC; --cream:#FFF5E1; --peach-cream:#FFF1E6; --peach-pink:#fad0c1;
+      --strawberry-red:#FF6B81; --bold-strawberry:#ff3856; --powder-blue:#a9ceeb;
+      --soft-blue:#abd2ef; --orange:#ff7b00; --soft-orange:#ff9f6b; --charcoal-gray:#4A4A4A;
+      --shadow-sm:0 4px 12px rgba(0,0,0,.08); --shadow-md:0 10px 20px rgba(0,0,0,.12); --radius:15px;
     }
 
-    body {
-      background-color: var(--peach-cream);
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
-    }
+    body{background-color:var(--peach-cream);margin:0;font-family:'Nunito',sans-serif;color:var(--charcoal-gray);}  
+    .logo{position:absolute;top:1.5rem;left:2rem;width:90px;height:auto;opacity:.95;z-index:100;}
 
-    .logo {
-      position: absolute;
-      top: 1.5rem;
-      left: 2rem;
-      width: 90px;
-      height: auto;
-      opacity: 0.95;
-      z-index: 100;
-    }
+    .banner{width:100%;background:linear-gradient(90deg,var(--baby-pink),var(--peach-pink),var(--cream),var(--peach-pink),var(--baby-pink));padding:2rem 1rem;text-align:center;}
+    .banner h1{font-family:'Baloo 2',cursive;font-size:4rem;color:var(--strawberry-red);margin:0;text-shadow:1px 1px 4px rgba(0,0,0,.08);}  
 
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, var(--baby-pink), var(--peach-pink), var(--cream), var(--peach-pink), var(--baby-pink));
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;padding:1rem;background-color:var(--peach-cream);position:sticky;top:0;z-index:1000;backdrop-filter:blur(6px);box-shadow:0 2px 6px rgba(0,0,0,.05);}  
+    nav a{font-family:'Comfortaa',sans-serif;text-decoration:none;color:var(--charcoal-gray);background-color:var(--powder-blue);padding:.5rem 1rem;border-radius:25px;transition:background-color .3s ease, transform .15s ease, box-shadow .2s ease; box-shadow:var(--shadow-sm);}  
+    nav a:hover{background-color:var(--strawberry-red);color:#fff;transform:translateY(-1px);box-shadow:var(--shadow-md);}  
+    nav a[aria-current="page"]{background-color:var(--soft-blue);font-weight:600;}
 
-    .banner h1 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 4rem;
-      color: var(--strawberry-red);
-      margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
-    }
+    main{max-width:980px;margin:2rem auto;padding:0 1rem;}
+    h2{font-family:'Comfortaa',cursive;font-size:2.2rem;color:var(--charcoal-gray);background:linear-gradient(to top,var(--peach-pink) 50%,transparent 50%);padding:0 6px;border-radius:8px;display:inline-block;}
+    .meta{font-size:.95rem;opacity:.8;margin:.4rem 0 1rem;}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem;
-      background-color: var(--peach-cream);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
+    /* Highlights */
+    .highlights{background:var(--cream);border-radius:12px;border-left:5px solid var(--powder-blue);box-shadow:var(--shadow-sm);padding:1rem 1.25rem;margin-bottom:1.5rem;}
+    .highlights ul{margin:.25rem 0 0 1.25rem;}
 
-    nav a {
-      font-family: 'Comfortaa', sans-serif;
-      text-decoration: none;
-      color: var(--charcoal-gray);
-      background-color: var(--powder-blue);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
+    /* Preview card */
+    .resume-wrap{display:grid;grid-template-columns:1fr;gap:1.25rem;}
+    .resume-preview{max-width:560px;margin:0 auto;background-color:var(--cream);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow-sm);border:3px solid var(--peach-pink);text-align:center;}
+    .resume-preview img{max-width:100%;height:auto;border-radius:12px;border:none;padding:5px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.05);margin-bottom:1rem;transition:transform .3s ease, box-shadow .3s ease;}
+    .resume-preview img:hover{transform:scale(1.03);box-shadow:0 6px 14px rgba(0,0,0,.1);}  
 
-    nav a:hover {
-      background-color: var(--strawberry-red);
-      color: white;
-    }
+    .actions{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+    .btn{display:inline-block;font-family:'Comfortaa',sans-serif;background:var(--powder-blue);color:var(--charcoal-gray);padding:.5rem 1rem;border-radius:25px;box-shadow:var(--shadow-sm);text-decoration:none;transition:background .2s ease, transform .15s ease, box-shadow .2s ease;}
+    .btn:hover{background:var(--strawberry-red);color:#fff;transform:translateY(-1px);box-shadow:var(--shadow-md);}  
+    .btn-primary{background:var(--bold-strawberry);color:#fff;}
 
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
+    /* Viewer */
+    .viewer{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);border:3px solid var(--peach-pink);overflow:hidden;}
+    .viewer object{width:100%;height:720px;border:0;display:block;}
 
-    .resume-preview {
-      max-width: 500px;
-      margin: 0 auto;
-      background-color: var(--cream);
-      border-radius: 15px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      border: 3px solid var(--peach-pink);
-    }
+    /* Text version */
+    details{background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow-sm);}  
+    summary{list-style:none;cursor:pointer;padding:1rem 1.25rem;font-family:'Comfortaa',sans-serif;display:flex;align-items:center;gap:.5rem;}
+    summary::marker{display:none}
+    summary:hover{background:var(--cream);}  
+    .text-resume{padding:0 1.25rem 1rem;}
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}  
+    .pill{display:inline-block;background:var(--powder-blue);color:var(--charcoal-gray);padding:.25rem .6rem;border-radius:999px;margin:.15rem .25rem 0 0;font-family:'Comfortaa',sans-serif;font-size:.95rem;}
 
-    .resume-preview img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: none;
-      padding: 5px;
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .resume-preview img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-    }
-
-    .resume-button {
-      display: inline-block;
-      background-color: var(--bold-strawberry);
-      padding: 0.5rem 1.2rem;
-      border-radius: 20px;
-      color: white;
-      font-family: 'Comfortaa', sans-serif;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .resume-button:hover {
-      background-color: var(--charcoal-gray);
-      color: white;
-    }
-
-    @media screen and (max-width: 768px) {
-      .logo {
-        width: 70px;
-        top: 1rem;
-        left: 1rem;
-      }
-      .banner h1 {
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        line-height: 1.2;
-      }
+    @media (max-width:768px){
+      .logo{width:70px;top:1rem;left:1rem;}
+      .banner h1{font-size:2.5rem;padding:0 2rem;line-height:1.2;}
+      .viewer object{height:520px;}
+      .grid-two{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -158,37 +76,111 @@
   <img src="images/Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo" class="logo" />
 
   <!-- Banner -->
-  <div class="banner">
-    <h1>Resume</h1>
-  </div>
+  <div class="banner"><h1>Resume</h1></div>
 
   <!-- Navigation -->
-  <nav>
+  <nav aria-label="Primary">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html" aria-current="page">Resume</a>
     <a href="achievements.html">Achievements</a>
     <a href="deliverables.html">Deliverables</a>
     <a href="contact.html">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
   </nav>
 
-  <!-- Resume Section -->
   <main>
     <section data-aos="fade-up">
-      <div class="resume-preview">
-        <img src="images/resume-preview.jpg" alt="Resume Preview">
-        <br>
-        <a href="documents/isa-irizarry-resume.zip" download class="resume-button">📄 Download Resume</a>
+      <h2>Resume Highlights</h2>
+      <p class="meta">Last updated: <time datetime="2025-10-14">Oct 14, 2025</time></p>
+      <div class="highlights">
+        <ul>
+          <li><strong>Operations & Exhibitions Services Lead</strong> — UCF Rosen College Career Fair: layouts, signage, registration; exhibitor load-in/out; guest flow; detailed pre-/post-con docs.</li>
+          <li><strong>Concierge, Disney’s Fort Wilderness Resort</strong> — welcome & assist hundreds daily; coordinate special requests cross-department; support operational logistics.</li>
+          <li><strong>Multi‑Language Sales & Solutions Specialist (WDW)</strong> — organized group bookings; handled escalations; bilingual support in Spanish/English.</li>
+          <li><strong>Concierge Coordinator, Kaplan Test Prep</strong> — logistics & scheduling for seminars; mentored 80+ staff; client relationship building.</li>
+          <li><strong>Sales Hostess (WDW)</strong> — high‑volume transactions; guest‑tailored solutions; upheld Safety, Courtesy & Efficiency standards.</li>
+        </ul>
       </div>
+
+      <div class="resume-wrap">
+        <!-- Preview card -->
+        <div class="resume-preview">
+          <img
+            src="images/resume-preview.jpg"
+            srcset="images/resume-preview.jpg 1x, images/resume-preview@2x.jpg 2x"
+            width="520" height="672"
+            alt="Preview of Isabela Irizarry’s current resume" loading="lazy">
+          <div class="actions">
+            <a class="btn btn-primary" href="documents/Isabela_Irizarry_Resume.pdf" type="application/pdf">View PDF</a>
+            <a class="btn" href="documents/Isabela_Irizarry_Resume.pdf" download>Download PDF</a>
+            <a class="btn" href="documents/Isabela_Irizarry_Resume.docx">Download DOCX</a>
+            <a class="btn" href="#" onclick="window.print();return false;">Print</a>
+          </div>
+        </div>
+
+        <!-- Inline PDF viewer -->
+        <div class="viewer" data-aos="fade-up" aria-label="Resume PDF viewer">
+          <object data="documents/Isabela_Irizarry_Resume.pdf" type="application/pdf">
+            <div style="padding:1rem;">
+              <p>Can’t display the PDF here. You can <a href="documents/Isabela_Irizarry_Resume.pdf">open it in a new tab</a> or download above.</p>
+            </div>
+          </object>
+        </div>
+      </div>
+
+      <!-- Text version (ATS-friendly) -->
+      <details data-aos="fade-up" style="margin-top:1rem;">
+        <summary>▼ View Text Version (ATS-friendly)</summary>
+        <div class="text-resume">
+          <h3 style="margin:.5rem 0 0;">ISABELA IRIZARRY LIZARRAGA</h3>
+          <p>2865 Polana St 105 · Orlando, FL 32835 · 407-965-8395 · <a href="mailto:isairizarryli@gmail.com">isairizarryli@gmail.com</a> · <a href="https://isairizarry.com">isairizarry.com</a></p>
+
+          <h4>Career Objective</h4>
+          <p>Pursuing opportunities in event operations and hospitality management. Experienced in guest service, logistics coordination, and event support; proven ability to deliver organized, guest-centered experiences. Skilled in communication, adaptability, and attention to detail, with a strong commitment to excellence and collaboration in dynamic hospitality environments.</p>
+
+          <h4>Education</h4>
+          <p><strong>University of Central Florida — Rosen College of Hospitality Management</strong><br>BS, Event Management · President’s List · Dean’s List · GPA 3.7 · <em>Graduating Dec 2025</em></p>
+
+          <h4>Professional Experience</h4>
+          <p><strong>Concierge</strong> — Walt Disney Company, Disney’s Fort Wilderness Resort <span style="float:right;">Jun 2025 – Present</span><br>Welcome and assist hundreds of Guests daily; coordinate special requests across departments; maintain organized workspace; support operational logistics.</p>
+
+          <p><strong>Sales Hostess</strong> — Walt Disney Company <span style="float:right;">Mar 2022 – Jun 2025</span><br>Processed transactions and managed logistics in a high-volume environment; anticipated Guest needs; ensured Disney standards of Safety, Courtesy, and Efficiency.</p>
+
+          <p><strong>Operations & Exhibitions Services Lead</strong> — UCF Rosen College of Hospitality Management <span style="float:right;">Jan 2025 – Mar 2025</span><br>Oversaw event logistics including layouts, signage, and registration; directed exhibitor load‑in/out and Guest flow; prepared detailed pre‑con/post‑con documentation.</p>
+
+          <p><strong>Multi‑Language Sales & Solutions Specialist</strong> — Walt Disney World Company <span style="float:right;">Sep 2019 – Mar 2022</span><br>Organized group bookings and itineraries; resolved escalated issues; provided bilingual support in Spanish and English.</p>
+
+          <p><strong>Concierge Coordinator</strong> — Kaplan Test Prep <span style="float:right;">Aug 2018 – Jul 2019</span><br>Managed logistics and scheduling for events and seminars; supervised/mentored 80+ staff; built strong client relationships through proactive communication and service.</p>
+
+          <div class="grid-two">
+            <div>
+              <h4>Achievements</h4>
+              <ul>
+                <li>President’s List</li>
+                <li>Dean’s List</li>
+                <li>National Honor Society</li>
+                <li>Operations & Exhibitions Services Lead</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Skills</h4>
+              <span class="pill">Organization</span>
+              <span class="pill">Adaptability</span>
+              <span class="pill">Collaboration</span>
+              <span class="pill">Communication</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top:1rem;">Certifications</h4>
+          <p>CVENT · Operations Specialist · Operational Support Management · Business Support & Specialist</p>
+        </div>
+      </details>
     </section>
   </main>
 
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    document.addEventListener('DOMContentLoaded',()=>{ AOS.init({ duration: 800, once: true }); });
   </script>
 </body>
 </html>

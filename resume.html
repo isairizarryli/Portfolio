@@ -39,6 +39,18 @@
     .highlights{background:var(--cream);border-radius:12px;border-left:5px solid var(--powder-blue);box-shadow:var(--shadow-sm);padding:1rem 1.25rem;margin-bottom:1.5rem;}
     .highlights ul{margin:.25rem 0 0 1.25rem;}
 
+    /* Role cards */
+    .role-cards{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;margin-top:.25rem;}
+    .role-card{grid-column:span 6;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;box-shadow:var(--shadow-sm);padding:1rem 1.1rem;transition:transform .15s ease, box-shadow .2s ease;}
+    .role-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-md);}    
+    .role-card .kicker{font-family:'Josefin Sans',sans-serif;text-transform:uppercase;letter-spacing:1.6px;color:var(--strawberry-red);font-size:.9rem;margin-bottom:.25rem;}
+    .role-card h4{margin:.1rem 0 .35rem;font-family:'Josefin Sans',sans-serif;font-size:1.05rem;color:var(--charcoal-gray);}    
+    .role-card .meta{font-size:.95rem;opacity:.8;margin:0 0 .4rem;}
+    .role-card ul{margin:.35rem 0 0 1rem;padding:0}
+    .role-card li{margin:.2rem 0}
+
+    @media (max-width:900px){.role-card{grid-column:span 12;}}
+
     /* Preview card */
     .resume-wrap{display:grid;grid-template-columns:1fr;gap:1.25rem;}
     .resume-preview{max-width:560px;margin:0 auto;background-color:var(--cream);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow-sm);border:3px solid var(--peach-pink);text-align:center;}
@@ -94,13 +106,59 @@
       <h2>Resume Highlights</h2>
       <p class="meta">Last updated: <time datetime="2025-10-14">Oct 14, 2025</time></p>
       <div class="highlights">
-        <ul>
-          <li><strong>Operations & Exhibitions Services Lead</strong> — UCF Rosen College Career Fair: layouts, signage, registration; exhibitor load-in/out; guest flow; detailed pre-/post-con docs.</li>
-          <li><strong>Concierge, Disney’s Fort Wilderness Resort</strong> — welcome & assist hundreds daily; coordinate special requests cross-department; support operational logistics.</li>
-          <li><strong>Multi‑Language Sales & Solutions Specialist (WDW)</strong> — organized group bookings; handled escalations; bilingual support in Spanish/English.</li>
-          <li><strong>Concierge Coordinator, Kaplan Test Prep</strong> — logistics & scheduling for seminars; mentored 80+ staff; client relationship building.</li>
-          <li><strong>Sales Hostess (WDW)</strong> — high‑volume transactions; guest‑tailored solutions; upheld Safety, Courtesy & Efficiency standards.</li>
-        </ul>
+        <div class="role-cards">
+          <article class="role-card">
+            <div class="kicker">Current Role</div>
+            <h4>Concierge — Disney’s Fort Wilderness Resort</h4>
+            <p class="meta">Walt Disney Company · Jun 2025 – Present</p>
+            <ul>
+              <li>Welcome and assist hundreds of Guests daily; anticipate needs and resolve issues.</li>
+              <li>Coordinate special requests cross‑department (Transportation, Housekeeping, F&amp;B).</li>
+              <li>Support operational logistics and maintain organized, guest‑ready workspaces.</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <div class="kicker">Leadership</div>
+            <h4>Operations &amp; Exhibitions Services Lead — Career Fair</h4>
+            <p class="meta">UCF Rosen College · Jan 2025 – Mar 2025</p>
+            <ul>
+              <li>Directed layouts, signage, and registration for a 500+ attendee event.</li>
+              <li>Managed exhibitor load‑in/out and guest flow; authored pre/post‑con docs.</li>
+              <li>Selected to lead Ops/Exhibition; recognized for calm, guest‑first leadership.</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <div class="kicker">Guest Service</div>
+            <h4>Sales Hostess</h4>
+            <p class="meta">Walt Disney Company · Mar 2022 – Jun 2025</p>
+            <ul>
+              <li>Handled high‑volume transactions; tailored solutions to diverse Guest needs.</li>
+              <li>Upheld Disney standards of Safety, Courtesy &amp; Efficiency.</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <div class="kicker">Reservations</div>
+            <h4>Multi‑Language Sales &amp; Solutions Specialist</h4>
+            <p class="meta">Walt Disney World Company · Sep 2019 – Mar 2022</p>
+            <ul>
+              <li>Organized group bookings and itineraries; resolved escalations.</li>
+              <li>Provided bilingual support in Spanish and English.</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <div class="kicker">Coordination</div>
+            <h4>Concierge Coordinator</h4>
+            <p class="meta">Kaplan Test Prep · Aug 2018 – Jul 2019</p>
+            <ul>
+              <li>Managed logistics &amp; scheduling for seminars; mentored 80+ staff.</li>
+              <li>Built strong client relationships via proactive communication.</li>
+            </ul>
+          </article>
+        </div>
       </div>
 
       <div class="resume-wrap">

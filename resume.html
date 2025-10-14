@@ -62,7 +62,7 @@
     .btn:hover{background:var(--strawberry-red);color:#fff;transform:translateY(-1px);box-shadow:var(--shadow-md);}  
     .btn-primary{background:var(--bold-strawberry);color:#fff;}
 
-    /* Viewer */
+    /* Viewer (optional) */
     .viewer{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);border:3px solid var(--peach-pink);overflow:hidden;}
     .viewer object{width:100%;height:720px;border:0;display:block;}
 
@@ -105,6 +105,7 @@
     <section data-aos="fade-up">
       <h2>Resume Highlights</h2>
       <p class="meta">Last updated: <time datetime="2025-10-14">Oct 14, 2025</time></p>
+
       <div class="highlights">
         <div class="role-cards">
           <article class="role-card">
@@ -119,7 +120,7 @@
           </article>
 
           <article class="role-card">
-            <div class="kicker"></div>
+            <div class="kicker">Leadership</div>
             <h4>Operations &amp; Exhibitions Services Lead — Career Fair</h4>
             <p class="meta">UCF Rosen College · Jan 2025 – Mar 2025</p>
             <ul>
@@ -130,7 +131,7 @@
           </article>
           
           <article class="role-card">
-            <div class="kicker"></div>
+            <div class="kicker">Guest Service</div>
             <h4>Sales Hostess</h4>
             <p class="meta">Walt Disney Company · Mar 2022 – Jun 2025</p>
             <ul>
@@ -141,8 +142,8 @@
           </article>
 
           <article class="role-card">
-            <div class="kicker"></div>
-            <h4>Multi‑Language Sales &amp; Solutions Specialist</h4>
+            <div class="kicker">Reservations</div>
+            <h4>Multi-Language Sales &amp; Solutions Specialist</h4>
             <p class="meta">Walt Disney World Company · Sep 2019 – Mar 2022</p>
             <ul>
               <li>Organized group bookings and itineraries to accommodate diverse Guest needs</li>
@@ -152,7 +153,7 @@
           </article>
 
           <article class="role-card">
-            <div class="kicker"></div>
+            <div class="kicker">Coordination</div>
             <h4>Concierge Coordinator</h4>
             <p class="meta">Kaplan Test Prep · Aug 2018 – Jul 2019</p>
             <ul>
@@ -168,16 +169,20 @@
         <!-- Preview card -->
         <div class="resume-preview">
           <img
-            src="images/resume-preview.jpg"
-            srcset="images/resume-preview.jpg 1x, images/resume-preview@2x.jpg 2x"
+            id="resumePreview"
+            src="images/resume-preview.jpg?v=1"
             width="520" height="672"
-            alt="Preview of Isabela Irizarry’s current resume" loading="lazy">
+            alt="Preview of Isabela Irizarry’s current resume"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'520\\' height=\\'672\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23FFF5E1\\'/><text x=\\'50%\\' y=\\'50%\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\\'%234A4A4A\\' font-family=\\'Nunito\\' font-size=\\'18\\'>resume-preview.jpg not found</text></svg>';">
           <div class="actions">
             <a class="btn btn-primary" href="documents/Isabela_Irizarry_Resume.pdf" type="application/pdf">View PDF</a>
             <a class="btn" href="documents/Isabela_Irizarry_Resume.pdf" download>Download PDF</a>
             <a class="btn" href="documents/Isabela_Irizarry_Resume.docx">Download DOCX</a>
           </div>
         </div>
+      </div>
+    </section>
   </main>
 
   <script>

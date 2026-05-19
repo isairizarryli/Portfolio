@@ -4,8 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isabela Irizarry | Contact Me</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comfortaa&family=Josefin+Sans:wght@500&family=Nunito&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
   <style>
     :root {
       --baby-pink: #FFC1CC;
@@ -81,6 +86,10 @@
       color: white;
     }
 
+    nav a[aria-current="page"] {
+      background-color: var(--soft-blue);
+    }
+
     main {
       max-width: 700px;
       margin: 3rem auto;
@@ -137,11 +146,19 @@
     form input,
     form textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.7rem;
       margin-bottom: 1rem;
       border-radius: 10px;
       border: 1px solid #ccc;
       font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: 2px solid var(--powder-blue);
+      border-color: var(--strawberry-red);
     }
 
     form button {
@@ -151,12 +168,30 @@
       border: none;
       border-radius: 20px;
       font-family: 'Comfortaa', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     form button:hover {
       background-color: var(--charcoal-gray);
       color: white;
+    }
+
+    .form-backup {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--charcoal-gray);
+    }
+
+    .form-backup a {
+      color: var(--bold-strawberry);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .form-backup a:hover {
+      color: var(--charcoal-gray);
     }
 
     .sr-only {
@@ -182,6 +217,7 @@
         top: 1rem;
         left: 1rem;
       }
+
       .banner h1 {
         font-size: 2.5rem;
         padding: 0 2rem;
@@ -190,36 +226,45 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- Logo -->
   <img src="images/Isabela-Irizarry-Logo.png" alt="Isabela Irizarry Logo" class="logo">
+
+  <!-- Banner -->
   <div class="banner">
     <h1>Contact Me</h1>
   </div>
 
-  <nav>
+  <!-- Navigation -->
+  <nav aria-label="Primary Navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="resume.html">Resume</a>
     <a href="achievements.html">Achievements</a>
     <a href="deliverables.html">Deliverables</a>
-    <a href="contact.html">Contact Me</a>
+    <a href="contact.html" aria-current="page">Contact Me</a>
     <a href="thankyou.html">Thank You</a>
   </nav>
 
   <main>
     <section class="contact-section">
       <h2 class="section-title">Let's Connect!</h2>
+
       <a href="mailto:isairizarryli@gmail.com" class="contact-link">📧 isairizarryli@gmail.com</a>
       <a href="tel:+14079658395" class="contact-link">📞 (407) 965-8395</a>
-      <a href="https://www.linkedin.com/in/isabelai/" target="_blank" class="contact-link">🔗 linkedin.com/in/isabelai/</a>
+      <a href="https://www.linkedin.com/in/isabelai/" target="_blank" rel="noopener noreferrer" class="contact-link">🔗 linkedin.com/in/isabelai/</a>
     </section>
 
     <section class="form-section">
       <h2 class="section-title" style="margin-top: 3rem;">Send Me a Message</h2>
+
       <p>Whether you’re here to connect, collaborate, or just say hi — I’d love to hear from you!</p>
+
       <p style="font-size: 0.9rem; color: var(--charcoal-gray); margin-top: -0.5rem;">
         You'll be redirected to a thank you page once your message is sent.
       </p>
+
       <form action="https://formsubmit.co/isairizarryli@gmail.com" method="POST">
         <label for="name" class="sr-only">Name</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -230,10 +275,24 @@
         <label for="message" class="sr-only">Message</label>
         <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
 
+        <!-- FormSubmit Settings -->
+        <input type="hidden" name="_subject" value="New message from Isabela Irizarry's portfolio">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="http://isairizarry.com/thankyou.html">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Redirect after successful submission -->
+        <input type="hidden" name="_next" value="https://isairizarry.com/thankyou.html">
+
+        <!-- Honeypot spam protection: real users will not see this -->
+        <input type="text" name="_honey" style="display:none">
+
         <button type="submit">Send</button>
       </form>
+
+      <p class="form-backup">
+        If the form does not work, please email me directly at
+        <a href="mailto:isairizarryli@gmail.com">isairizarryli@gmail.com</a>.
+      </p>
     </section>
   </main>
 </body>
